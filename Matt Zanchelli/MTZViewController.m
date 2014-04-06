@@ -27,6 +27,10 @@
 
 - (void)setContainingViewController:(UIViewController *)containingViewController
 {
+	// Hide old child view controller.
+	[self hideChildViewController:_containingViewController];
+	
+	// Update to the new child view controller.
 	_containingViewController = containingViewController;
 	[self addChildViewController:_containingViewController];
 }
@@ -34,14 +38,16 @@
 - (void)addChildViewController:(UIViewController *)childController
 {
 	[super addChildViewController:childController];
-	
-	NSLog(@"%@", self.containerView.subviews);
-#warning remove previous view on containerView
 	[self.containerView addSubview:childController.view];
-	
 	[childController didMoveToParentViewController:self];
 }
 
+- (void)hideChildViewController:(UIViewController *)childController
+{
+	[childController willMoveToParentViewController:nil];
+	[childController.view removeFromSuperview];
+	[childController removeFromParentViewController];
+}
 
 #pragma mark - Actions
 
