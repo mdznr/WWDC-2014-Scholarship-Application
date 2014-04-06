@@ -10,6 +10,8 @@
 
 @interface MTZViewController ()
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+
 @end
 
 @implementation MTZViewController
@@ -18,6 +20,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+
+#pragma mark - UIViewController Misc.
+
+- (BOOL)prefersStatusBarHidden
+{
+	return YES;
 }
 
 - (void)didReceiveMemoryWarning
