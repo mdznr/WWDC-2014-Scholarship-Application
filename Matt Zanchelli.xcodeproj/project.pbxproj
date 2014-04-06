@@ -459,6 +459,7 @@
 				C998223018EDAC1E00983B36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C998223118EDAC1E00983B36 /* Build configuration list for PBXNativeTarget "Matt ZanchelliTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +468,7 @@
 				C998223318EDAC1E00983B36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
