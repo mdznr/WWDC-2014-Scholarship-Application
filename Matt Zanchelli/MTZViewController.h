@@ -10,4 +10,7 @@
 
 @interface MTZViewController : UIViewController
 
+///	<#Description#>
+@property (nonatomic) UIViewController *containingViewController;
+
 @end
