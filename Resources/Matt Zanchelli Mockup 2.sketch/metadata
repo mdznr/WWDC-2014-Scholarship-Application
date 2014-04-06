@@ -10,6 +10,16 @@
 	<string>421b5ab1617d3a0def25bf53ababb8a7c8aabc34</string>
 	<key>fonts</key>
 	<array>
+		<string>MyriadSetPro-Thin</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSetPro-Thin</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSet-Text</string>
+		<string>MyriadSet-Text</string>
 		<string>MyriadSet-Text</string>
 		<string>MyriadSet-Bold</string>
 		<string>MyriadSet-Text</string>
@@ -46,7 +56,7 @@
 		<string>MyriadSet-Text</string>
 	</array>
 	<key>length</key>
-	<integer>2480497</integer>
+	<integer>2715753</integer>
 	<key>version</key>
 	<integer>36</integer>
 </dict>
