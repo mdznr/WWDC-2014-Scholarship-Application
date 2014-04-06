@@ -10,8 +10,6 @@
 
 @interface MTZViewController ()
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-
 @end
 
 @implementation MTZViewController
@@ -22,6 +20,23 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+/// Tapped the button for the "About Me" section.
+- (IBAction)tappedAboutMeSectionButton:(id)sender
+{
+	NSLog(@"About Me");
+}
+
+/// Tapped the button for the "Background" section.
+- (IBAction)tappedBackgroundSectionButton:(id)sender
+{
+	NSLog(@"Background");
+}
+
+/// Tapped the button for the "Projects" section.
+- (IBAction)tappedProjectsSectionButton:(id)sender
+{
+	NSLog(@"Projects");
+}
 
 #pragma mark - UIViewController Misc.
 
