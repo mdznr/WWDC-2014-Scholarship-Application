@@ -24,6 +24,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	// Load About view controller by default.
+	[self performSegueWithIdentifier:@"About Me" sender:self];
 }
 
 
