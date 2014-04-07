@@ -49,6 +49,7 @@
 - (void)addChildViewController:(UIViewController *)childController
 {
 	[super addChildViewController:childController];
+	childController.view.frame = self.containerView.frame;
 	[self.containerView addSubview:childController.view];
 	[childController didMoveToParentViewController:self];
 }

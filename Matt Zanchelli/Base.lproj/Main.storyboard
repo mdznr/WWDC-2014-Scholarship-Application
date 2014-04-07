@@ -98,7 +98,7 @@
         <!--About Me View Controller-->
         <scene sceneID="lZi-Hi-iGB">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="usf-5j-UWD" userLabel="About Me View Controller" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="usf-5j-UWD" userLabel="About Me View Controller" customClass="MTZAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kE0-jG-MCS"/>
                         <viewControllerLayoutGuide type="bottom" id="IJV-g1-qgV"/>
@@ -123,12 +123,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvd-9n-HGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="-868"/>
+            <point key="canvasLocation" x="1633" y="-1320"/>
         </scene>
         <!--Projects View Controller-->
         <scene sceneID="7az-vt-12O">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="yCz-xY-8p9" userLabel="Projects View Controller" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="yCz-xY-8p9" userLabel="Projects View Controller" customClass="MTZProjectsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EXN-k4-IWv"/>
                         <viewControllerLayoutGuide type="bottom" id="xJV-oq-mRl"/>
@@ -153,12 +153,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHc-jO-bdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="864"/>
+            <point key="canvasLocation" x="1633" y="472"/>
         </scene>
         <!--Background View Controller-->
         <scene sceneID="EVH-iP-Bqs">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGp-Z3-zL5" userLabel="Background View Controller" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGp-Z3-zL5" userLabel="Background View Controller" customClass="MTZBackgroundViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Goc-4X-p3A"/>
                         <viewControllerLayoutGuide type="bottom" id="qFj-5X-gVf"/>
@@ -168,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="background" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Him-Z4-3rU">
-                                <rect key="frame" x="586" y="406" width="92" height="21"/>
+                                <rect key="frame" x="617" y="367" width="92" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXF-DK-Awf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="-12"/>
+            <point key="canvasLocation" x="1925" y="-399"/>
         </scene>
     </scenes>
     <resources>
