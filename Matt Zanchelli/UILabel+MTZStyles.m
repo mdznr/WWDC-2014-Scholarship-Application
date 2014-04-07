@@ -13,23 +13,57 @@
 - (void)applyMTZStyle:(MTZStyle)style
 {
 	switch ( style ) {
-		case MTZStyleName: {
-		} break;
-		case MTZStylePersonalDescription: {
-			self.font = [UIFont fontForPersonalDescription];
-			NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
-			NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
-			paragrahStyle.lineSpacing = 5.0f; // 26.0f - 21.0f
-			paragrahStyle.alignment = NSTextAlignmentCenter;
-			[attributedString addAttribute:NSParagraphStyleAttributeName
-									  value:paragrahStyle
-									  range:NSMakeRange(0, attributedString.length)];
-			self.attributedText = attributedString;
-			self.textColor = [UIColor colorWithWhite:0.6f alpha:1.0f];
-		} break;
-		default: {
-		} break;
+		case MTZStyleName:
+			[self applyMTZStyleName];
+			break;
+		case MTZStylePersonalDescription:
+			[self applyMTZStylePersonalDescription];
+			break;
+		default:
+			break;
 	}
+}
+
+- (void)applyMTZStyleName
+{
+	// Set the proper font.
+	self.font = [UIFont fontForName];
+	
+	// Set the proper text color.
+	self.textColor = [UIColor blackColor];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 0.0f;
+	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStylePersonalDescription
+{
+	// Set the proper font.
+	self.font = [UIFont fontForPersonalDescription];
+	
+	// Set the proper text color.
+	self.textColor = [UIColor colorWithWhite:0.6f alpha:1.0f];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 5.0f; // 26.0f - 21.0f
+	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
 }
 
 @end

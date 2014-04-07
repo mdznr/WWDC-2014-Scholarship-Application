@@ -25,8 +25,33 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	// Add edge gesture recognizer.
+	UIScreenEdgePanGestureRecognizer *edge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(didPanFromEdge:)];
+	edge.minimumNumberOfTouches = 1;
+	edge.maximumNumberOfTouches = 1;
+	edge.edges = UIRectEdgeLeft|UIRectEdgeRight;
+	[self.view addGestureRecognizer:edge];
+	
 	// Load About view controller by default.
 	[self performSegueWithIdentifier:@"About Me" sender:self];
+}
+
+- (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
+{
+#warning TODO: Enable scrollview panning horizontally between sections.
+	NSLog(@"Did Pan");
+	switch ( sender.state ) {
+		case UIGestureRecognizerStateBegan:
+			break;
+		case UIGestureRecognizerStateChanged:
+			break;
+		case UIGestureRecognizerStateEnded:
+			break;
+		case UIGestureRecognizerStateCancelled:
+			break;
+		default:
+			break;
+	}
 }
 
 
