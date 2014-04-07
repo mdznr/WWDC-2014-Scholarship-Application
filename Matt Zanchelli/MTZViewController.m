@@ -32,6 +32,8 @@
 
 #pragma mark - Containing View Controller
 
+///	Set the containing view controller.
+///	@param containingViewController The view controller to set as the containing view controller.
 - (void)setContainingViewController:(UIViewController *)containingViewController
 {
 	// Hide old child view controller.
@@ -42,6 +44,8 @@
 	[self addChildViewController:_containingViewController];
 }
 
+///	Add a child view controller.
+///	@param childController The child view controller to add.
 - (void)addChildViewController:(UIViewController *)childController
 {
 	[super addChildViewController:childController];
@@ -49,6 +53,8 @@
 	[childController didMoveToParentViewController:self];
 }
 
+///	Hide a child view controller.
+///	@param childController The child view controller to hide.
 - (void)hideChildViewController:(UIViewController *)childController
 {
 	[childController willMoveToParentViewController:nil];
@@ -60,21 +66,42 @@
 #pragma mark - Actions
 
 /// Tapped the button for the "About Me" section.
+/// @param sender The segment that was tapped.
 - (IBAction)tappedAboutMeSectionButton:(id)sender
 {
 	[self performSegueWithIdentifier:@"About Me" sender:self];
+	[self updateSelectedSegment:sender];
 }
 
 /// Tapped the button for the "Background" section.
+/// @param sender The segment that was tapped.
 - (IBAction)tappedBackgroundSectionButton:(id)sender
 {
 	[self performSegueWithIdentifier:@"Background" sender:self];
+	[self updateSelectedSegment:sender];
 }
 
 /// Tapped the button for the "Projects" section.
+/// @param sender The segment that was tapped.
 - (IBAction)tappedProjectsSectionButton:(id)sender
 {
 	[self performSegueWithIdentifier:@"Projects" sender:self];
+	[self updateSelectedSegment:sender];
+}
+
+/// Update the position of the selected segment view to represent the selected segment.
+///	@param sender The segment that was selected.
+- (void)updateSelectedSegment:(id)sender
+{
+	[UIView animateWithDuration:0.5f
+						  delay:0.0f
+		 usingSpringWithDamping:0.75f
+		  initialSpringVelocity:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState
+					 animations:^{
+						 self.selectedView.center = CGPointMake(((UIView *)sender).center.x, self.selectedView.center.y);
+					 }
+					 completion:^(BOOL finished) {}];
 }
 
 
