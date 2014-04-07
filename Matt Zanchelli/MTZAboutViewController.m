@@ -10,6 +10,8 @@
 
 @interface MTZAboutViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *description;
+
 @end
 
 @implementation MTZAboutViewController
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	
+	self.description.font = [UIFont fontWithName:@"MyriadSetPro-Thin" size:21];
 }
 
 

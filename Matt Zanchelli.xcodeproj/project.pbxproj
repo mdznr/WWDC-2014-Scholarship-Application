@@ -25,6 +25,8 @@
 		C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232418F255C100983B36 /* MTZAboutViewController.m */; };
 		C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232718F2562500983B36 /* MTZBackgroundViewController.m */; };
 		C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232A18F2563100983B36 /* MTZProjectsViewController.m */; };
+		C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */; };
+		C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		C998232718F2562500983B36 /* MTZBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZBackgroundViewController.m; sourceTree = "<group>"; };
 		C998232918F2563100983B36 /* MTZProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZProjectsViewController.h; sourceTree = "<group>"; };
 		C998232A18F2563100983B36 /* MTZProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZProjectsViewController.m; sourceTree = "<group>"; };
+		C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadSetPro-Thin.ttf"; sourceTree = "<group>"; };
+		C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 				C998232918F2563100983B36 /* MTZProjectsViewController.h */,
 				C998232A18F2563100983B36 /* MTZProjectsViewController.m */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
+				C998233018F25C5900983B36 /* Fonts */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
 			);
 			path = "Matt Zanchelli";
@@ -170,6 +175,15 @@
 				C998222718EDAC1E00983B36 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C998233018F25C5900983B36 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */,
+				C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +263,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */,
+				C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */,
 				C998221818EDAC1E00983B36 /* Images.xcassets in Resources */,
 				C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */,
 				C998221318EDAC1E00983B36 /* Main.storyboard in Resources */,
