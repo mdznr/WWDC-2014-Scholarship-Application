@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */; };
 		C998220018EDAC1E00983B36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99821FF18EDAC1E00983B36 /* Foundation.framework */; };
 		C998220218EDAC1E00983B36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C998220118EDAC1E00983B36 /* CoreGraphics.framework */; };
 		C998220418EDAC1E00983B36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C998220318EDAC1E00983B36 /* UIKit.framework */; };
@@ -27,6 +28,7 @@
 		C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232A18F2563100983B36 /* MTZProjectsViewController.m */; };
 		C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */; };
 		C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */; };
+		C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C998233418F260FB00983B36 /* UIFont+MTZStyles.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9196F3318F2669A003D2E51 /* UILabel+MTZStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MTZStyles.h"; sourceTree = "<group>"; };
+		C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MTZStyles.m"; sourceTree = "<group>"; };
 		C99821FC18EDAC1E00983B36 /* Matt Zanchelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matt Zanchelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99821FF18EDAC1E00983B36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C998220118EDAC1E00983B36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +73,8 @@
 		C998232A18F2563100983B36 /* MTZProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZProjectsViewController.m; sourceTree = "<group>"; };
 		C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadSetPro-Thin.ttf"; sourceTree = "<group>"; };
 		C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
+		C998233318F260FB00983B36 /* UIFont+MTZStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MTZStyles.h"; sourceTree = "<group>"; };
+		C998233418F260FB00983B36 /* UIFont+MTZStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MTZStyles.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,10 @@
 			children = (
 				C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */,
 				C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */,
+				C998233318F260FB00983B36 /* UIFont+MTZStyles.h */,
+				C998233418F260FB00983B36 /* UIFont+MTZStyles.m */,
+				C9196F3318F2669A003D2E51 /* UILabel+MTZStyles.h */,
+				C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -290,6 +300,8 @@
 				C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */,
 				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
+				C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */,
+				C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */,
 				C998220C18EDAC1E00983B36 /* main.m in Sources */,
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */,

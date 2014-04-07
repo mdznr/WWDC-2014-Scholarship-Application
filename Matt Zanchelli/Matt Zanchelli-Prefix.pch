@@ -13,4 +13,6 @@
 #ifdef __OBJC__
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
+	#import "UIFont+MTZStyles.h"
+	#import "UILabel+MTZStyles.h"
 #endif
