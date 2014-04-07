@@ -10,6 +10,11 @@
 
 @implementation UIFont (MTZStyles)
 
++ (instancetype)fontForName
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:55];
+}
+
 + (instancetype)fontForPersonalDescription
 {
 	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:21];

@@ -10,7 +10,14 @@
 
 @interface MTZAboutViewController ()
 
+///	The label for my name.
+@property (weak, nonatomic) IBOutlet UILabel *name;
+
+///	The label for my personal description.
 @property (weak, nonatomic) IBOutlet UILabel *description;
+
+///	The label mentioning my other interests.
+@property (weak, nonatomic) IBOutlet UILabel *interests;
 
 @end
 
@@ -30,7 +37,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
+	[self.name applyMTZStyle:MTZStyleName];
 	[self.description applyMTZStyle:MTZStylePersonalDescription];
+	[self.interests applyMTZStyle:MTZStylePersonalDescription];
 }
 
 

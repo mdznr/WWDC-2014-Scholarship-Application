@@ -10,7 +10,10 @@
 
 @interface UIFont (MTZStyles)
 
-/// The font used for personal description.
+///	The font used for my name.
++ (instancetype)fontForName;
+
+/// The font used for my personal description.
 + (instancetype)fontForPersonalDescription;
 
 @end
