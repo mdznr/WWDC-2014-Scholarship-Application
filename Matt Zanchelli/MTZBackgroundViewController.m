@@ -31,6 +31,9 @@
 	self.view.backgroundColor = [UIColor greenColor];
 }
 
+
+#pragma mark - UIViewController Misc.
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
