@@ -115,6 +115,10 @@
                                 <rect key="frame" x="96" y="238" width="405" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="About - Photo" translatesAutoresizingMaskIntoConstraints="NO" id="DxV-8H-6av">
+                                <rect key="frame" x="608" y="130" width="234" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -191,6 +195,7 @@
     <resources>
         <image name="About - Matt Zanchelli" width="405" height="52"/>
         <image name="About - Personal Description" width="405" height="78"/>
+        <image name="About - Photo" width="234" height="234"/>
         <image name="About Me" width="88" height="17"/>
         <image name="Background" width="88" height="17"/>
         <image name="Matt Zanchelli" width="100" height="17"/>
