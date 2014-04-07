@@ -10,7 +10,11 @@
 
 @interface MTZViewController ()
 
+///	The view to contain the selected section.
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+
+///	The view that marks the selected segment.
+@property (weak, nonatomic) IBOutlet UIView *selectedView;
 
 @end
 
@@ -49,26 +53,24 @@
 	[childController removeFromParentViewController];
 }
 
+
 #pragma mark - Actions
 
 /// Tapped the button for the "About Me" section.
 - (IBAction)tappedAboutMeSectionButton:(id)sender
 {
-	NSLog(@"About Me");
 	[self performSegueWithIdentifier:@"About Me" sender:self];
 }
 
 /// Tapped the button for the "Background" section.
 - (IBAction)tappedBackgroundSectionButton:(id)sender
 {
-	NSLog(@"Background");
 	[self performSegueWithIdentifier:@"Background" sender:self];
 }
 
 /// Tapped the button for the "Projects" section.
 - (IBAction)tappedProjectsSectionButton:(id)sender
 {
-	NSLog(@"Projects");
 	[self performSegueWithIdentifier:@"Projects" sender:self];
 }
 

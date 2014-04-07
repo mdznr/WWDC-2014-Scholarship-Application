@@ -73,6 +73,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hkz-nl-Z47" userLabel="Selected View">
+                                <rect key="frame" x="660" y="43" width="88" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.5490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -81,6 +86,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="containerView" destination="H9U-6M-2hx" id="2iC-8B-ZEG"/>
+                        <outlet property="selectedView" destination="Hkz-nl-Z47" id="ke3-pL-sCZ"/>
                         <segue destination="usf-5j-UWD" kind="custom" identifier="About Me" customClass="MTZStoryboardSegue" id="abP-JQ-7fF"/>
                         <segue destination="FGp-Z3-zL5" kind="custom" identifier="Background" customClass="MTZStoryboardSegue" id="V9z-Xs-bDv"/>
                         <segue destination="yCz-xY-8p9" kind="custom" identifier="Projects" customClass="MTZStoryboardSegue" id="xkT-mI-HAo"/>
