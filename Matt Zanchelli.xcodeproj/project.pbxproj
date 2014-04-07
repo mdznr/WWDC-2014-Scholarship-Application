@@ -22,6 +22,9 @@
 		C998222918EDAC1E00983B36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C998222718EDAC1E00983B36 /* InfoPlist.strings */; };
 		C998222B18EDAC1E00983B36 /* Matt_ZanchelliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C998222A18EDAC1E00983B36 /* Matt_ZanchelliTests.m */; };
 		C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232118F2050800983B36 /* MTZStoryboardSegue.m */; };
+		C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232418F255C100983B36 /* MTZAboutViewController.m */; };
+		C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232718F2562500983B36 /* MTZBackgroundViewController.m */; };
+		C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232A18F2563100983B36 /* MTZProjectsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,12 @@
 		C998222A18EDAC1E00983B36 /* Matt_ZanchelliTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Matt_ZanchelliTests.m; sourceTree = "<group>"; };
 		C998232018F2050800983B36 /* MTZStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZStoryboardSegue.h; sourceTree = "<group>"; };
 		C998232118F2050800983B36 /* MTZStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZStoryboardSegue.m; sourceTree = "<group>"; };
+		C998232318F255C100983B36 /* MTZAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAboutViewController.h; sourceTree = "<group>"; };
+		C998232418F255C100983B36 /* MTZAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZAboutViewController.m; sourceTree = "<group>"; };
+		C998232618F2562500983B36 /* MTZBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZBackgroundViewController.h; sourceTree = "<group>"; };
+		C998232718F2562500983B36 /* MTZBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZBackgroundViewController.m; sourceTree = "<group>"; };
+		C998232918F2563100983B36 /* MTZProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZProjectsViewController.h; sourceTree = "<group>"; };
+		C998232A18F2563100983B36 /* MTZProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZProjectsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +131,12 @@
 				C998232118F2050800983B36 /* MTZStoryboardSegue.m */,
 				C998221418EDAC1E00983B36 /* MTZViewController.h */,
 				C998221518EDAC1E00983B36 /* MTZViewController.m */,
+				C998232318F255C100983B36 /* MTZAboutViewController.h */,
+				C998232418F255C100983B36 /* MTZAboutViewController.m */,
+				C998232618F2562500983B36 /* MTZBackgroundViewController.h */,
+				C998232718F2562500983B36 /* MTZBackgroundViewController.m */,
+				C998232918F2563100983B36 /* MTZProjectsViewController.h */,
+				C998232A18F2563100983B36 /* MTZProjectsViewController.m */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
 			);
@@ -255,9 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */,
 				C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */,
 				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
+				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
 				C998220C18EDAC1E00983B36 /* main.m in Sources */,
+				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
