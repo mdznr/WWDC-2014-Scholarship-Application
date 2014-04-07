@@ -51,7 +51,7 @@
 	self.font = [UIFont fontForPersonalDescription];
 	
 	// Set the proper text color.
-	self.textColor = [UIColor colorWithWhite:0.6f alpha:1.0f];
+	self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
 	
 	// Get the attributed string.
 	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
