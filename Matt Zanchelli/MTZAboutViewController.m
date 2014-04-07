@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	self.description.font = [UIFont fontWithName:@"MyriadSetPro-Thin" size:21];
+	[self.description applyMTZStyle:MTZStylePersonalDescription];
 }
 
 
