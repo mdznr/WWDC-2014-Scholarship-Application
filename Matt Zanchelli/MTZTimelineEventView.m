@@ -68,12 +68,12 @@
 - (void)setUpMTZTimeLineEventView
 {
 	// Set up frame.
-	self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 600, 130);
+	self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 620, 130);
 	
 	// Set up labels frames.
-	self.dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(1, 5, 88, 25)];
-	self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(128, 5, 472, 25)];
-	self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(128, 29, 472, 100)];
+	self.dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(21, 5, 88, 25)];
+	self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(148, 5, 472, 25)];
+	self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(148, 29, 472, 100)];
 	
 	// Set up number of lines.
 	self.dateLabel.numberOfLines = 1;
