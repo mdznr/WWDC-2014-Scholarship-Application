@@ -64,6 +64,10 @@
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	
+	UIView *timelineStripeView = [[UIView alloc] initWithFrame:CGRectMake(128, 0, 1, cell.frame.size.height)];
+	timelineStripeView.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
+	[cell.contentView addSubview:timelineStripeView];
+	
 	MTZTimelineEvent *event = (MTZTimelineEvent *) self.content[indexPath.row];
 	MTZTimelineEventView *eventView = [[MTZTimelineEventView alloc] initWithTimelineEvent:event];
 	[cell.contentView addSubview:eventView];

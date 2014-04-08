@@ -19,6 +19,12 @@
 ///	Label for the description.
 @property (strong, nonatomic) UILabel *descriptionLabel;
 
+///	The mark on the timeline for the event.
+@property (strong, nonatomic) UIImageView *dotView;
+
+///	The vertical stripe representing the timeline.
+@property (strong, nonatomic) UIView *timelineStripeView;
+
 @end
 
 @implementation MTZTimelineEventView
@@ -66,14 +72,36 @@
 }
 
 - (void)setUpMTZTimeLineEventView
-{
+{	
 	// Set up frame.
 	self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, 620, 130);
+	
+	self.timelineStripeView = [[UIView alloc] initWithFrame:CGRectMake(128, 0, 1, 130)];
+	[self addSubview:self.timelineStripeView];
+	
+	// Add dot view.
+	self.dotView = [[UIImageView alloc] initWithFrame:CGRectMake(123, 11, 11, 11)];
+	self.dotView.image = [UIImage imageNamed:@"Timeline-Dot"];
+	[self addSubview:self.dotView];
 	
 	// Set up labels frames.
 	self.dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(21, 5, 88, 25)];
 	self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(148, 5, 472, 25)];
 	self.descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(148, 29, 472, 100)];
+	
+	// Set backgrounds.
+	self.dateLabel.backgroundColor = [UIColor whiteColor];
+	self.titleLabel.backgroundColor = [UIColor whiteColor];
+	self.descriptionLabel.backgroundColor = [UIColor whiteColor];
+	self.dotView.backgroundColor = [UIColor whiteColor];
+	self.timelineStripeView.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
+	
+	// Make views opaque.
+	self.dateLabel.opaque = YES;
+	self.titleLabel.opaque = YES;
+	self.descriptionLabel.opaque = YES;
+	self.dotView.opaque = YES;
+	self.timelineStripeView.opaque = YES;
 	
 	// Set up number of lines.
 	self.dateLabel.numberOfLines = 1;
