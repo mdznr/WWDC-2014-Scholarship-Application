@@ -10,6 +10,14 @@
 
 @interface UIFont (MTZStyles)
 
+#pragma mark - Navigation Bar
+
+///	The font used for buttons for each section in the navigation bar.
++ (instancetype)fontForSectionButton;
+
+
+#pragma mark - About
+
 ///	The font used for my name.
 + (instancetype)fontForName;
 

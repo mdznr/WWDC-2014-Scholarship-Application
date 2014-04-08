@@ -16,6 +16,11 @@
 ///	The view that marks the selected segment.
 @property (weak, nonatomic) IBOutlet UIView *selectedView;
 
+@property (weak, nonatomic) IBOutlet UILabel *MattZanchelli;
+@property (weak, nonatomic) IBOutlet UIButton *aboutMeButton;
+@property (weak, nonatomic) IBOutlet UIButton *backgroundButton;
+@property (weak, nonatomic) IBOutlet UIButton *projectsButton;
+
 @end
 
 @implementation MTZViewController
@@ -31,6 +36,12 @@
 	edge.maximumNumberOfTouches = 1;
 	edge.edges = UIRectEdgeLeft|UIRectEdgeRight;
 	[self.view addGestureRecognizer:edge];
+	
+	// Set proper text styles.
+	self.MattZanchelli.font = [UIFont fontForSectionButton];
+	self.aboutMeButton.titleLabel.font = [UIFont fontForSectionButton];
+	self.backgroundButton.titleLabel.font = [UIFont fontForSectionButton];
+	self.projectsButton.titleLabel.font = [UIFont fontForSectionButton];
 	
 	// Load About view controller by default.
 	[self performSegueWithIdentifier:@"About Me" sender:self];
