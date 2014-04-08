@@ -20,4 +20,9 @@
 	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:21];
 }
 
++ (instancetype)fontForInterestDescription
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:14];
+}
+
 @end

@@ -16,4 +16,7 @@
 /// The font used for my personal description.
 + (instancetype)fontForPersonalDescription;
 
+///	The font used for each interest's description.
++ (instancetype)fontForInterestDescription;
+
 @end

@@ -19,6 +19,9 @@
 		case MTZStylePersonalDescription:
 			[self applyMTZStylePersonalDescription];
 			break;
+		case MTZStyleInterestDescription:
+			[self applyMTZStyleInterestDescription];
+			break;
 		default:
 			break;
 	}
@@ -59,6 +62,27 @@
 	// Add the paragraph style.
 	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
 	paragrahStyle.lineSpacing = 5.0f; // 26.0f - 21.0f
+	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleInterestDescription
+{
+	// Set the proper font.
+	self.font = [UIFont fontForInterestDescription];
+	
+	// Set the proper text color.
+	self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 2.0f; // 16.0f - 14.0f
 	paragrahStyle.alignment = NSTextAlignmentCenter;
 	[attributedString addAttribute:NSParagraphStyleAttributeName
 							 value:paragrahStyle
