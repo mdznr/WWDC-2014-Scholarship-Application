@@ -10,6 +10,16 @@
 
 @implementation UIFont (MTZStyles)
 
+#pragma mark - Navigation Bar
+
++ (instancetype)fontForSectionButton
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:16];
+}
+
+
+#pragma mark - About
+
 + (instancetype)fontForName
 {
 	return [UIFont fontWithName:@"MyriadPro-Regular" size:55];
