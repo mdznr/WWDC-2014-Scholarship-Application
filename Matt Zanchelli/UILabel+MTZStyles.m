@@ -22,6 +22,15 @@
 		case MTZStyleInterestDescription:
 			[self applyMTZStyleInterestDescription];
 			break;
+		case MTZStyleEventDate:
+			[self applyMTZStyleEventDate];
+			break;
+		case MTZStyleEventTitle:
+			[self applyMTZStyleEventTitle];
+			break;
+		case MTZStyleEventDetail:
+			[self applyMTZStyleEventDetail];
+			break;
 		default:
 			break;
 	}
@@ -84,6 +93,69 @@
 	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
 	paragrahStyle.lineSpacing = 2.0f; // 16.0f - 14.0f
 	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleEventDate
+{
+	// Set the proper font.
+	self.font = [UIFont fontForEventDate];
+	
+	// Set the proper text color.
+	self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 7.0f; // 25 - 18
+	paragrahStyle.alignment = NSTextAlignmentRight;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleEventTitle
+{
+	// Set the proper font.
+	self.font = [UIFont fontForEventTitle];
+	
+	// Set the proper text color.
+	self.textColor = [UIColor colorWithWhite:0.0f alpha:1.0f];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 7.0f; // 25 - 18
+	paragrahStyle.alignment = NSTextAlignmentLeft;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleEventDetail
+{
+	// Set the proper font.
+	self.font = [UIFont fontForEventDetail];
+	
+	// Set the proper text color.
+	self.textColor = [UIColor colorWithWhite:0.0f alpha:1.0f];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 7.0f; // 25 - 18
+	paragrahStyle.alignment = NSTextAlignmentLeft;
 	[attributedString addAttribute:NSParagraphStyleAttributeName
 							 value:paragrahStyle
 							 range:NSMakeRange(0, attributedString.length)];

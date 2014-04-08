@@ -27,4 +27,16 @@
 ///	The font used for each interest's description.
 + (instancetype)fontForInterestDescription;
 
+
+#pragma mark - Background
+
+///	The font used for the date in the timeline.
++ (instancetype)fontForEventDate;
+
+///	The font used for the event title in the timeline.
++ (instancetype)fontForEventTitle;
+
+///	The font used for the event detail in the timeline.
++ (instancetype)fontForEventDetail;
+
 @end

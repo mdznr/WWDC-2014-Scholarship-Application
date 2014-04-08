@@ -13,6 +13,12 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 
+// Dec. 2004 — Bought my first iPod.
+@property (weak, nonatomic) IBOutlet UILabel *date1;
+@property (weak, nonatomic) IBOutlet UILabel *event1;
+@property (weak, nonatomic) IBOutlet UILabel *detail1;
+
+
 @end
 
 @implementation MTZBackgroundViewController
@@ -30,6 +36,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	
+	[self.date1 applyMTZStyle:MTZStyleEventDate];
+	[self.event1 applyMTZStyle:MTZStyleEventTitle];
+	[self.detail1 applyMTZStyle:MTZStyleEventDetail];
 }
 
 
