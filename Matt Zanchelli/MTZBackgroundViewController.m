@@ -10,6 +10,9 @@
 
 @interface MTZBackgroundViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
 @end
 
 @implementation MTZBackgroundViewController
@@ -27,8 +30,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-	
-	self.view.backgroundColor = [UIColor greenColor];
 }
 
 
