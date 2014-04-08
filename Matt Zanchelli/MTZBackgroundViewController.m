@@ -21,15 +21,6 @@
 
 @implementation MTZBackgroundViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,7 +38,7 @@
 	
 	MTZTimelineEvent *event3 = [MTZTimelineEvent eventWithDate:@"Aug. 2007"
 														 title:@"Started High School."
-												   description:@"By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I learned and was inspired by fantastic Mac designers. I started designing icons and user interfaces for fun."];
+												   description:@"By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I was inspired by and learned from fantastic Mac designers. I started designing icons and user interfaces for fun."];
 	
 	MTZTimelineEvent *event4 = [MTZTimelineEvent eventWithDate:@"Oct. 2007"
 														 title:@"Began Freelancing."
@@ -55,7 +46,7 @@
 	
 	MTZTimelineEvent *event5 = [MTZTimelineEvent eventWithDate:@"Apr. 2008"
 														 title:@"Started DJ BMZ."
-												   description:@"I became very interested in music and started collecting music equipment. My neighbour and I started DJing parties and other events. That turned into a business that’s still running to this day."];
+												   description:@"I became very interested in music and started collecting equipment to playback and manipulate music. My neighbour and I started DJing parties and other events. Eventually that turned into a profitable business that’s still running to this day."];
 	
 	MTZTimelineEvent *event6 = [MTZTimelineEvent eventWithDate:@"Aug. 2011"
 														 title:@"Started College."
