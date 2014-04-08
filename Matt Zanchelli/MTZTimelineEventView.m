@@ -23,6 +23,18 @@
 
 @implementation MTZTimelineEventView
 
+- (id)initWithTimelineEvent:(MTZTimelineEvent *)timelineEvent
+{
+	self = [super initWithFrame:CGRectMake(0, 0, 600, 130)];
+	if (self) {
+		[self setUpMTZTimeLineEventView];
+		self.date = timelineEvent.date;
+		self.title = timelineEvent.title;
+		self.description = timelineEvent.description;
+	}
+	return self;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super initWithCoder:aDecoder];
