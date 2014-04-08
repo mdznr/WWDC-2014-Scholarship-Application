@@ -37,19 +37,31 @@
 	
 	self.tableView.contentInset = UIEdgeInsetsMake(44+31, 0, 0, 0);
 	
-	MTZTimelineEvent *event1 = [MTZTimelineEvent eventWithDate:@"Dec 2004"
+	MTZTimelineEvent *event1 = [MTZTimelineEvent eventWithDate:@"Dec. 2004"
 														 title:@"Bought my first iPod."
 												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Everyday of my life is working towards that goal."];
 	
-	MTZTimelineEvent *event2 = [MTZTimelineEvent eventWithDate:@"Dec 2004"
-														 title:@"Bought my first iPad."
-												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Everyday of my life is working towards that goal."];
+	MTZTimelineEvent *event2 = [MTZTimelineEvent eventWithDate:@"Aug. 2006"
+														 title:@"Bought my first Mac."
+												   description:@"After a couple years of collecting iPods, I knew it was time to also get a Mac. I used them occasionally at school and found them to be much more enjoyable to use than any other computer I had ever used before."];
 	
-	MTZTimelineEvent *event3 = [MTZTimelineEvent eventWithDate:@"Dec 2004"
-														 title:@"Bought my first iPod sock."
-												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Everyday of my life is working towards that goal."];
+	MTZTimelineEvent *event3 = [MTZTimelineEvent eventWithDate:@"Aug. 2007"
+														 title:@"Started High School."
+												   description:@"By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I learned and was inspired by fantastic Mac designers. I started designing icons and user interfaces for fun."];
 	
-	self.content = @[event1, event2, event3];
+	MTZTimelineEvent *event4 = [MTZTimelineEvent eventWithDate:@"Oct. 2007"
+														 title:@"Began Freelancing."
+												   description:@"I had enough experience with designing and building websites that I could do freelance design and web work. I loved my time designing logos, business cards, and websites for friends and locals in my community."];
+	
+	MTZTimelineEvent *event5 = [MTZTimelineEvent eventWithDate:@"Apr. 2008"
+														 title:@"Started DJ BMZ."
+												   description:@"I became very interested in music and started collecting music equipment. My neighbour and I started DJing parties and other events. That turned into a business that’s still running to this day."];
+	
+	MTZTimelineEvent *event6 = [MTZTimelineEvent eventWithDate:@"Aug. 2011"
+														 title:@"Started College."
+												   description:@"I figured out that the design I’m most interested in was in software, so I decided to go to school for Computer Science. I met by best friend, Peter, who taught me how to take what I learned in class and build native apps for Mac and iOS."];
+	
+	self.content = @[event1, event2, event3, event4, event5, event6];
 }
 
 
