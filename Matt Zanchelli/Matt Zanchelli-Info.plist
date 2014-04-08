@@ -28,6 +28,7 @@
 	<array>
 		<string>MyriadSetPro-Thin.ttf</string>
 		<string>MyriadPro-Regular.otf</string>
+		<string>MyriadPro-Bold.otf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>

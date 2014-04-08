@@ -13,6 +13,13 @@ typedef NS_ENUM(NSUInteger, MTZStyle){
 	MTZStyleName,
 	MTZStylePersonalDescription,
 	MTZStyleInterestDescription,
+	
+	// Background
+	MTZStyleEventDate,
+	MTZStyleEventTitle,
+	MTZStyleEventDetail,
+	
+	// Projects
 };
 
 @interface UILabel (MTZStyles)

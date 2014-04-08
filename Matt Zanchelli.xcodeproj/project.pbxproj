@@ -29,6 +29,7 @@
 		C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */; };
 		C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */; };
 		C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C998233418F260FB00983B36 /* UIFont+MTZStyles.m */; };
+		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
 		C998233318F260FB00983B36 /* UIFont+MTZStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MTZStyles.h"; sourceTree = "<group>"; };
 		C998233418F260FB00983B36 /* UIFont+MTZStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MTZStyles.m"; sourceTree = "<group>"; };
+		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */,
 				C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */,
+				C9B4631918F47639000D480D /* MyriadPro-Bold.otf */,
 				C998233318F260FB00983B36 /* UIFont+MTZStyles.h */,
 				C998233418F260FB00983B36 /* UIFont+MTZStyles.m */,
 				C9196F3318F2669A003D2E51 /* UILabel+MTZStyles.h */,
@@ -275,6 +278,7 @@
 			files = (
 				C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */,
 				C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */,
+				C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */,
 				C998221818EDAC1E00983B36 /* Images.xcassets in Resources */,
 				C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */,
 				C998221318EDAC1E00983B36 /* Main.storyboard in Resources */,

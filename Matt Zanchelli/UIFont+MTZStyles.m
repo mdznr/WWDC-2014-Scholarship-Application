@@ -35,4 +35,23 @@
 	return [UIFont fontWithName:@"MyriadPro-Regular" size:14];
 }
 
+
+#pragma mark - Background
+
++ (instancetype)fontForEventDate
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+}
+
++ (instancetype)fontForEventTitle
+{
+	return [UIFont fontWithName:@"MyriadPro-Bold" size:18];
+}
+
++ (instancetype)fontForEventDetail
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+}
+
+
 @end
