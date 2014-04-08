@@ -8,16 +8,14 @@
 
 #import "MTZBackgroundViewController.h"
 
+#import "MTZTimelineEventView.h"
+
 @interface MTZBackgroundViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 
-// Dec. 2004 — Bought my first iPod.
-@property (weak, nonatomic) IBOutlet UILabel *date1;
-@property (weak, nonatomic) IBOutlet UILabel *event1;
-@property (weak, nonatomic) IBOutlet UILabel *detail1;
-
+@property (weak, nonatomic) IBOutlet MTZTimelineEventView *event1;
 
 @end
 
@@ -37,9 +35,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	[self.date1 applyMTZStyle:MTZStyleEventDate];
-	[self.event1 applyMTZStyle:MTZStyleEventTitle];
-	[self.detail1 applyMTZStyle:MTZStyleEventDetail];
+	self.event1.date = @"Dec. 2004";
+	self.event1.title = @"Bought my first iPod.";
+	self.event1.description = @"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Everyday of my life is working towards that goal.";
 }
 
 
