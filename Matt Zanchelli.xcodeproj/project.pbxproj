@@ -31,6 +31,7 @@
 		C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C998233418F260FB00983B36 /* UIFont+MTZStyles.m */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
+		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
 		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
+		C9B4631E18F4831F000D480D /* MTZTimelineEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEvent.h; sourceTree = "<group>"; };
+		C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				C998232418F255C100983B36 /* MTZAboutViewController.m */,
 				C998232618F2562500983B36 /* MTZBackgroundViewController.h */,
 				C998232718F2562500983B36 /* MTZBackgroundViewController.m */,
+				C9B4631E18F4831F000D480D /* MTZTimelineEvent.h */,
+				C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */,
 				C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */,
 				C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */,
 				C998232918F2563100983B36 /* MTZProjectsViewController.h */,
@@ -308,6 +313,7 @@
 				C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */,
 				C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */,
 				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
+				C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */,
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
 				C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */,
 				C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */,

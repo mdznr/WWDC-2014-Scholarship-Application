@@ -200,35 +200,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvV-h1-iTk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="175" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="djA-gw-mwa">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZb-ee-uTe" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-oa-dsC" userLabel="Bought my first iPod." customClass="MTZTimelineEventView">
-                                                <rect key="frame" x="20" y="75" width="600" height="130"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1024" id="7ZR-mY-x7s"/>
-                                            <constraint firstAttribute="width" constant="1024" id="HaQ-8A-yKj"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="FZb-ee-uTe" firstAttribute="leading" secondItem="YvV-h1-iTk" secondAttribute="leading" id="6nH-gR-y4H"/>
-                                    <constraint firstItem="FZb-ee-uTe" firstAttribute="top" secondItem="YvV-h1-iTk" secondAttribute="top" id="BaL-sC-2bi"/>
-                                    <constraint firstAttribute="bottom" secondItem="FZb-ee-uTe" secondAttribute="bottom" id="TuM-og-XTI"/>
-                                    <constraint firstAttribute="trailing" secondItem="FZb-ee-uTe" secondAttribute="trailing" id="ovH-o6-hnO"/>
-                                </constraints>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
-                            </scrollView>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Event" id="EC0-SF-cSD">
+                                        <rect key="frame" x="0.0" y="22" width="1024" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EC0-SF-cSD" id="heb-py-JV1">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FGp-Z3-zL5" id="kvS-Lh-6OC"/>
+                                    <outlet property="delegate" destination="FGp-Z3-zL5" id="RlY-fj-rpg"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3q-wa-zl8" userLabel="Timeline">
                                 <rect key="frame" x="128" y="0.0" width="1" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,12 +228,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="YvV-h1-iTk" secondAttribute="trailing" id="2sp-Ec-Z1e"/>
-                            <constraint firstAttribute="bottom" secondItem="YvV-h1-iTk" secondAttribute="bottom" id="8eg-2l-bEv"/>
-                            <constraint firstItem="YvV-h1-iTk" firstAttribute="leading" secondItem="77Q-J9-e4f" secondAttribute="leading" id="Jh6-wm-1bR"/>
-                            <constraint firstItem="YvV-h1-iTk" firstAttribute="top" secondItem="77Q-J9-e4f" secondAttribute="top" id="zeN-Rz-bdw"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
@@ -251,9 +237,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="1024"/>
                     <connections>
-                        <outlet property="contentView" destination="FZb-ee-uTe" id="QRW-PE-Q0c"/>
-                        <outlet property="event1" destination="V8v-oa-dsC" id="jRM-NO-eeR"/>
-                        <outlet property="scrollView" destination="YvV-h1-iTk" id="SjR-RF-oaz"/>
+                        <outlet property="tableView" destination="djA-gw-mwa" id="CIr-ed-Egx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXF-DK-Awf" userLabel="First Responder" sceneMemberID="firstResponder"/>
