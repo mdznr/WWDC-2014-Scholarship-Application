@@ -19,6 +19,11 @@
 ///	The label mentioning my other interests.
 @property (weak, nonatomic) IBOutlet UILabel *interests;
 
+///	Labels below each interest.
+@property (weak, nonatomic) IBOutlet UILabel *biking;
+@property (weak, nonatomic) IBOutlet UILabel *music;
+@property (weak, nonatomic) IBOutlet UILabel *photography;
+
 @end
 
 @implementation MTZAboutViewController
@@ -40,6 +45,9 @@
 	[self.name applyMTZStyle:MTZStyleName];
 	[self.description applyMTZStyle:MTZStylePersonalDescription];
 	[self.interests applyMTZStyle:MTZStylePersonalDescription];
+	[self.biking applyMTZStyle:MTZStyleInterestDescription];
+	[self.music applyMTZStyle:MTZStyleInterestDescription];
+	[self.photography applyMTZStyle:MTZStyleInterestDescription];
 }
 
 

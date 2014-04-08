@@ -134,6 +134,39 @@
                                 <rect key="frame" x="608" y="130" width="234" height="234"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="About - Bike" translatesAutoresizingMaskIntoConstraints="NO" id="zed-g5-ADn" userLabel="Bike">
+                                <rect key="frame" x="181" y="509" width="150" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I love commuting with my bicycle and using it to get around town." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="149" translatesAutoresizingMaskIntoConstraints="NO" id="zmM-R5-tZn" userLabel="Bike">
+                                <rect key="frame" x="181" y="595" width="149" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="About - Music" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-0p-eG5" userLabel="Music">
+                                <rect key="frame" x="437" y="509" width="150" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I enjoy listening to a wide variety of music. I attend  concerts regularly." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="149" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-8N-GZn" userLabel="Music">
+                                <rect key="frame" x="437" y="595" width="149" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="About - Camera" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-mq-Sgx" userLabel="Camera">
+                                <rect key="frame" x="693" y="509" width="150" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I’m passionate about photography, both my own and other’s. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="149" translatesAutoresizingMaskIntoConstraints="NO" id="Z7A-gZ-pGf" userLabel="Camera">
+                                <rect key="frame" x="693" y="595" width="149" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -143,9 +176,12 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="biking" destination="zmM-R5-tZn" id="OO9-Ud-Jqe"/>
                         <outlet property="description" destination="xjg-uG-ID6" id="Fgx-aq-goL"/>
                         <outlet property="interests" destination="XDH-4b-cbv" id="JKx-vy-TeP"/>
+                        <outlet property="music" destination="eHw-8N-GZn" id="J5K-ID-WhS"/>
                         <outlet property="name" destination="X8u-yi-cc8" id="T4u-C7-GrX"/>
+                        <outlet property="photography" destination="Z7A-gZ-pGf" id="Yel-SX-9j1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvd-9n-HGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,6 +250,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="About - Bike" width="149" height="68"/>
+        <image name="About - Camera" width="149" height="68"/>
+        <image name="About - Music" width="149" height="68"/>
         <image name="About - Photo" width="234" height="234"/>
         <image name="About Me" width="88" height="17"/>
         <image name="Background" width="88" height="17"/>
