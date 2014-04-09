@@ -10,6 +10,9 @@
 
 @interface MTZGoodnightProjectViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
 @end
 
 @implementation MTZGoodnightProjectViewController

@@ -6,17 +6,56 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZPasscodeProjectViewController">
             <connections>
+                <outlet property="contentView" destination="s9a-Pj-lNg" id="3vk-BG-zQX"/>
+                <outlet property="scrollView" destination="DOH-3B-SaZ" id="wge-eC-8P8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOH-3B-SaZ">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-Pj-lNg" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCU-KM-NdB">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="702"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2048" id="0yM-su-NNI"/>
+                                <constraint firstAttribute="width" constant="1024" id="SXC-eO-H3y"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="s9a-Pj-lNg" firstAttribute="leading" secondItem="DOH-3B-SaZ" secondAttribute="leading" id="kqV-8L-d8P"/>
+                        <constraint firstAttribute="trailing" secondItem="s9a-Pj-lNg" secondAttribute="trailing" id="lL2-gg-ZpF"/>
+                        <constraint firstAttribute="bottom" secondItem="s9a-Pj-lNg" secondAttribute="bottom" id="mxB-Ll-Kn7"/>
+                        <constraint firstItem="s9a-Pj-lNg" firstAttribute="top" secondItem="DOH-3B-SaZ" secondAttribute="top" id="sdg-wq-PPv"/>
+                    </constraints>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="DOH-3B-SaZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DgX-f5-q1w"/>
+                <constraint firstAttribute="trailing" secondItem="DOH-3B-SaZ" secondAttribute="trailing" id="dYQ-zj-Das"/>
+                <constraint firstItem="DOH-3B-SaZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nbu-os-xIV"/>
+                <constraint firstAttribute="bottom" secondItem="DOH-3B-SaZ" secondAttribute="bottom" id="txo-uy-ip1"/>
+            </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>
