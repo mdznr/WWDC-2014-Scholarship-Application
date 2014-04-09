@@ -8,12 +8,12 @@
 
 #import "MTZProjectsViewController.h"
 
-@interface MTZProjectsViewController ()
+#import "MTZPageViewController.h"
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIView *contentView;
+@interface MTZProjectsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-
+///	The names of the .xib child view controllers.
+@property (strong, nonatomic) NSArray *childViewControllerNibNames;
 
 @end
 
@@ -32,26 +32,77 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	
+	self.dataSource = self;
+	self.delegate = self;
+	
+	self.childViewControllerNibNames = @[@"MTZHoneycrispProjectViewController",
+										 @"MTZPasscodeProjectViewController",
+										 @"MTZGoodnightProjectViewController"];
+	
+	// Load first view controller.
+	[self setViewControllers:@[[self viewControllerAtIndex:0]]
+				   direction:UIPageViewControllerNavigationDirectionForward
+					animated:NO
+				  completion:^(BOOL finished) {}];
 }
 
-
-#pragma mark - UIViewController Misc.
-
-- (void)didReceiveMemoryWarning
+- (MTZPageViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	if ( index >= [self.childViewControllerNibNames count] ) {
+		return nil;
+	}
+	
+	NSString *nibName = self.childViewControllerNibNames[index];
+	MTZPageViewController *childViewController = [[MTZPageViewController alloc] initWithNibName:nibName bundle:nil];
+	childViewController.index = index;
+
+	return childViewController;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+#pragma mark - UIPageViewControllerDataSource Delegate
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+	  viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	// Find the index of the current view controller.
+	NSUInteger index = [(MTZPageViewController *)viewController index];
+	
+	// No view controllers before the first one.
+	if (index == 0) {
+		return nil;
+	}
+	
+	// Return the previous view controller.
+	return [self viewControllerAtIndex:--index];
 }
-*/
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+	   viewControllerAfterViewController:(UIViewController *)viewController
+{
+	// Find the index of the current view controller.
+	NSUInteger index = [(MTZPageViewController *)viewController index];
+	
+	// No view controllers beyond the last one.
+	if (index == [self.childViewControllerNibNames count]-1) {
+		return nil;
+	}
+	
+	// Return the next view controller.
+	return [self viewControllerAtIndex:++index];
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+	// The total number of view controllers.
+    return [self.childViewControllerNibNames count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    // The index of the first view controller.
+    return 0;
+}
 
 @end

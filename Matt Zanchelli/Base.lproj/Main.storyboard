@@ -4,6 +4,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Projects View Controller-->
+        <scene sceneID="Uou-Yu-Rvg">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Pc8-xI-Faj" userLabel="Projects View Controller" customClass="MTZProjectsViewController" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7L-jF-2Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2947" y="1223"/>
+        </scene>
         <!--Navigation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -82,7 +95,7 @@
                         <outlet property="selectedView" destination="Hkz-nl-Z47" id="ke3-pL-sCZ"/>
                         <segue destination="usf-5j-UWD" kind="custom" identifier="About Me" customClass="MTZStoryboardSegue" id="abP-JQ-7fF"/>
                         <segue destination="FGp-Z3-zL5" kind="custom" identifier="Background" customClass="MTZStoryboardSegue" id="V9z-Xs-bDv"/>
-                        <segue destination="wYR-KH-cKS" kind="custom" identifier="Projects" customClass="MTZStoryboardSegue" id="LrO-AU-f9R"/>
+                        <segue destination="Pc8-xI-Faj" kind="custom" identifier="Projects" customClass="MTZStoryboardSegue" id="2V2-B7-ea5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -243,74 +256,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXF-DK-Awf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2713" y="-967"/>
-        </scene>
-        <!--Projects View Controller-->
-        <scene sceneID="06y-u8-Kw3">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wYR-KH-cKS" userLabel="Projects View Controller" customClass="MTZProjectsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KYI-Ec-b7i"/>
-                        <viewControllerLayoutGuide type="bottom" id="QkN-MZ-QwX"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G0W-G7-IbY">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEb-bo-7eh">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAK-WU-YgQ" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-VD-VoY">
-                                                <rect key="frame" x="866" y="202" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1024" id="5Pb-Ff-vuE"/>
-                                            <constraint firstAttribute="width" constant="1024" id="Gh4-BK-sZg"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="MAK-WU-YgQ" secondAttribute="bottom" id="MXv-PD-w4O"/>
-                                    <constraint firstAttribute="trailing" secondItem="MAK-WU-YgQ" secondAttribute="trailing" id="T9S-bM-oyi"/>
-                                    <constraint firstItem="MAK-WU-YgQ" firstAttribute="leading" secondItem="pEb-bo-7eh" secondAttribute="leading" id="df1-YT-JXf"/>
-                                    <constraint firstItem="MAK-WU-YgQ" firstAttribute="top" secondItem="pEb-bo-7eh" secondAttribute="top" id="gaa-D3-e8E"/>
-                                </constraints>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pEb-bo-7eh" firstAttribute="leading" secondItem="G0W-G7-IbY" secondAttribute="leading" id="059-wJ-w61"/>
-                            <constraint firstAttribute="trailing" secondItem="pEb-bo-7eh" secondAttribute="trailing" id="0jD-Hy-rhq"/>
-                            <constraint firstItem="pEb-bo-7eh" firstAttribute="top" secondItem="G0W-G7-IbY" secondAttribute="top" id="UtD-gI-FVo"/>
-                            <constraint firstAttribute="bottom" secondItem="pEb-bo-7eh" secondAttribute="bottom" id="dFw-fI-yN2"/>
-                        </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1024" height="1024"/>
-                    <connections>
-                        <outlet property="contentView" destination="MAK-WU-YgQ" id="syj-5k-ajA"/>
-                        <outlet property="scrollView" destination="pEb-bo-7eh" id="fI9-pD-oa2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YRR-xz-0GK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1645" y="-317"/>
         </scene>
     </scenes>
     <resources>

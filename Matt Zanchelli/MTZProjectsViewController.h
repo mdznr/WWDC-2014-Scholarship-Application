@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTZProjectsViewController : UIViewController
+@interface MTZProjectsViewController : UIPageViewController
 
 @end
