@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZHoneycrispProjectViewController">
             <connections>
+                <outlet property="contentView" destination="8ZK-zd-TiO" id="0gc-Ea-EWv"/>
+                <outlet property="headerView" destination="YvV-Ra-1i8" id="r7S-RY-CJn"/>
+                <outlet property="scrollView" destination="kXY-0w-7v7" id="oJV-bL-DqK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +25,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YvV-Ra-1i8">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YvV-Ra-1i8" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="702"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
