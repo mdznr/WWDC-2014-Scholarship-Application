@@ -114,7 +114,7 @@
 	self.font = [UIFont fontForEventDate];
 	
 	// Set the proper text color.
-	self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
+	self.textColor = [UIColor colorWithWhite:0.65f alpha:1.0f];
 	
 	// Get the attributed string.
 	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
@@ -135,7 +135,7 @@
 	self.font = [UIFont fontForEventTitle];
 	
 	// Set the proper text color.
-	self.textColor = [UIColor colorWithWhite:0.0f alpha:1.0f];
+	self.textColor = [UIColor colorWithWhite:0.1f alpha:1.0f];
 	
 	// Get the attributed string.
 	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
@@ -156,7 +156,7 @@
 	self.font = [UIFont fontForEventDetail];
 	
 	// Set the proper text color.
-	self.textColor = [UIColor colorWithWhite:0.0f alpha:1.0f];
+	self.textColor = [UIColor colorWithWhite:0.33f alpha:1.0f];
 	
 	// Get the attributed string.
 	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];

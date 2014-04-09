@@ -50,6 +50,11 @@
 	[self.photography applyMTZStyle:MTZStyleInterestDescription];
 }
 
+- (void)flashScrollIndicators
+{
+	
+}
+
 - (void)scrollToTop
 {
 	

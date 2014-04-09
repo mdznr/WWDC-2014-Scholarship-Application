@@ -98,6 +98,22 @@
 				  completion:^(BOOL finished) {}];
 }
 
+- (void)flashScrollIndicators
+{
+	// Flash scroll indicators for all child view controllers.
+	for ( MTZPageViewController *childViewController in self.childViewControllers ) {
+		[childViewController flashScrollIndicators];
+	}
+}
+
+- (void)scrollToTop
+{
+	// Scroll all child view controllers to the top.
+	for ( MTZPageViewController *childViewController in self.childViewControllers ) {
+		[childViewController scrollToTop];
+	}
+}
+
 
 #pragma mark - UIPageViewControllerDataSource Protocol
 
@@ -129,14 +145,6 @@
 	
 	// Return the next view controller.
 	return [self viewControllerAtIndex:++index];
-}
-
-- (void)scrollToTop
-{
-	// Scroll all child view controllers to the top.
-	for ( MTZPageViewController *childViewController in self.childViewControllers ) {
-		[childViewController scrollToTop];
-	}
 }
 
 

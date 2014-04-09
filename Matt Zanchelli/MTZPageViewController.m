@@ -32,6 +32,11 @@
 	[self.scrollView flashScrollIndicators];
 }
 
+- (void)flashScrollIndicators
+{
+	[self.scrollView flashScrollIndicators];
+}
+
 - (void)scrollToTop
 {
 	[self.scrollView setContentOffset:CGPointZero animated:YES];

@@ -10,6 +10,9 @@
 
 @protocol MTZSectionViewControllerProtocol <NSObject>
 
+///	Flash scroll indicators, if any.
+- (void)flashScrollIndicators;
+
 ///	Scroll to the top of the view controller.
 - (void)scrollToTop;
 

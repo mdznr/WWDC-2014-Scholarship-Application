@@ -52,6 +52,24 @@
 	self.index = 0;
 }
 
+- (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
+{
+#warning TODO: Enable scrollview panning horizontally between sections.
+	NSLog(@"Did Pan");
+	switch ( sender.state ) {
+		case UIGestureRecognizerStateBegan:
+			break;
+		case UIGestureRecognizerStateChanged:
+			break;
+		case UIGestureRecognizerStateEnded:
+			break;
+		case UIGestureRecognizerStateCancelled:
+			break;
+		default:
+			break;
+	}
+}
+
 - (void)setIndex:(NSUInteger)index
 {
 	if ( _index == index) {
@@ -79,24 +97,9 @@
 		default:
 			break;
 	}
-}
-
-- (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
-{
-#warning TODO: Enable scrollview panning horizontally between sections.
-	NSLog(@"Did Pan");
-	switch ( sender.state ) {
-		case UIGestureRecognizerStateBegan:
-			break;
-		case UIGestureRecognizerStateChanged:
-			break;
-		case UIGestureRecognizerStateEnded:
-			break;
-		case UIGestureRecognizerStateCancelled:
-			break;
-		default:
-			break;
-	}
+	
+	// Ask child view controller to flash scroll indicators.
+	[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
 }
 
 
