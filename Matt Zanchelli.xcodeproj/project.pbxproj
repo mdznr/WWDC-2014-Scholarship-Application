@@ -36,6 +36,7 @@
 		C9AF881618F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF880F18F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m */; };
 		C9AF881718F5AD5B005E0CEC /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF881118F5AD5B005E0CEC /* UIImage+JTSImageEffects.m */; };
 		C9AF881918F5ADF3005E0CEC /* college.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9AF881818F5ADF3005E0CEC /* college.jpg */; };
+		C9AF881B18F5AF93005E0CEC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C9AF881A18F5AF93005E0CEC /* LICENSE */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
@@ -106,6 +107,7 @@
 		C9AF881018F5AD5B005E0CEC /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
 		C9AF881118F5AD5B005E0CEC /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
 		C9AF881818F5ADF3005E0CEC /* college.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = college.jpg; sourceTree = "<group>"; };
+		C9AF881A18F5AF93005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
 		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		C9AF880518F5AD5B005E0CEC /* JTSImageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C9AF881A18F5AF93005E0CEC /* LICENSE */,
 				C9AF880618F5AD5B005E0CEC /* JTSAnimatedGIFUtility.h */,
 				C9AF880718F5AD5B005E0CEC /* JTSAnimatedGIFUtility.m */,
 				C9AF880818F5AD5B005E0CEC /* JTSImageInfo.h */,
@@ -411,6 +414,7 @@
 				C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */,
 				C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */,
 				C9B4632F18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib in Resources */,
+				C9AF881B18F5AF93005E0CEC /* LICENSE in Resources */,
 				C9B4632518F4C388000D480D /* MTZHoneycrispProjectViewController.xib in Resources */,
 				C998221818EDAC1E00983B36 /* Images.xcassets in Resources */,
 				C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */,
