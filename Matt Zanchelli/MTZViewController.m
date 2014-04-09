@@ -13,6 +13,9 @@
 ///	The view to contain the selected section.
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
+///	The index of the selected segment.
+@property (nonatomic) NSUInteger index;
+
 ///	The view that marks the selected segment.
 @property (weak, nonatomic) IBOutlet UIView *selectedView;
 
@@ -41,8 +44,38 @@
 	self.backgroundButton.titleLabel.font = [UIFont fontForSectionButton];
 	self.projectsButton.titleLabel.font = [UIFont fontForSectionButton];
 	
-	// Load About view controller by default.
-	[self performSegueWithIdentifier:@"About Me" sender:self];
+	_index = -1;
+	
+	// Load first view controller.
+	self.index = 0;
+}
+
+- (void)setIndex:(NSUInteger)index
+{
+	if ( _index == index) {
+		return;
+	}
+	
+	_index = index;
+	
+	
+	switch ( index ) {
+		case 0:
+			// Load About view controller by default.
+			[self performSegueWithIdentifier:@"About Me" sender:self];
+			[self updateSelectedSegment:self.aboutMeButton];
+			break;
+		case 1:
+			[self performSegueWithIdentifier:@"Background" sender:self];
+			[self updateSelectedSegment:self.backgroundButton];
+			break;
+		case 2:
+			[self performSegueWithIdentifier:@"Projects" sender:self];
+			[self updateSelectedSegment:self.projectsButton];
+			break;
+		default:
+			break;
+	}
 }
 
 - (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
@@ -104,24 +137,21 @@
 /// @param sender The segment that was tapped.
 - (IBAction)tappedAboutMeSectionButton:(id)sender
 {
-	[self performSegueWithIdentifier:@"About Me" sender:self];
-	[self updateSelectedSegment:sender];
+	self.index = 0;
 }
 
 /// Tapped the button for the "Background" section.
 /// @param sender The segment that was tapped.
 - (IBAction)tappedBackgroundSectionButton:(id)sender
 {
-	[self performSegueWithIdentifier:@"Background" sender:self];
-	[self updateSelectedSegment:sender];
+	self.index = 1;
 }
 
 /// Tapped the button for the "Projects" section.
 /// @param sender The segment that was tapped.
 - (IBAction)tappedProjectsSectionButton:(id)sender
 {
-	[self performSegueWithIdentifier:@"Projects" sender:self];
-	[self updateSelectedSegment:sender];
+	self.index = 2;
 }
 
 /// Update the position of the selected segment view to represent the selected segment.
