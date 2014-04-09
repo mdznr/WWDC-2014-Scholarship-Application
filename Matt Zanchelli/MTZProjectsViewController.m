@@ -36,23 +36,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	/*
-	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:emailLabel
-														  attribute:NSLayoutAttributeLeft
-														  relatedBy:NSLayoutRelationGreaterThanOrEqual
-															 toItem:emailField
-														  attribute:NSLayoutAttributeLeft
-														 multiplier:1.0f
-														   constant:0.0f]];
-	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:spinner attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:logInButton attribute:NSLayoutAttributeRight multiplier:1.0f constant:10.0f]];
-	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:preview attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:preview attribute:NSLayoutAttributeWidth multiplier:0.625f constant:0.0f]];
-	 */
-	
 	self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-31, self.view.frame.size.width, 10)];
 	self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 	self.pageControl.numberOfPages = 3;
 	self.pageControl.currentPage = 0;
 	self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.5f alpha:0.5f];
+#warning change tint color depending on which page it's on (purple for Goodnight, red for honeycrisp, green for passcode, etc.)
 	self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.75f];
 	[self.pageControl addTarget:self action:@selector(pageDidChangeOnPageControl:) forControlEvents:UIControlEventValueChanged];
 	[self.view addSubview:self.pageControl];

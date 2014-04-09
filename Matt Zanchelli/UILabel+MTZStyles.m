@@ -31,6 +31,12 @@
 		case MTZStyleEventDetail:
 			[self applyMTZStyleEventDetail];
 			break;
+		case MTZStyleProjectTitle:
+			[self applyMTZStyleProjectTitle];
+			break;
+		case MTZStyleProjectDescription:
+			[self applyMTZStyleProjectDescription];
+			break;
 		default:
 			break;
 	}
@@ -156,6 +162,29 @@
 	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
 	paragrahStyle.lineSpacing = 7.0f; // 25 - 18
 	paragrahStyle.alignment = NSTextAlignmentLeft;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleProjectTitle
+{
+	// Set the proper font.
+	self.font = [UIFont fontForProjectTitle];
+}
+
+- (void)applyMTZStyleProjectDescription
+{
+	// Set the proper font.
+	self.font = [UIFont fontForProjectDescription];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 5.0f; // 26 - 21
 	[attributedString addAttribute:NSParagraphStyleAttributeName
 							 value:paragrahStyle
 							 range:NSMakeRange(0, attributedString.length)];

@@ -10,6 +10,9 @@
 
 @interface MTZGoodnightProjectViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *goodnight;
+@property (weak, nonatomic) IBOutlet UILabel *description;
+
 @end
 
 @implementation MTZGoodnightProjectViewController
@@ -18,6 +21,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	[self.goodnight applyMTZStyle:MTZStyleProjectTitle];
+	[self.description applyMTZStyle:MTZStyleProjectDescription];
 }
 
 @end

@@ -54,4 +54,17 @@
 }
 
 
+#pragma mark - Projects
+
++ (instancetype)fontForProjectTitle
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:55];
+}
+
++ (instancetype)fontForProjectDescription
+{
+	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:21];
+}
+
+
 @end

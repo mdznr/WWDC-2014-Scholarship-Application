@@ -39,4 +39,13 @@
 ///	The font used for the event detail in the timeline.
 + (instancetype)fontForEventDetail;
 
+
+#pragma mark - Projects
+
+///	The font used for project titles.
++ (instancetype)fontForProjectTitle;
+
+///	The font used for project descriptions.
++ (instancetype)fontForProjectDescription;
+
 @end
