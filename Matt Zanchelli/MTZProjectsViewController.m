@@ -40,9 +40,9 @@
 	self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 	self.pageControl.numberOfPages = 3;
 	self.pageControl.currentPage = 0;
-	self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.5f alpha:0.5f];
+	self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.3f];
 #warning change tint color depending on which page it's on (purple for Goodnight, red for honeycrisp, green for passcode, etc.)
-	self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.75f];
+	self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
 	[self.pageControl addTarget:self action:@selector(pageDidChangeOnPageControl:) forControlEvents:UIControlEventValueChanged];
 	[self.view addSubview:self.pageControl];
 	
