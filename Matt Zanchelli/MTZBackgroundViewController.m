@@ -30,7 +30,7 @@
 	
 	MTZTimelineEvent *event1 = [MTZTimelineEvent eventWithDate:@"Dec. 2004"
 														 title:@"Bought my first iPod."
-												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Everyday of my life is working towards that goal."];
+												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Every day of my life is working towards that goal."];
 	
 	MTZTimelineEvent *event2 = [MTZTimelineEvent eventWithDate:@"Aug. 2006"
 														 title:@"Bought my first Mac."
