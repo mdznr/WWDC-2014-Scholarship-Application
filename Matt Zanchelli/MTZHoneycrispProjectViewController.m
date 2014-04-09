@@ -10,6 +10,9 @@
 
 @interface MTZHoneycrispProjectViewController () <UIScrollViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *honeycrisp;
+@property (weak, nonatomic) IBOutlet UILabel *description;
+
 @end
 
 @implementation MTZHoneycrispProjectViewController
@@ -18,6 +21,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	[self.honeycrisp applyMTZStyle:MTZStyleProjectTitle];
+	[self.description applyMTZStyle:MTZStyleProjectDescription];
 }
 
 @end
