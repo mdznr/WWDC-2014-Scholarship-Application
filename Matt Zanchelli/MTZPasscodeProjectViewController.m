@@ -10,6 +10,9 @@
 
 @interface MTZPasscodeProjectViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *passcode;
+@property (weak, nonatomic) IBOutlet UILabel *description;
+
 @end
 
 @implementation MTZPasscodeProjectViewController
@@ -18,6 +21,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	[self.passcode applyMTZStyle:MTZStyleProjectTitle];
+	[self.description applyMTZStyle:MTZStyleProjectDescriptionCenter];
 }
 
 @end

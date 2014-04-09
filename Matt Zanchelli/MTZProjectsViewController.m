@@ -133,7 +133,10 @@
 
 - (void)scrollToTop
 {
-	[((MTZPageViewController *)[self.childViewControllers lastObject]) scrollToTop];
+	// Scroll all child view controllers to the top.
+	for ( MTZPageViewController *childViewController in self.childViewControllers ) {
+		[childViewController scrollToTop];
+	}
 }
 
 

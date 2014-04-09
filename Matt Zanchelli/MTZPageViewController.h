@@ -10,10 +10,10 @@
 
 @interface MTZPageViewController : UIViewController
 
-///	<#Description#>
+///	The index of the page view controller.
 @property (assign, nonatomic) NSInteger index;
 
-///	<#Description#>
+///	Scroll to the top of the page.
 - (void)scrollToTop;
 
 @end

@@ -37,6 +37,9 @@
 		case MTZStyleProjectDescription:
 			[self applyMTZStyleProjectDescription];
 			break;
+		case MTZStyleProjectDescriptionCenter:
+			[self applyMTZStyleProjectDescriptionCentered];
+			break;
 		default:
 			break;
 	}
@@ -185,6 +188,24 @@
 	// Add the paragraph style.
 	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
 	paragrahStyle.lineSpacing = 5.0f; // 26 - 21
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleProjectDescriptionCentered
+{
+	// Set the proper font.
+	self.font = [UIFont fontForProjectDescription];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 5.0f; // 26 - 21
+	paragrahStyle.alignment = NSTextAlignmentCenter;
 	[attributedString addAttribute:NSParagraphStyleAttributeName
 							 value:paragrahStyle
 							 range:NSMakeRange(0, attributedString.length)];

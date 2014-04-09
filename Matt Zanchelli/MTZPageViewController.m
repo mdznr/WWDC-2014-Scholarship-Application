@@ -26,6 +26,12 @@
 	self.scrollView.delegate = self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	[self.scrollView flashScrollIndicators];
+}
+
 - (void)scrollToTop
 {
 	[self.scrollView setContentOffset:CGPointZero animated:YES];
