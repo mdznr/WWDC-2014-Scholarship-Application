@@ -56,7 +56,7 @@
 	NSString *nibName = self.childViewControllerNibNames[index];
 	MTZPageViewController *childViewController = [[MTZPageViewController alloc] initWithNibName:nibName bundle:nil];
 	childViewController.index = index;
-
+	
 	return childViewController;
 }
 
@@ -93,6 +93,7 @@
 	return [self viewControllerAtIndex:++index];
 }
 
+/*
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
 	// The total number of view controllers.
@@ -104,5 +105,6 @@
     // The index of the first view controller.
     return 0;
 }
+ */
 
 @end
