@@ -55,6 +55,17 @@
 	self.content = @[event1, event2, event3, event4, event5, event6];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	[self.tableView flashScrollIndicators];
+}
+
+- (void)flashScrollIndicators
+{
+	[self.tableView flashScrollIndicators];
+}
+
 - (void)scrollToTop
 {
 	[self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];

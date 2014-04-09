@@ -23,6 +23,7 @@
 + (instancetype)fontForName
 {
 	return [UIFont fontWithName:@"MyriadPro-Regular" size:55];
+//	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:55];
 }
 
 + (instancetype)fontForPersonalDescription
@@ -40,17 +41,20 @@
 
 + (instancetype)fontForEventDate
 {
-	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+//	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:18];
 }
 
 + (instancetype)fontForEventTitle
 {
 	return [UIFont fontWithName:@"MyriadPro-Bold" size:18];
+//	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
 }
 
 + (instancetype)fontForEventDetail
 {
 	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+//	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:18];
 }
 
 
@@ -58,12 +62,14 @@
 
 + (instancetype)fontForProjectTitle
 {
+//	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:55];
 	return [UIFont fontWithName:@"MyriadPro-Regular" size:55];
 }
 
 + (instancetype)fontForProjectDescription
 {
 	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:21];
+//	return [UIFont fontWithName:@"MyriadSetPro-Regular" size:21];
 }
 
 

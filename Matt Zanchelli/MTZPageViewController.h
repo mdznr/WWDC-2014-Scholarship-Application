@@ -13,6 +13,9 @@
 ///	The index of the page view controller.
 @property (assign, nonatomic) NSInteger index;
 
+///	Flash the scrollview's scroll indicators.
+- (void)flashScrollIndicators;
+
 ///	Scroll to the top of the page.
 - (void)scrollToTop;
 
