@@ -54,6 +54,7 @@
 	self.pageControl.currentPage = 0;
 	self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.5f alpha:0.5f];
 	self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.75f];
+	[self.pageControl addTarget:self action:@selector(pageDidChangeOnPageControl:) forControlEvents:UIControlEventValueChanged];
 	[self.view addSubview:self.pageControl];
 	
 	self.dataSource = self;
@@ -82,6 +83,27 @@
 	childViewController.index = index;
 	
 	return childViewController;
+}
+
+- (void)pageDidChangeOnPageControl:(UIPageControl *)sender
+{
+	NSInteger previousPage = ((MTZPageViewController *)[self.viewControllers lastObject]).index;
+	NSInteger currentPage = sender.currentPage;
+	
+	UIPageViewControllerNavigationDirection direction;
+	if ( previousPage < currentPage ) {
+		direction = UIPageViewControllerNavigationDirectionForward;
+	} else if ( previousPage > currentPage ) {
+		direction = UIPageViewControllerNavigationDirectionReverse;
+	} else {
+		return;
+	}
+	
+	MTZPageViewController *viewController = [self viewControllerAtIndex:currentPage];
+	[self setViewControllers:@[viewController]
+				   direction:direction
+					animated:YES
+				  completion:^(BOOL finished) {}];
 }
 
 
