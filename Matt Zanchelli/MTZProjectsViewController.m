@@ -151,6 +151,14 @@
 #pragma mark - UIPageViewControllerDelegate Protocol
 
 - (void)pageViewController:(UIPageViewController *)pageViewController
+willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+	// Scroll to the top of the current page if trying to switch pages.
+	MTZPageViewController *currentViewController = (MTZPageViewController *) [self.viewControllers lastObject];
+	[currentViewController scrollToTop];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController
 		didFinishAnimating:(BOOL)finished
    previousViewControllers:(NSArray *)previousViewControllers
 	   transitionCompleted:(BOOL)completed
@@ -162,7 +170,7 @@
 #warning not always accurate.
 	
 	// Find the index of current page.
-	MTZPageViewController *currentViewController = (MTZPageViewController *)[self.viewControllers lastObject];
+	MTZPageViewController *currentViewController = (MTZPageViewController *) [self.viewControllers lastObject];
 	NSUInteger index = currentViewController.index;
 //	NSLog(@"%@, %lu", currentViewController, (unsigned long)index);
 	self.pageControl.currentPage = index;
