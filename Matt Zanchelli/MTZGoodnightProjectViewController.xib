@@ -38,6 +38,10 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.14509803921568629" green="0.0" blue="0.29019607843137257" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goodnight-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="YEN-Ro-EQM" userLabel="iPhone">
+                                    <rect key="frame" x="571" y="94" width="390" height="752"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goodnight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-5Y-q6n" userLabel="Goodnight">
                                     <rect key="frame" x="96" y="312" width="405" height="55"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,10 +74,6 @@
                     </constraints>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
                 </scrollView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goodnight-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="YEN-Ro-EQM" userLabel="iPhone">
-                    <rect key="frame" x="605" y="128" width="322" height="641"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
