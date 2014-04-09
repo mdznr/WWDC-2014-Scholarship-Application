@@ -13,12 +13,14 @@
 + (instancetype)eventWithDate:(NSString *)date
 						title:(NSString *)title
 				  description:(NSString *)description
+						image:(UIImage *)image
 {
 	MTZTimelineEvent *event = [[MTZTimelineEvent alloc] init];
 	
 	event.date = date;
 	event.title = title;
 	event.description = description;
+	event.image = image;
 	
 	return event;
 }

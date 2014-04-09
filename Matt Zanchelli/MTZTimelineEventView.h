@@ -27,4 +27,7 @@
 ///	Description of the event.
 @property (nonatomic, copy) NSString *description;
 
+///	An image corresponding to the event.
+@property (nonatomic, copy) UIImage *image;
+
 @end
