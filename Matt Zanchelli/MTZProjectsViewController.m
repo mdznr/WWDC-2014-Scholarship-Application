@@ -15,6 +15,9 @@
 ///	The names of the .xib child view controllers.
 @property (strong, nonatomic) NSArray *childViewControllerNibNames;
 
+///	The page control to indicate which page is currently shown.
+@property (strong, nonatomic) UIPageControl *pageControl;
+
 @end
 
 @implementation MTZProjectsViewController
@@ -32,6 +35,26 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	
+	/*
+	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:emailLabel
+														  attribute:NSLayoutAttributeLeft
+														  relatedBy:NSLayoutRelationGreaterThanOrEqual
+															 toItem:emailField
+														  attribute:NSLayoutAttributeLeft
+														 multiplier:1.0f
+														   constant:0.0f]];
+	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:spinner attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:logInButton attribute:NSLayoutAttributeRight multiplier:1.0f constant:10.0f]];
+	[self.view addConstraint:[NSLayoutConstraint constraintWithItem:preview attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:preview attribute:NSLayoutAttributeWidth multiplier:0.625f constant:0.0f]];
+	 */
+	
+	self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-31, self.view.frame.size.width, 10)];
+	self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+	self.pageControl.numberOfPages = 3;
+	self.pageControl.currentPage = 0;
+	self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.5f alpha:0.5f];
+	self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.75f];
+	[self.view addSubview:self.pageControl];
 	
 	self.dataSource = self;
 	self.delegate = self;
@@ -53,15 +76,16 @@
 		return nil;
 	}
 	
-	NSString *nibName = self.childViewControllerNibNames[index];
-	MTZPageViewController *childViewController = [[MTZPageViewController alloc] initWithNibName:nibName bundle:nil];
+	NSString *className = self.childViewControllerNibNames[index];
+	Class pageViewControllerSubclass = NSClassFromString(className);
+	MTZPageViewController *childViewController = [[pageViewControllerSubclass alloc] initWithNibName:className bundle:nil];
 	childViewController.index = index;
 	
 	return childViewController;
 }
 
 
-#pragma mark - UIPageViewControllerDataSource Delegate
+#pragma mark - UIPageViewControllerDataSource Protocol
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
 	  viewControllerBeforeViewController:(UIViewController *)viewController
@@ -93,18 +117,24 @@
 	return [self viewControllerAtIndex:++index];
 }
 
-/*
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-	// The total number of view controllers.
-    return [self.childViewControllerNibNames count];
-}
+#pragma mark - UIPageViewControllerDelegate Protocol
 
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+- (void)pageViewController:(UIPageViewController *)pageViewController
+		didFinishAnimating:(BOOL)finished
+   previousViewControllers:(NSArray *)previousViewControllers
+	   transitionCompleted:(BOOL)completed
 {
-    // The index of the first view controller.
-    return 0;
+	if ( !completed ) {
+		return;
+	}
+	
+#warning not always accurate.
+	
+	// Find the index of current page.
+	MTZPageViewController *currentViewController = (MTZPageViewController *)[self.viewControllers lastObject];
+	NSUInteger index = currentViewController.index;
+//	NSLog(@"%@, %lu", currentViewController, (unsigned long)index);
+	self.pageControl.currentPage = index;
 }
- */
 
 @end

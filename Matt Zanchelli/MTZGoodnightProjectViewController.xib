@@ -6,17 +6,56 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZGoodnightProjectViewController">
             <connections>
+                <outlet property="contentView" destination="ihR-Dv-8tq" id="faD-Qb-PfJ"/>
+                <outlet property="scrollView" destination="wN7-WI-6Nx" id="OYa-sE-aFJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.1019607843" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN7-WI-6Nx">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihR-Dv-8tq" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-rf-Gu1">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="702"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1024" id="b8i-fp-9PR"/>
+                                <constraint firstAttribute="height" constant="2048" id="bmo-Y0-7WX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ihR-Dv-8tq" firstAttribute="leading" secondItem="wN7-WI-6Nx" secondAttribute="leading" id="M3f-Mg-iZt"/>
+                        <constraint firstItem="ihR-Dv-8tq" firstAttribute="top" secondItem="wN7-WI-6Nx" secondAttribute="top" id="MGD-4H-TXX"/>
+                        <constraint firstAttribute="trailing" secondItem="ihR-Dv-8tq" secondAttribute="trailing" id="ZhY-14-B2i"/>
+                        <constraint firstAttribute="bottom" secondItem="ihR-Dv-8tq" secondAttribute="bottom" id="atu-Kz-T86"/>
+                    </constraints>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wN7-WI-6Nx" secondAttribute="trailing" id="Oi6-hM-sPa"/>
+                <constraint firstItem="wN7-WI-6Nx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pcd-N0-o62"/>
+                <constraint firstAttribute="bottom" secondItem="wN7-WI-6Nx" secondAttribute="bottom" id="bnY-EQ-VsJ"/>
+                <constraint firstItem="wN7-WI-6Nx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gDT-Ha-kBM"/>
+            </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

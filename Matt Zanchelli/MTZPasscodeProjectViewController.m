@@ -10,6 +10,9 @@
 
 @interface MTZPasscodeProjectViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
 @end
 
 @implementation MTZPasscodeProjectViewController
