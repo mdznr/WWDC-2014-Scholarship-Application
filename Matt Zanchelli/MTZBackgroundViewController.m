@@ -11,6 +11,9 @@
 #import "MTZTimelineEvent.h"
 #import "MTZTimelineEventView.h"
 
+#import "JTSImageViewController.h"
+#import "JTSImageInfo.h"
+
 @interface MTZBackgroundViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -69,6 +72,24 @@
 - (void)scrollToTop
 {
 	[self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];
+}
+
+- (IBAction)tappedPhoto:(UIButton *)sender
+{
+	// Create image info
+    JTSImageInfo *imageInfo = [[JTSImageInfo alloc] init];
+    imageInfo.image = [sender backgroundImageForState:UIControlStateNormal];
+    imageInfo.referenceRect = sender.frame;
+    imageInfo.referenceView = sender.superview;
+	
+    // Setup view controller
+    JTSImageViewController *imageViewer = [[JTSImageViewController alloc]
+                                           initWithImageInfo:imageInfo
+                                           mode:JTSImageViewControllerMode_Image
+                                           backgroundStyle:JTSImageViewControllerBackgroundStyle_ScaledDimmed];
+    
+    // Present the view controller.
+    [imageViewer showFromViewController:self transition:JTSImageViewControllerTransition_FromOriginalPosition];
 }
 
 

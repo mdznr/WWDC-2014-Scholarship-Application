@@ -29,6 +29,13 @@
 		C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C998232C18F25C5400983B36 /* MyriadSetPro-Thin.ttf */; };
 		C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C998233118F25F5B00983B36 /* MyriadPro-Regular.otf */; };
 		C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C998233418F260FB00983B36 /* UIFont+MTZStyles.m */; };
+		C9AF881218F5AD5B005E0CEC /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF880718F5AD5B005E0CEC /* JTSAnimatedGIFUtility.m */; };
+		C9AF881318F5AD5B005E0CEC /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF880918F5AD5B005E0CEC /* JTSImageInfo.m */; };
+		C9AF881418F5AD5B005E0CEC /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF880B18F5AD5B005E0CEC /* JTSImageViewController.m */; };
+		C9AF881518F5AD5B005E0CEC /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF880D18F5AD5B005E0CEC /* JTSSimpleImageDownloader.m */; };
+		C9AF881618F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF880F18F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m */; };
+		C9AF881718F5AD5B005E0CEC /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF881118F5AD5B005E0CEC /* UIImage+JTSImageEffects.m */; };
+		C9AF881918F5ADF3005E0CEC /* college.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9AF881818F5ADF3005E0CEC /* college.jpg */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
@@ -86,6 +93,19 @@
 		C998233318F260FB00983B36 /* UIFont+MTZStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+MTZStyles.h"; sourceTree = "<group>"; };
 		C998233418F260FB00983B36 /* UIFont+MTZStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+MTZStyles.m"; sourceTree = "<group>"; };
 		C9AF880018F5134E005E0CEC /* MTZSectionViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZSectionViewControllerProtocol.h; sourceTree = "<group>"; };
+		C9AF880618F5AD5B005E0CEC /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		C9AF880718F5AD5B005E0CEC /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		C9AF880818F5AD5B005E0CEC /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		C9AF880918F5AD5B005E0CEC /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		C9AF880A18F5AD5B005E0CEC /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		C9AF880B18F5AD5B005E0CEC /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		C9AF880C18F5AD5B005E0CEC /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		C9AF880D18F5AD5B005E0CEC /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		C9AF880E18F5AD5B005E0CEC /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		C9AF880F18F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		C9AF881018F5AD5B005E0CEC /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		C9AF881118F5AD5B005E0CEC /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		C9AF881818F5ADF3005E0CEC /* college.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = college.jpg; sourceTree = "<group>"; };
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
 		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
@@ -172,6 +192,7 @@
 				C9AF880418F51C22005E0CEC /* About Me */,
 				C9AF880318F51C1B005E0CEC /* Background */,
 				C9AF880118F51C06005E0CEC /* Projects */,
+				C9AF880518F5AD5B005E0CEC /* JTSImageViewController */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998233018F25C5900983B36 /* Fonts */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
@@ -245,6 +266,7 @@
 				C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */,
 				C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */,
 				C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */,
+				C9AF881818F5ADF3005E0CEC /* college.jpg */,
 			);
 			name = Background;
 			sourceTree = "<group>";
@@ -256,6 +278,25 @@
 				C998232418F255C100983B36 /* MTZAboutViewController.m */,
 			);
 			name = "About Me";
+			sourceTree = "<group>";
+		};
+		C9AF880518F5AD5B005E0CEC /* JTSImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C9AF880618F5AD5B005E0CEC /* JTSAnimatedGIFUtility.h */,
+				C9AF880718F5AD5B005E0CEC /* JTSAnimatedGIFUtility.m */,
+				C9AF880818F5AD5B005E0CEC /* JTSImageInfo.h */,
+				C9AF880918F5AD5B005E0CEC /* JTSImageInfo.m */,
+				C9AF880A18F5AD5B005E0CEC /* JTSImageViewController.h */,
+				C9AF880B18F5AD5B005E0CEC /* JTSImageViewController.m */,
+				C9AF880C18F5AD5B005E0CEC /* JTSSimpleImageDownloader.h */,
+				C9AF880D18F5AD5B005E0CEC /* JTSSimpleImageDownloader.m */,
+				C9AF880E18F5AD5B005E0CEC /* UIApplication+JTSImageViewController.h */,
+				C9AF880F18F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m */,
+				C9AF881018F5AD5B005E0CEC /* UIImage+JTSImageEffects.h */,
+				C9AF881118F5AD5B005E0CEC /* UIImage+JTSImageEffects.m */,
+			);
+			path = JTSImageViewController;
 			sourceTree = "<group>";
 		};
 		C9B4633018F4C3F8000D480D /* Honeycrisp */ = {
@@ -374,6 +415,7 @@
 				C998221818EDAC1E00983B36 /* Images.xcassets in Resources */,
 				C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */,
 				C998221318EDAC1E00983B36 /* Main.storyboard in Resources */,
+				C9AF881918F5ADF3005E0CEC /* college.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AF881218F5AD5B005E0CEC /* JTSAnimatedGIFUtility.m in Sources */,
 				C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */,
 				C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */,
 				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
@@ -399,13 +442,18 @@
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
 				C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */,
 				C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */,
+				C9AF881718F5AD5B005E0CEC /* UIImage+JTSImageEffects.m in Sources */,
 				C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */,
+				C9AF881518F5AD5B005E0CEC /* JTSSimpleImageDownloader.m in Sources */,
 				C9B4632418F4C388000D480D /* MTZHoneycrispProjectViewController.m in Sources */,
 				C998220C18EDAC1E00983B36 /* main.m in Sources */,
 				C9B4632E18F4C3DC000D480D /* MTZGoodnightProjectViewController.m in Sources */,
+				C9AF881618F5AD5B005E0CEC /* UIApplication+JTSImageViewController.m in Sources */,
 				C9B4632918F4C3BF000D480D /* MTZPasscodeProjectViewController.m in Sources */,
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
+				C9AF881418F5AD5B005E0CEC /* JTSImageViewController.m in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
+				C9AF881318F5AD5B005E0CEC /* JTSImageInfo.m in Sources */,
 				C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
