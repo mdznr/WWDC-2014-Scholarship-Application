@@ -7,11 +7,12 @@
         <!--Projects View Controller-->
         <scene sceneID="Uou-Yu-Rvg">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Pc8-xI-Faj" userLabel="Projects View Controller" customClass="MTZProjectsViewController" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="Projects" transitionStyle="scroll" pageSpacing="85" navigationOrientation="horizontal" spineLocation="none" id="Pc8-xI-Faj" userLabel="Projects View Controller" customClass="MTZProjectsViewController" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="805"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7L-jF-2Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +105,7 @@
         <!--About Me View Controller-->
         <scene sceneID="lZi-Hi-iGB">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="usf-5j-UWD" userLabel="About Me View Controller" customClass="MTZAboutViewController" sceneMemberID="viewController">
+                <viewController title="About Me" automaticallyAdjustsScrollViewInsets="NO" id="usf-5j-UWD" userLabel="About Me View Controller" customClass="MTZAboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kE0-jG-MCS"/>
                         <viewControllerLayoutGuide type="bottom" id="IJV-g1-qgV"/>
@@ -197,7 +198,7 @@
         <!--Background View Controller-->
         <scene sceneID="EVH-iP-Bqs">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FGp-Z3-zL5" userLabel="Background View Controller" customClass="MTZBackgroundViewController" sceneMemberID="viewController">
+                <viewController title="Background" automaticallyAdjustsScrollViewInsets="NO" id="FGp-Z3-zL5" userLabel="Background View Controller" customClass="MTZBackgroundViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Goc-4X-p3A"/>
                         <viewControllerLayoutGuide type="bottom" id="qFj-5X-gVf"/>
