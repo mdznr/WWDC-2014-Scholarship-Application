@@ -55,6 +55,11 @@
 	self.content = @[event1, event2, event3, event4, event5, event6];
 }
 
+- (void)scrollToTop
+{
+	[self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];
+}
+
 
 #pragma mark - UITableViewDataSource
 
@@ -87,28 +92,5 @@
 {
 	return self.content.count;
 }
-
-
-#pragma mark - UITableViewDelegate
-
-
-#pragma mark - UIViewController Misc.
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

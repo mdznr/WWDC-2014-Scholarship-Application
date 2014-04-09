@@ -6,9 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZPasscodeProjectViewController">
             <connections>
-                <outlet property="contentView" destination="s9a-Pj-lNg" id="3vk-BG-zQX"/>
-                <outlet property="headerView" destination="XCU-KM-NdB" id="7dD-oq-Ji1"/>
-                <outlet property="scrollView" destination="DOH-3B-SaZ" id="wge-eC-8P8"/>
+                <outlet property="contentView" destination="s9a-Pj-lNg" id="hh4-2S-HoD"/>
+                <outlet property="headerView" destination="XCU-KM-NdB" id="nQu-uc-oAv"/>
+                <outlet property="scrollView" destination="DOH-3B-SaZ" id="yzI-Yq-8md"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

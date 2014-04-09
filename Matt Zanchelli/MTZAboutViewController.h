@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTZAboutViewController : UIViewController
+#import "MTZSectionViewControllerProtocol.h"
+
+@interface MTZAboutViewController : UIViewController <MTZSectionViewControllerProtocol>
 
 @end

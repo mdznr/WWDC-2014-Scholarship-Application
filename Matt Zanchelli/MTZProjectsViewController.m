@@ -70,6 +70,9 @@
 	Class pageViewControllerSubclass = NSClassFromString(className);
 	MTZPageViewController *childViewController = [[pageViewControllerSubclass alloc] initWithNibName:className bundle:nil];
 	childViewController.index = index;
+
+#warning Try not to clip.
+	childViewController.view.clipsToBounds = NO;
 	
 	return childViewController;
 }
@@ -127,6 +130,12 @@
 	// Return the next view controller.
 	return [self viewControllerAtIndex:++index];
 }
+
+- (void)scrollToTop
+{
+	[((MTZPageViewController *)[self.childViewControllers lastObject]) scrollToTop];
+}
+
 
 #pragma mark - UIPageViewControllerDelegate Protocol
 
