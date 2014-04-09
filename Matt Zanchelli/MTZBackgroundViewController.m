@@ -11,8 +11,7 @@
 #import "MTZTimelineEvent.h"
 #import "MTZTimelineEventView.h"
 
-#import "JTSImageViewController.h"
-#import "JTSImageInfo.h"
+#import "PSPushPopPressView.h"
 
 @interface MTZBackgroundViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,27 +32,33 @@
 	
 	MTZTimelineEvent *event1 = [MTZTimelineEvent eventWithDate:@"Dec. 2004"
 														 title:@"Bought my first iPod."
-												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Every day of my life is working towards that goal."];
+												   description:@"As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Every day of my life is working towards that goal."
+														  image:[UIImage imageNamed:@"college.jpg"]];
 	
 	MTZTimelineEvent *event2 = [MTZTimelineEvent eventWithDate:@"Aug. 2006"
 														 title:@"Bought my first Mac."
-												   description:@"After a couple years of collecting iPods, I knew it was time to also get a Mac. I used them occasionally at school and found them to be much more enjoyable to use than any other computer I had ever used before."];
+												   description:@"After a couple years of collecting iPods, I knew it was time to also get a Mac. I used them occasionally at school and found them to be much more enjoyable to use than any other computer I had ever used before."
+														 image:[UIImage imageNamed:@"college.jpg"]];
 	
 	MTZTimelineEvent *event3 = [MTZTimelineEvent eventWithDate:@"Aug. 2007"
 														 title:@"Started High School."
-												   description:@"By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I was inspired by and learned from fantastic Mac designers. I started designing icons and user interfaces for fun."];
+												   description:@"By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I was inspired by and learned from fantastic Mac designers. I started designing icons and user interfaces for fun."
+														 image:[UIImage imageNamed:@"college.jpg"]];
 	
 	MTZTimelineEvent *event4 = [MTZTimelineEvent eventWithDate:@"Oct. 2007"
 														 title:@"Began Freelancing."
-												   description:@"I had enough experience with designing and building websites that I could do freelance design and web work. I loved my time designing logos, business cards, and websites for friends and locals in my community."];
+												   description:@"I had enough experience with designing and building websites that I could do freelance design and web work. I loved my time designing logos, business cards, and websites for friends and locals in my community."
+														 image:[UIImage imageNamed:@"college.jpg"]];
 	
 	MTZTimelineEvent *event5 = [MTZTimelineEvent eventWithDate:@"Apr. 2008"
 														 title:@"Started DJ BMZ."
-												   description:@"I became very interested in music and started collecting equipment to playback and manipulate music. My neighbour and I started DJing parties and other events. Eventually that turned into a profitable business that’s still running to this day."];
+												   description:@"I became very interested in music and started collecting equipment to playback and manipulate music. My neighbour and I started DJing parties and other events. Eventually that turned into a profitable business that’s still running to this day."
+														 image:[UIImage imageNamed:@"college.jpg"]];
 	
 	MTZTimelineEvent *event6 = [MTZTimelineEvent eventWithDate:@"Aug. 2011"
 														 title:@"Started College."
-												   description:@"I figured out that the design I’m most interested in was in software, so I decided to go to school for Computer Science. I met by best friend, Peter, who taught me how to take what I learned in class and build native apps for Mac and iOS."];
+												   description:@"I figured out that the design I’m most interested in was in software, so I decided to go to school for Computer Science. I met by best friend, Peter, who taught me how to take what I learned in class and build native apps for Mac and iOS."
+														 image:[UIImage imageNamed:@"college.jpg"]];
 	
 	self.content = @[event1, event2, event3, event4, event5, event6];
 }
@@ -72,24 +77,6 @@
 - (void)scrollToTop
 {
 	[self.tableView setContentOffset:CGPointMake(0, -self.tableView.contentInset.top) animated:YES];
-}
-
-- (IBAction)tappedPhoto:(UIButton *)sender
-{
-	// Create image info
-    JTSImageInfo *imageInfo = [[JTSImageInfo alloc] init];
-    imageInfo.image = [sender backgroundImageForState:UIControlStateNormal];
-    imageInfo.referenceRect = sender.frame;
-    imageInfo.referenceView = sender.superview;
-	
-    // Setup view controller
-    JTSImageViewController *imageViewer = [[JTSImageViewController alloc]
-                                           initWithImageInfo:imageInfo
-                                           mode:JTSImageViewControllerMode_Image
-                                           backgroundStyle:JTSImageViewControllerBackgroundStyle_ScaledDimmed];
-    
-    // Present the view controller.
-    [imageViewer showFromViewController:self transition:JTSImageViewControllerTransition_FromOriginalPosition];
 }
 
 
