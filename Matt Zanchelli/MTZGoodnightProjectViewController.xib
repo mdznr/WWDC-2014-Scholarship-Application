@@ -89,6 +89,6 @@
     </objects>
     <resources>
         <image name="Goodnight-Background" width="1024" height="702"/>
-        <image name="Goodnight-iPhone" width="322" height="641"/>
+        <image name="Goodnight-iPhone" width="390" height="752"/>
     </resources>
 </document>
