@@ -10,6 +10,10 @@
 
 @interface MTZPageViewController : UIViewController
 
+///	<#Description#>
 @property (assign, nonatomic) NSInteger index;
+
+///	<#Description#>
+- (void)scrollToTop;
 
 @end

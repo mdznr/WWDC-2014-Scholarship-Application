@@ -8,6 +8,8 @@
 
 #import "MTZViewController.h"
 
+#import "MTZSectionViewControllerProtocol.h"
+
 @interface MTZViewController ()
 
 ///	The view to contain the selected section.
@@ -53,11 +55,12 @@
 - (void)setIndex:(NSUInteger)index
 {
 	if ( _index == index) {
+		// Ask the section to scroll to top.
+		[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) scrollToTop];
 		return;
 	}
 	
 	_index = index;
-	
 	
 	switch ( index ) {
 		case 0:
@@ -116,7 +119,7 @@
 - (void)addChildViewController:(UIViewController *)childController
 {
 	[super addChildViewController:childController];
-	childController.view.frame = self.containerView.frame;
+	childController.view.frame = self.containerView.bounds;
 	[self.containerView addSubview:childController.view];
 	[childController didMoveToParentViewController:self];
 }

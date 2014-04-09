@@ -10,7 +10,7 @@
 
 @interface MTZViewController : UIViewController
 
-///	<#Description#>
+///	The section view controller to display.
 @property (nonatomic) UIViewController *containingViewController;
 
 @end
