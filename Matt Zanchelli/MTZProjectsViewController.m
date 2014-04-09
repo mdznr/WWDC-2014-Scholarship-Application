@@ -36,6 +36,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
+	UIView *pageControlHoldingView = [[UIView alloc] initWithFrame:CGRectMake(483, 729, 58, 26)];
+	pageControlHoldingView.backgroundColor = [UIColor whiteColor];
+	pageControlHoldingView.alpha = 0.9f;
+	pageControlHoldingView.layer.cornerRadius = 13.0f;
+	[self.view addSubview:pageControlHoldingView];
+	
 	self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-31, self.view.frame.size.width, 10)];
 	self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 	self.pageControl.numberOfPages = 3;
