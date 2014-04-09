@@ -20,6 +20,8 @@ typedef NS_ENUM(NSUInteger, MTZStyle){
 	MTZStyleEventDetail,
 	
 	// Projects
+	MTZStyleProjectTitle,
+	MTZStyleProjectDescription,
 };
 
 @interface UILabel (MTZStyles)
