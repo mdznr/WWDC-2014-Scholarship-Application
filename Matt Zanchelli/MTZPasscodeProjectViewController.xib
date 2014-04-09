@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZPasscodeProjectViewController">
             <connections>
                 <outlet property="contentView" destination="s9a-Pj-lNg" id="3vk-BG-zQX"/>
+                <outlet property="headerView" destination="XCU-KM-NdB" id="7dD-oq-Ji1"/>
                 <outlet property="scrollView" destination="DOH-3B-SaZ" id="wge-eC-8P8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,7 +25,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCU-KM-NdB">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCU-KM-NdB" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="702"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>

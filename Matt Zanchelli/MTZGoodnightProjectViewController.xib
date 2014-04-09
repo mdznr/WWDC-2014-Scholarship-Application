@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZGoodnightProjectViewController">
             <connections>
                 <outlet property="contentView" destination="ihR-Dv-8tq" id="faD-Qb-PfJ"/>
+                <outlet property="headerView" destination="cnp-rf-Gu1" id="ObJ-xW-Tax"/>
                 <outlet property="scrollView" destination="wN7-WI-6Nx" id="OYa-sE-aFJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,7 +25,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="2048"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-rf-Gu1">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cnp-rf-Gu1" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="702"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
