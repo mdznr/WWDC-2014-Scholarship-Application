@@ -50,6 +50,7 @@
 	
 	// Load first view controller.
 	[self setSelectedIndex:0];
+	[self.segmentedControl setSelectedSegmentIndex:0];
 }
 
 - (BOOL)prefersStatusBarHidden
