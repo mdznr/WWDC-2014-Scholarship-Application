@@ -16,9 +16,6 @@
 ///	Whether or not the delegate was just set.
 @property (nonatomic) BOOL delegateJustSet;
 
-///	Whether or not the data source was just set.
-@property (nonatomic) BOOL dataSourceJustSet;
-
 @end
 
 @implementation RS3DSegmentedControl
@@ -28,8 +25,8 @@
 	self = [super init];
 	if (self) {
 		[self commonInit];
-    }
-    return self;
+	}
+	return self;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -43,11 +40,11 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
+	self = [super initWithFrame:frame];
+	if (self) {
 		[self commonInit];
-    }
-    return self;
+	}
+	return self;
 }
 
 - (void)commonInit
@@ -85,45 +82,40 @@
 {
 	_dataSource = dataSource;
 	
-    NSUInteger itemToScrollTo = 0;
-    
-    [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
-    
-	_dataSourceJustSet = YES;
-    
-    _carousel.delegate = self;
-    
-    [_carousel reloadData];
+	NSUInteger itemToScrollTo = 0;
+	
+	[_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
+
+	
+	_carousel.delegate = self;
+	
+	[_carousel reloadData];
 }
 
 - (void)setDelegate:(id<RS3DSegmentedControlDelegate>)delegate
 {
-    _delegate = delegate;
-    
-    NSUInteger itemToScrollTo = 0;
-    
-    [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
-    
-    _delegateJustSet = YES;
-    
-    _carousel.delegate = self;
-    
-    [_carousel reloadData];
+	_delegate = delegate;
+	
+	NSUInteger itemToScrollTo = 0;
+	
+	[_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
+	
+	_delegateJustSet = YES;
+	
+	_carousel.delegate = self;
+	
+	[_carousel reloadData];
 }
 
-- (NSUInteger)selectedSegmentIndex
+- (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex animated:(BOOL)animated
 {
-    return _carousel.currentItemIndex;
+	_selectedSegmentIndex = selectedSegmentIndex;
+	[_carousel scrollToItemAtIndex:selectedSegmentIndex animated:animated];
 }
 
-- (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex animated:(BOOL)animated
+- (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex
 {
-    [_carousel scrollToItemAtIndex:selectedSegmentIndex animated:animated];
-}
-
-- (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex
-{
-    [self setSelectedSegmentIndex:selectedSegmentIndex animated:YES];
+	[self setSelectedSegmentIndex:selectedSegmentIndex animated:YES];
 }
 
 
@@ -138,44 +130,48 @@
   viewForItemAtIndex:(NSUInteger)index
 		 reusingView:(UIView *)view
 {
-    if ( !view ) {
-        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, self.frame.size.height)];
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-        label.backgroundColor = [UIColor clearColor];
-		label.textColor = self.textColor;
+	if ( !view ) {
+		view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, self.frame.size.height)];
+		
+		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+		label.backgroundColor = [UIColor clearColor];
+		if ( index == _selectedSegmentIndex ) {
+			label.textColor = [UIColor redColor];
+		} else {
+			label.textColor = self.textColor;
+		}
 		label.font = self.font;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.tag = 1;
-        
-        [view addSubview:label];
-    }
-    
-    UILabel *label = (UILabel *)[view viewWithTag:1];
-    
+		label.textAlignment = NSTextAlignmentCenter;
+		label.tag = 1;
+		
+		[view addSubview:label];
+	}
+	
+	UILabel *label = (UILabel *)[view viewWithTag:1];
+	
 	label.text = [_dataSource segmentedControl:self titleForSegmentAtIndex:index];
-    
-    return view;
+	
+	return view;
 }
 
 - (CGFloat)carousel:(iCarousel *)carousel
 	 valueForOption:(iCarouselOption)option
 		withDefault:(CGFloat)value;
 {
-    switch ( option ) {
-        case iCarouselOptionWrap:
-            return NO;
-        case iCarouselOptionFadeMax:
-            return 0.0f;
-        case iCarouselOptionFadeMin:
-            return 0.0f;
-        case iCarouselOptionFadeRange:
-            return 3.25f;
-        case iCarouselOptionOffsetMultiplier:
-            return 1.0f;
-        default:
-            return value;
-    }
+	switch ( option ) {
+		case iCarouselOptionWrap:
+			return NO;
+		case iCarouselOptionFadeMax:
+			return 0.0f;
+		case iCarouselOptionFadeMin:
+			return 0.0f;
+		case iCarouselOptionFadeRange:
+			return 3.25f;
+		case iCarouselOptionOffsetMultiplier:
+			return 1.0f;
+		default:
+			return value;
+	}
 }
 
 - (CATransform3D)carousel:(iCarousel *)carousel
@@ -183,17 +179,17 @@
 			baseTransform:(CATransform3D)transform
 {
 	// The number of items in the carousel, if it were fully circular.
-    NSUInteger count = 1280;
-    
+	NSUInteger count = 1280;
+	
 	// The spacing between items.
-    CGFloat spacing = 1.2f;
-    
-    CGFloat arc = M_PI * 1.0f;
-    
-    CGFloat radius = fmaxf(100 * spacing / 2.0f, 100 * spacing / 2.0f / tanf(arc/2.0f/count));
-    CGFloat angle = offset / count * arc;
-    
-    return CATransform3DTranslate(transform, radius * sin(angle), 0.0f, radius * cos(angle) - radius);
+	CGFloat spacing = 1.2f;
+	
+	CGFloat arc = M_PI * 1.0f;
+	
+	CGFloat radius = fmaxf(100 * spacing / 2.0f, 100 * spacing / 2.0f / tanf(arc/2.0f/count));
+	CGFloat angle = offset / count * arc;
+	
+	return CATransform3DTranslate(transform, radius * sin(angle), 0.0f, radius * cos(angle) - radius);
 }
 
 - (void)carousel:(iCarousel *)carousel willSelectItemAtIndex:(NSUInteger)index
@@ -201,10 +197,25 @@
 	NSLog(@"DID CHG %ld", index);
 	
 	if ( _delegateJustSet ) {
-        _delegateJustSet = NO;
-        return;
-    }
+		_delegateJustSet = NO;
+		return;
+	}
 	
+//	[carousel reloadItemAtIndex:_selectedSegmentIndex animated:NO];
+//	[carousel reloadItemAtIndex:index animated:NO];
+	
+	// Change style of previously selected segment.
+	UIView *old = [carousel itemViewAtIndex:_selectedSegmentIndex];
+	((UILabel *)[old.subviews firstObject]).textColor = [UIColor blackColor];
+	
+	// Change style of newly selected segment.
+	UIView *new = [carousel itemViewAtIndex:index];
+	((UILabel *)[new.subviews firstObject]).textColor = [UIColor redColor];
+	
+	// Update the selected segment data.
+	_selectedSegmentIndex = index;
+	
+	// Notify delegate that the segment has been selected.
 	[_delegate segmentedControl:self didSelectSegmentAtIndex:index];
 }
 
