@@ -47,7 +47,7 @@
 @property (nonatomic, weak) id<RS3DSegmentedControlDelegate> delegate;
 
 ///	The index number identifying the selected segment.
-@property (nonatomic, assign) NSUInteger selectedSegmentIndex;
+@property (nonatomic, assign) NSInteger selectedSegmentIndex;
 
 
 #pragma mark - Customization
