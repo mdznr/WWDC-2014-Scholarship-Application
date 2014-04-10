@@ -74,6 +74,7 @@
 	
 	// Defaults.
 	self.textColor = [UIColor blackColor];
+	self.selectedTextColor = self.tintColor;
 	self.font = [UIFont systemFontOfSize:17.0f];
 	
 	[self addSubview:_carousel];
@@ -175,10 +176,10 @@ forAlternateState:(BOOL)selected
 {
 	if ( selected ) {
 		AUIAnimatableLabel *label = (AUIAnimatableLabel *)[view viewWithTag:1];
-		label.textColor = [UIColor redColor];
+		label.textColor = self.selectedTextColor;
 	} else {
 		AUIAnimatableLabel *label = (AUIAnimatableLabel *)[view viewWithTag:1];
-		label.textColor = [UIColor blackColor];
+		label.textColor = self.textColor;
 	}
 }
 

@@ -56,6 +56,10 @@
 /// @discussion The default value for this property is a black color (set through the @c blackColor class method of @c UIColor).
 @property (nonatomic, retain) UIColor *textColor;
 
+///	The color of text on a select segment.
+/// @discussion The default value for this property is @c tintColor.
+@property (nonatomic, retain) UIColor *selectedTextColor;
+
 ///	The font of the text.
 /// @discussion The default value for this property is the system font at a size of 17 points (using the @c systemFontOfSize: class method of @c UIFont).
 @property (nonatomic, retain) UIFont *font;
