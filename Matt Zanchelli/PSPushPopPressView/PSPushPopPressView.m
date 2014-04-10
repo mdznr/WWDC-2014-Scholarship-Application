@@ -281,13 +281,14 @@
                          _scaleTransform = CGAffineTransformIdentity;
                          self.transform = CGAffineTransformIdentity;
                          
+#warning Fix issue of moving frame when it's in a scrollview/tableview.
                          CGRect correctedInitialFrame = [self superviewCorrectedInitialFrame];
 						 [self setFrame:correctedInitialFrame];
-                     }
-                     completion: ^(BOOL finished) {
+					 }
+					 completion:^(BOOL finished) {
 //						NSLog(@"moveViewToOriginalPositionAnimated [complete] finished:%d, bounces:%d", finished, bounces);
 						_fullscreenAnimationActive = NO;
-						if ( !self.isBeingDragged ) {
+						if ( !self.isBeingDragged && finished ) {
 							[self detachViewToWindow:NO];
 						}
 						if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidAnimateToOriginalFrame:)]) {
@@ -302,7 +303,7 @@
 		[self.pushPopPressViewDelegate pushPopPressViewWillAnimateToFullscreenWindowFrame:self duration:kPSAnimationDuration];
     }
 	
-    BOOL viewChanged = [self detachViewToWindow:YES];
+	BOOL viewChanged = [self detachViewToWindow:YES];
     self.fullscreen = YES;
 	
 	[UIView animateWithDuration:animated ? kPSAnimationDuration : 0.0f
@@ -346,7 +347,7 @@
 
 - (void)startedGesture:(UIGestureRecognizer *)gesture
 {
-    [self detachViewToWindow:YES];
+	[self detachViewToWindow:YES];
     UIPinchGestureRecognizer *pinch = [gesture isKindOfClass:[UIPinchGestureRecognizer class]] ? (UIPinchGestureRecognizer *)gesture : nil;
     _gesturesEnded = NO;
     if ( pinch ) {
