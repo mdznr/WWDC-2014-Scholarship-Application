@@ -16,6 +16,9 @@
 ///	Whether or not the delegate was just set.
 @property (nonatomic) BOOL delegateJustSet;
 
+///	Whether or not the data source was just set.
+@property (nonatomic) BOOL dataSourceJustSet;
+
 @end
 
 @implementation RS3DSegmentedControl
@@ -54,7 +57,6 @@
 		NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
 		NSString *bundlePath = [resourcePath stringByAppendingPathComponent:@"RS3DSegmentedControl.bundle"];
 		NSString *imagePath = [bundlePath stringByAppendingPathComponent:@"RS3DSegmentedControlBg.png"];
-		
 		bg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:imagePath]];
 	}
 	
@@ -68,7 +70,7 @@
 	_carousel.stopAtItemBoundary = NO;
 	_carousel.dataSource = self;
 	
-	// Defaults
+	// Defaults.
 	self.textColor = [UIColor blackColor];
 	self.font = [UIFont systemFontOfSize:17.0f];
 	
@@ -87,6 +89,21 @@
     [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
     
     _delegateJustSet = YES;
+    
+    _carousel.delegate = self;
+    
+    [_carousel reloadData];
+}
+
+- (void)setDataSource:(id<RS3DSegmentedControlDataSource>)dataSource
+{
+	_dataSource = dataSource;
+	
+    NSUInteger itemToScrollTo = 0;
+    
+    [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
+    
+	_dataSourceJustSet = YES;
     
     _carousel.delegate = self;
     
@@ -113,7 +130,7 @@
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    return [_delegate numberOfSegmentsIn3DSegmentedControl:self];
+	return [_dataSource numberOfSegmentsInSegmentedControl:self];
 }
 
 - (UIView *)carousel:(iCarousel *)carousel
@@ -135,7 +152,7 @@
     
     UILabel *label = (UILabel *)[view viewWithTag:1];
     
-    label.text = [_delegate titleForSegmentAtIndex:index segmentedControl:self];
+	label.text = [_dataSource segmentedControl:self titleForSegmentAtIndex:index];
     
     return view;
 }
@@ -190,7 +207,7 @@
         return;
     }
 
-    [_delegate didSelectSegmentAtIndex:carousel.currentItemIndex segmentedControl:self];
+	[_delegate segmentedControl:self didSelectSegmentAtIndex:carousel.currentItemIndex];
 }
 
 @end
