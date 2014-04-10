@@ -51,17 +51,6 @@
 
 - (void)commonInit
 {
-#warning expose image as property
-	static UIImageView *bg = nil;
-	if ( !bg ) {
-		NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
-		NSString *bundlePath = [resourcePath stringByAppendingPathComponent:@"RS3DSegmentedControl.bundle"];
-		NSString *imagePath = [bundlePath stringByAppendingPathComponent:@"RS3DSegmentedControlBg.png"];
-		bg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:imagePath]];
-	}
-	
-	[self addSubview:bg];
-	
 	_carousel = [[iCarousel alloc] initWithFrame:self.bounds];
 	_carousel.backgroundColor = [UIColor clearColor];
 	_carousel.type = iCarouselTypeCustom;
@@ -90,7 +79,6 @@
 	NSUInteger itemToScrollTo = 0;
 	
 	[_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
-
 	
 	_carousel.delegate = self;
 	
@@ -223,8 +211,6 @@ forAlternateState:(BOOL)selected
 
 - (void)carousel:(iCarousel *)carousel willSelectItemAtIndex:(NSUInteger)index
 {
-	NSLog(@"DID CHG %ld", index);
-	
 	if ( _delegateJustSet ) {
 		_delegateJustSet = NO;
 		return;
@@ -245,12 +231,12 @@ forAlternateState:(BOOL)selected
 
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
-	NSLog(@"Did SEL %ld", index);
+	
 }
 
 - (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel
 {
-	NSLog(@"Did END %ld", (long)carousel.currentItemIndex);
+	
 }
 
 @end

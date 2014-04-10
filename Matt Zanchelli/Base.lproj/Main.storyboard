@@ -43,6 +43,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </navigationBar>
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="8x3-15-BuX" userLabel="Indicator">
+                                        <rect key="frame" x="506" y="0.0" width="12" height="6"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
                                     <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="96a-UP-4BE" userLabel="Segmented Control" customClass="RS3DSegmentedControl">
                                         <rect key="frame" x="212" y="4" width="600" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,6 +235,7 @@
         <image name="About - Camera" width="149" height="68"/>
         <image name="About - Music" width="149" height="68"/>
         <image name="About - Photo" width="234" height="234"/>
+        <image name="Indicator" width="12" height="6"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
