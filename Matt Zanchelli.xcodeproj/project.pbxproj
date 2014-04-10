@@ -32,6 +32,10 @@
 		C9AF881918F5ADF3005E0CEC /* college.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9AF881818F5ADF3005E0CEC /* college.jpg */; };
 		C9AF881F18F5E613005E0CEC /* PSPushPopPressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF881E18F5E613005E0CEC /* PSPushPopPressView.m */; };
 		C9AF882118F5E61D005E0CEC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C9AF882018F5E61D005E0CEC /* LICENSE */; };
+		C9AF887118F62C9A005E0CEC /* RS3DSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF887018F62C9A005E0CEC /* RS3DSegmentedControl.m */; };
+		C9AF887318F62CA0005E0CEC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C9AF887218F62CA0005E0CEC /* LICENSE */; };
+		C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF887618F62CF7005E0CEC /* iCarousel.m */; };
+		C9AF887918F62CFC005E0CEC /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = C9AF887818F62CFC005E0CEC /* LICENSE.md */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
@@ -93,6 +97,12 @@
 		C9AF881D18F5E613005E0CEC /* PSPushPopPressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPushPopPressView.h; sourceTree = "<group>"; };
 		C9AF881E18F5E613005E0CEC /* PSPushPopPressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPushPopPressView.m; sourceTree = "<group>"; };
 		C9AF882018F5E61D005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C9AF886F18F62C9A005E0CEC /* RS3DSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RS3DSegmentedControl.h; sourceTree = "<group>"; };
+		C9AF887018F62C9A005E0CEC /* RS3DSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RS3DSegmentedControl.m; sourceTree = "<group>"; };
+		C9AF887218F62CA0005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C9AF887518F62CF7005E0CEC /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		C9AF887618F62CF7005E0CEC /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		C9AF887818F62CFC005E0CEC /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
 		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
@@ -179,6 +189,7 @@
 				C9AF880418F51C22005E0CEC /* About Me */,
 				C9AF880318F51C1B005E0CEC /* Background */,
 				C9AF880118F51C06005E0CEC /* Projects */,
+				C9AF886E18F62C9A005E0CEC /* RS3DSegmentedControl */,
 				C9AF881C18F5E613005E0CEC /* PSPushPopPressView */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998233018F25C5900983B36 /* Fonts */,
@@ -275,6 +286,27 @@
 				C9AF881E18F5E613005E0CEC /* PSPushPopPressView.m */,
 			);
 			path = PSPushPopPressView;
+			sourceTree = "<group>";
+		};
+		C9AF886E18F62C9A005E0CEC /* RS3DSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				C9AF887218F62CA0005E0CEC /* LICENSE */,
+				C9AF886F18F62C9A005E0CEC /* RS3DSegmentedControl.h */,
+				C9AF887018F62C9A005E0CEC /* RS3DSegmentedControl.m */,
+				C9AF887418F62CF7005E0CEC /* iCarousel */,
+			);
+			path = RS3DSegmentedControl;
+			sourceTree = "<group>";
+		};
+		C9AF887418F62CF7005E0CEC /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				C9AF887818F62CFC005E0CEC /* LICENSE.md */,
+				C9AF887518F62CF7005E0CEC /* iCarousel.h */,
+				C9AF887618F62CF7005E0CEC /* iCarousel.m */,
+			);
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
 		C9B4633018F4C3F8000D480D /* Honeycrisp */ = {
@@ -386,10 +418,12 @@
 			files = (
 				C9B4632A18F4C3BF000D480D /* MTZPasscodeProjectViewController.xib in Resources */,
 				C998233218F25F6000983B36 /* MyriadPro-Regular.otf in Resources */,
+				C9AF887318F62CA0005E0CEC /* LICENSE in Resources */,
 				C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */,
 				C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */,
 				C9B4632F18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib in Resources */,
 				C9AF882118F5E61D005E0CEC /* LICENSE in Resources */,
+				C9AF887918F62CFC005E0CEC /* LICENSE.md in Resources */,
 				C9B4632518F4C388000D480D /* MTZHoneycrispProjectViewController.xib in Resources */,
 				C998221818EDAC1E00983B36 /* Images.xcassets in Resources */,
 				C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */,
@@ -423,7 +457,9 @@
 				C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */,
 				C9B4632418F4C388000D480D /* MTZHoneycrispProjectViewController.m in Sources */,
 				C998220C18EDAC1E00983B36 /* main.m in Sources */,
+				C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */,
 				C9B4632E18F4C3DC000D480D /* MTZGoodnightProjectViewController.m in Sources */,
+				C9AF887118F62C9A005E0CEC /* RS3DSegmentedControl.m in Sources */,
 				C9B4632918F4C3BF000D480D /* MTZPasscodeProjectViewController.m in Sources */,
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
