@@ -8,6 +8,8 @@
 
 #import "RS3DSegmentedControl.h"
 
+#import "AUIAnimatableLabel.h"
+
 @interface RS3DSegmentedControl () <iCarouselDelegate, iCarouselDataSource>
 
 ///	The carousel.
@@ -68,6 +70,8 @@
 	_carousel.stopAtItemBoundary = NO;
 	_carousel.dataSource = self;
 	
+	_selectedSegmentIndex = -1;
+	
 	// Defaults.
 	self.textColor = [UIColor blackColor];
 	self.font = [UIFont systemFontOfSize:17.0f];
@@ -109,7 +113,17 @@
 
 - (void)setSelectedSegmentIndex:(NSInteger)selectedSegmentIndex animated:(BOOL)animated
 {
+	if ( _selectedSegmentIndex == selectedSegmentIndex ) { return; }
+	
+	// Change style of previously selected segment.
+	[self.carousel reloadItemAtIndex:_selectedSegmentIndex forAlternateState:NO animated:YES];
+	
+	// Update the selected segment data.
 	_selectedSegmentIndex = selectedSegmentIndex;
+	
+	// Change style of newly selected segment.
+	[self.carousel reloadItemAtIndex:_selectedSegmentIndex forAlternateState:YES animated:YES];
+	
 	[_carousel scrollToItemAtIndex:selectedSegmentIndex animated:animated];
 }
 
@@ -133,13 +147,9 @@
 	if ( !view ) {
 		view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, self.frame.size.height)];
 		
-		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+		AUIAnimatableLabel *label = [[AUIAnimatableLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
 		label.backgroundColor = [UIColor clearColor];
-		if ( index == _selectedSegmentIndex ) {
-			label.textColor = [UIColor redColor];
-		} else {
-			label.textColor = self.textColor;
-		}
+		label.textColor = self.textColor;
 		label.font = self.font;
 		label.textAlignment = NSTextAlignmentCenter;
 		label.tag = 1;
@@ -147,11 +157,29 @@
 		[view addSubview:label];
 	}
 	
-	UILabel *label = (UILabel *)[view viewWithTag:1];
-	
+	AUIAnimatableLabel *label = (AUIAnimatableLabel *)[view viewWithTag:1];
 	label.text = [_dataSource segmentedControl:self titleForSegmentAtIndex:index];
 	
+	if ( index == _selectedSegmentIndex ) {
+		[self carousel:carousel modifyView:view forAlternateState:YES];;
+	} else {
+		[self carousel:carousel modifyView:view forAlternateState:NO];
+	}
+	
 	return view;
+}
+
+- (void)carousel:(iCarousel *)carousel
+	  modifyView:(UIView *)view
+forAlternateState:(BOOL)selected
+{
+	if ( selected ) {
+		AUIAnimatableLabel *label = (AUIAnimatableLabel *)[view viewWithTag:1];
+		label.textColor = [UIColor redColor];
+	} else {
+		AUIAnimatableLabel *label = (AUIAnimatableLabel *)[view viewWithTag:1];
+		label.textColor = [UIColor blackColor];
+	}
 }
 
 - (CGFloat)carousel:(iCarousel *)carousel
@@ -179,7 +207,7 @@
 			baseTransform:(CATransform3D)transform
 {
 	// The number of items in the carousel, if it were fully circular.
-	NSUInteger count = 1280;
+	NSUInteger count = 640;
 	
 	// The spacing between items.
 	CGFloat spacing = 1.2f;
@@ -201,19 +229,14 @@
 		return;
 	}
 	
-//	[carousel reloadItemAtIndex:_selectedSegmentIndex animated:NO];
-//	[carousel reloadItemAtIndex:index animated:NO];
-	
 	// Change style of previously selected segment.
-	UIView *old = [carousel itemViewAtIndex:_selectedSegmentIndex];
-	((UILabel *)[old.subviews firstObject]).textColor = [UIColor blackColor];
-	
-	// Change style of newly selected segment.
-	UIView *new = [carousel itemViewAtIndex:index];
-	((UILabel *)[new.subviews firstObject]).textColor = [UIColor redColor];
+	[carousel reloadItemAtIndex:_selectedSegmentIndex forAlternateState:NO animated:YES];
 	
 	// Update the selected segment data.
 	_selectedSegmentIndex = index;
+	
+		// Change style of newly selected segment.
+	[carousel reloadItemAtIndex:_selectedSegmentIndex forAlternateState:YES animated:YES];
 	
 	// Notify delegate that the segment has been selected.
 	[_delegate segmentedControl:self didSelectSegmentAtIndex:index];

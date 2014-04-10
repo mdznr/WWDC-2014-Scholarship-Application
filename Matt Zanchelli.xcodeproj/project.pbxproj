@@ -33,6 +33,10 @@
 		C9AF881F18F5E613005E0CEC /* PSPushPopPressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF881E18F5E613005E0CEC /* PSPushPopPressView.m */; };
 		C9AF887118F62C9A005E0CEC /* RS3DSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF887018F62C9A005E0CEC /* RS3DSegmentedControl.m */; };
 		C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF887618F62CF7005E0CEC /* iCarousel.m */; };
+		C9AF888618F6660E005E0CEC /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF888318F6660E005E0CEC /* AUIAnimatableLabel.m */; };
+		C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */; };
+		C9AF888918F6661C005E0CEC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AF888818F6661C005E0CEC /* CoreText.framework */; };
+		C9AF888B18F66622005E0CEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AF888A18F66622005E0CEC /* QuartzCore.framework */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
@@ -100,6 +104,13 @@
 		C9AF887518F62CF7005E0CEC /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		C9AF887618F62CF7005E0CEC /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		C9AF887818F62CFC005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C9AF888218F6660E005E0CEC /* AUIAnimatableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUIAnimatableLabel.h; sourceTree = "<group>"; };
+		C9AF888318F6660E005E0CEC /* AUIAnimatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUIAnimatableLabel.m; sourceTree = "<group>"; };
+		C9AF888418F6660E005E0CEC /* UIFont+CoreTextExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CoreTextExtensions.h"; sourceTree = "<group>"; };
+		C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
+		C9AF888818F6661C005E0CEC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		C9AF888A18F66622005E0CEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C9AF888C18F6669A005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
 		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
@@ -123,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AF888B18F66622005E0CEC /* QuartzCore.framework in Frameworks */,
+				C9AF888918F6661C005E0CEC /* CoreText.framework in Frameworks */,
 				C998220218EDAC1E00983B36 /* CoreGraphics.framework in Frameworks */,
 				C998220418EDAC1E00983B36 /* UIKit.framework in Frameworks */,
 				C998220018EDAC1E00983B36 /* Foundation.framework in Frameworks */,
@@ -164,6 +177,8 @@
 		C99821FE18EDAC1E00983B36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9AF888A18F66622005E0CEC /* QuartzCore.framework */,
+				C9AF888818F6661C005E0CEC /* CoreText.framework */,
 				C99821FF18EDAC1E00983B36 /* Foundation.framework */,
 				C998220118EDAC1E00983B36 /* CoreGraphics.framework */,
 				C998220318EDAC1E00983B36 /* UIKit.framework */,
@@ -186,6 +201,7 @@
 				C9AF880418F51C22005E0CEC /* About Me */,
 				C9AF880318F51C1B005E0CEC /* Background */,
 				C9AF880118F51C06005E0CEC /* Projects */,
+				C9AF888118F6660E005E0CEC /* AUIAnimatableLabel */,
 				C9AF886E18F62C9A005E0CEC /* RS3DSegmentedControl */,
 				C9AF881C18F5E613005E0CEC /* PSPushPopPressView */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
@@ -304,6 +320,18 @@
 				C9AF887618F62CF7005E0CEC /* iCarousel.m */,
 			);
 			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		C9AF888118F6660E005E0CEC /* AUIAnimatableLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C9AF888C18F6669A005E0CEC /* LICENSE */,
+				C9AF888218F6660E005E0CEC /* AUIAnimatableLabel.h */,
+				C9AF888318F6660E005E0CEC /* AUIAnimatableLabel.m */,
+				C9AF888418F6660E005E0CEC /* UIFont+CoreTextExtensions.h */,
+				C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */,
+			);
+			path = AUIAnimatableLabel;
 			sourceTree = "<group>";
 		};
 		C9B4633018F4C3F8000D480D /* Honeycrisp */ = {
@@ -457,7 +485,9 @@
 				C9B4632918F4C3BF000D480D /* MTZPasscodeProjectViewController.m in Sources */,
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
+				C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */,
 				C9AF881F18F5E613005E0CEC /* PSPushPopPressView.m in Sources */,
+				C9AF888618F6660E005E0CEC /* AUIAnimatableLabel.m in Sources */,
 				C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
