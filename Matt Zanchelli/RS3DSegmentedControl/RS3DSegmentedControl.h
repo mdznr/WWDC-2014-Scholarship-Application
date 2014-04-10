@@ -12,23 +12,27 @@
 
 @class RS3DSegmentedControl;
 
+@protocol RS3DSegmentedControlDataSource <NSObject>
+
+///	Asks the data source to return the number of segments in the segmented control.
+///	@param segmentedControl An object representing the segmented control requesting this information.
+///	@return The number of sections in segmented control.
+- (NSUInteger)numberOfSegmentsInSegmentedControl:(RS3DSegmentedControl *)segmentedControl;
+
+///	Asks the data source for the title of the header of the specified section of the table view.
+///	@param segmentedControl The segmented control object asking for the title.
+///	@param index An index number identifying a segment of segmented control.
+///	@return A string to use as the title of the segment. If you return nil , the segment will have no title.
+- (NSString *)segmentedControl:(RS3DSegmentedControl *)segmentedControl titleForSegmentAtIndex:(NSUInteger)index;
+
+@end
+
 @protocol RS3DSegmentedControlDelegate <NSObject>
 
-///	<#Description#>
-///	@param segmentedControl <#segmentedControl description#>
-///	@return <#return value description#>
-- (NSUInteger)numberOfSegmentsIn3DSegmentedControl:(RS3DSegmentedControl *)segmentedControl;
-
-///	<#Description#>
-///	@param segmentIndex     <#segmentIndex description#>
-///	@param segmentedControl <#segmentedControl description#>
-///	@return <#return value description#>
-- (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl;
-
-///	<#Description#>
-///	@param segmentIndex     <#segmentIndex description#>
-///	@param segmentedControl <#segmentedControl description#>
-- (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex segmentedControl:(RS3DSegmentedControl *)segmentedControl;
+///	Tells the delegate that the specified segment is now selected.
+///	@param segmentedControl A segmented control object informing the delegate about the new segment selection.
+///	@param index The index of the new selected segment in @c segmentedControl.
+- (void)segmentedControl:(RS3DSegmentedControl *)segmentedControl didSelectSegmentAtIndex:(NSUInteger)index;
 
 @end
 
@@ -37,6 +41,9 @@
 
 ///	The object that acts as the delegate of the receiving segmented control.
 @property (nonatomic, weak) id<RS3DSegmentedControlDelegate> delegate;
+
+///	The object that acts as the data source of the receiving segmented control.
+@property (nonatomic, weak) id<RS3DSegmentedControlDataSource> dataSource;
 
 ///	The index number identifying the selected segment.
 @property (nonatomic, assign) NSUInteger selectedSegmentIndex;

@@ -11,7 +11,7 @@
 #import "MTZSectionViewControllerProtocol.h"
 #import "RS3DSegmentedControl/RS3DSegmentedControl.h"
 
-@interface MTZViewController () <RS3DSegmentedControlDelegate>
+@interface MTZViewController () <RS3DSegmentedControlDelegate, RS3DSegmentedControlDataSource>
 
 ///	The view to contain the selected section.
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -44,6 +44,7 @@
 	
 	self.segmentedControl.font = [UIFont fontForSectionButton];
 	self.segmentedControl.delegate = self;
+	self.segmentedControl.dataSource = self;
 	
 	_index = -1;
 	
@@ -93,21 +94,21 @@
 
 #pragma mark - Segmented Control Delegate
 
-- (NSUInteger)numberOfSegmentsIn3DSegmentedControl:(RS3DSegmentedControl *)segmentedControl
+- (NSUInteger)numberOfSegmentsInSegmentedControl:(RS3DSegmentedControl *)segmentedControl
 {
 	return [self.segments count];
 }
 
-- (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex
-					segmentedControl:(RS3DSegmentedControl *)segmentedControl
+- (NSString *)segmentedControl:(RS3DSegmentedControl *)segmentedControl
+		titleForSegmentAtIndex:(NSUInteger)index
 {
-	return self.segments[segmentIndex];
+	return self.segments[index];
 }
 
-- (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex
-			   segmentedControl:(RS3DSegmentedControl *)segmentedControl
+- (void)segmentedControl:(RS3DSegmentedControl *)segmentedControl
+ didSelectSegmentAtIndex:(NSUInteger)index
 {
-	[self setSelectedIndex:segmentIndex];
+	[self setSelectedIndex:index];
 }
 
 
@@ -142,19 +143,6 @@
 	[childController willMoveToParentViewController:nil];
 	[childController.view removeFromSuperview];
 	[childController removeFromParentViewController];
-}
-
-
-#pragma mark - Actions
-
-- (IBAction)didChangeSelectedSegment:(UISegmentedControl *)sender
-{
-	[self setSelectedIndex:sender.selectedSegmentIndex];
-}
-
-- (IBAction)didTapSegmentedControl:(UISegmentedControl *)sender
-{
-	[self setSelectedIndex:sender.selectedSegmentIndex];
 }
 
 
