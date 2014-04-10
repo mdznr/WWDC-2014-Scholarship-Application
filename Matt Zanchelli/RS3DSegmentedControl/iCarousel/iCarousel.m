@@ -1138,43 +1138,34 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 
 - (UIView *)loadViewAtIndex:(NSInteger)index withContainerView:(UIView *)containerView
 {
-    [self pushAnimationState:NO];
+//    [self pushAnimationState:NO];
     
     UIView *view = nil;
-    if (index < 0)
-    {
+    if ( index < 0 ) {
         view = [_dataSource carousel:self placeholderViewAtIndex:(int)ceilf((CGFloat)_numberOfPlaceholdersToShow/2.0f) + index reusingView:[self dequeuePlaceholderView]];
-    }
-    else if (index >= _numberOfItems)
-    {
+    } else if ( index >= _numberOfItems ) {
         view = [_dataSource carousel:self placeholderViewAtIndex:_numberOfPlaceholdersToShow/2.0f + index - _numberOfItems reusingView:[self dequeuePlaceholderView]];
-    }
-    else
-    {
+    } else {
         view = [_dataSource carousel:self viewForItemAtIndex:index reusingView:[self dequeueItemView]];
     }
     
-    if (view == nil)
-    {
+    if ( view == nil ) {
         view = [[UIView alloc] init];
     }
+	
     [self setItemView:view forIndex:index];
-    if (containerView)
-    {
-        //get old item view
+    if ( containerView ) {
+        // Get old item view.
         UIView *oldItemView = [containerView.subviews lastObject];
-        if (index < 0 || index >= _numberOfItems)
-        {
+        if ( index < 0 || index >= _numberOfItems ) {
             [self queuePlaceholderView:oldItemView];
-        }
-        else
-        {
+        } else {
             [self queueItemView:oldItemView];
         }
         
-        //set container frame
+        // Set container frame.
         CGRect frame = containerView.bounds;
-        if(_vertical) {
+        if ( _vertical ) {
             frame.size.width = view.frame.size.width;
             frame.size.height = MIN(_itemWidth, view.frame.size.height);
         } else {
@@ -1184,24 +1175,20 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
         containerView.bounds = frame;
         
 #ifdef ICAROUSEL_MACOS
-        
-        //clipping works differently on Mac OS
+        // Clipping works differently on Mac OS.
         [containerView setBoundsSize:view.frame.size];
-        
 #endif
         
-        //set view frame
+        // Set view frame.
         frame = view.frame;
         frame.origin.x = (containerView.bounds.size.width - frame.size.width) / 2.0f;
         frame.origin.y = (containerView.bounds.size.height - frame.size.height) / 2.0f;
         view.frame = frame;
         
-        //switch views
+        // Switch views.
         [oldItemView removeFromSuperview];
         [containerView addSubview:view];
-    }
-    else
-    {
+    } else {
         [_contentView addSubview:[self containView:view]];
     }
     [self transformItemView:view atIndex:index];
@@ -1445,11 +1432,8 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     index = [self clampedIndex:index];
     UIView *itemView = [self itemViewAtIndex:index];
     
-    if (animated)
-    {
-        
+    if ( animated ) {
 #ifdef ICAROUSEL_IOS
-        
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:0.1];
         [UIView setAnimationDelegate:itemView.superview];
@@ -1470,9 +1454,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
         _scrollOffset = self.currentItemIndex;
         [self didScroll];
         [UIView commitAnimations];
-        
 #else
-        
         [CATransaction begin];
         [CATransaction setAnimationDuration:0.1];
         [CATransaction setCompletionBlock:^{
@@ -1493,12 +1475,8 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
         _scrollOffset = self.currentItemIndex;
         [self didScroll];
         [CATransaction commit];
-        
 #endif
-        
-    }
-    else
-    {
+    } else {
         [self pushAnimationState:NO];
         [self queueItemView:itemView];
         [itemView.superview removeFromSuperview];
@@ -1519,19 +1497,15 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     CGFloat alpha = [self alphaForItemWithOffset:offset];
     
 #ifdef ICAROUSEL_IOS
-    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.1f];
     itemView.superview.layer.opacity = alpha;
     [UIView commitAnimations];
-    
 #else
-    
     [CATransaction begin];
     [CATransaction setAnimationDuration:0.1f];
     itemView.superview.layer.opacity = alpha;
     [CATransaction commit];
-    
 #endif
     
 }
@@ -1547,25 +1521,19 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     UIView *itemView = [self loadViewAtIndex:index];
     itemView.superview.layer.opacity = 0.0f;
     
-    if (_itemWidth == 0)
-    {
+    if ( _itemWidth == 0 ) {
         [self updateItemWidth];
     }
     
-    if (animated)
-    {
-        
+    if ( animated ) {
 #ifdef ICAROUSEL_IOS
-        
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:INSERT_DURATION];
         [UIView setAnimationDelegate:self];
         [UIView setAnimationDidStopSelector:@selector(loadUnloadViews)];
         [self transformItemViews];
         [UIView commitAnimations];
-        
 #else
-        
         [CATransaction begin];
         [CATransaction setAnimationDuration:INSERT_DURATION];
         [CATransaction setCompletionBlock:^{
@@ -1573,43 +1541,55 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
         }];
         [self transformItemViews];
         [CATransaction commit];
-        
 #endif
-        
         [self performSelector:@selector(fadeInItemView:) withObject:itemView afterDelay:INSERT_DURATION - 0.1f];
-    }
-    else
-    {
+    } else {
         [self pushAnimationState:NO];
         [self transformItemViews]; 
         [self popAnimationState];
         itemView.superview.layer.opacity = 1.0f; 
     }
     
-    if (_scrollOffset < 0.0f)
-    {
+    if ( _scrollOffset < 0.0f ) {
         [self scrollToItemAtIndex:0 animated:(animated && _numberOfPlaceholders)];
     }
 }
 
 - (void)reloadItemAtIndex:(NSInteger)index animated:(BOOL)animated
 {
-    //get container view
+    // Get container view.
     UIView *containerView = [[self itemViewAtIndex:index] superview];
-    if (containerView)
-    {
-        if (animated)
-        {
-            //fade transition
+    if ( containerView ) {
+        if ( animated ) {
+            // Fade transition.
             CATransition *transition = [CATransition animation];
             transition.duration = INSERT_DURATION;
             transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
             transition.type = kCATransitionFade;
             [containerView.layer addAnimation:transition forKey:nil];
         }
-        
-        //reload view
-        [self loadViewAtIndex:index withContainerView:containerView];
+		
+		// Reload view.
+		[self loadViewAtIndex:index withContainerView:containerView];
+    }
+}
+
+- (void)reloadItemAtIndex:(NSInteger)index forAlternateState:(BOOL)state animated:(BOOL)animated
+{
+    // Get container view.
+    UIView *containerView = [[self itemViewAtIndex:index] superview];
+	
+    if ( containerView ) {
+		// The animation should be the duration of the scroll, or 0 if not animating.
+		NSTimeInterval duration = animated ? SCROLL_DURATION : 0;
+		
+		[CATransaction begin];
+		[CATransaction setValue:[NSNumber numberWithDouble:duration] forKey:kCATransactionAnimationDuration];
+		// Reload view.
+		[_dataSource carousel:self
+				   modifyView:containerView
+			forAlternateState:state];
+		[CATransaction commit];
     }
 }
 

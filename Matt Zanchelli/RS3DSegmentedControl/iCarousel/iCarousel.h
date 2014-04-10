@@ -149,6 +149,7 @@ typedef NS_ENUM(NSUInteger, iCarouselOption)
 - (void)removeItemAtIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)insertItemAtIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)reloadItemAtIndex:(NSInteger)index animated:(BOOL)animated;
+- (void)reloadItemAtIndex:(NSInteger)index forAlternateState:(BOOL)state animated:(BOOL)animated;
 
 - (void)reloadData;
 
@@ -164,6 +165,7 @@ typedef NS_ENUM(NSUInteger, iCarouselOption)
 
 - (NSUInteger)numberOfPlaceholdersInCarousel:(iCarousel *)carousel;
 - (UIView *)carousel:(iCarousel *)carousel placeholderViewAtIndex:(NSUInteger)index reusingView:(UIView *)view;
+- (void)carousel:(iCarousel *)carousel modifyView:(UIView *)view forAlternateState:(BOOL)selected;
 
 @end
 
