@@ -9,8 +9,9 @@
 #import "MTZViewController.h"
 
 #import "MTZSectionViewControllerProtocol.h"
+#import "RS3DSegmentedControl/RS3DSegmentedControl.h"
 
-@interface MTZViewController ()
+@interface MTZViewController () <RS3DSegmentedControlDelegate>
 
 ///	The view to contain the selected section.
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -18,12 +19,9 @@
 ///	The index of the selected segment.
 @property (nonatomic) NSUInteger index;
 
-///	The view that marks the selected segment.
-@property (weak, nonatomic) IBOutlet UIView *selectedView;
+@property (strong, nonatomic) NSArray *segments;
 
-@property (weak, nonatomic) IBOutlet UIButton *aboutMeButton;
-@property (weak, nonatomic) IBOutlet UIButton *backgroundButton;
-@property (weak, nonatomic) IBOutlet UIButton *projectsButton;
+@property (weak, nonatomic) IBOutlet RS3DSegmentedControl *segmentedControl;
 
 @end
 
@@ -38,18 +36,19 @@
 	UIScreenEdgePanGestureRecognizer *edge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(didPanFromEdge:)];
 	edge.minimumNumberOfTouches = 1;
 	edge.maximumNumberOfTouches = 1;
-	edge.edges = UIRectEdgeLeft|UIRectEdgeRight;
+	edge.edges = UIRectEdgeLeft | UIRectEdgeRight;
 	[self.view addGestureRecognizer:edge];
 	
-	// Set proper text styles.
-	self.aboutMeButton.titleLabel.font = [UIFont fontForSectionButton];
-	self.backgroundButton.titleLabel.font = [UIFont fontForSectionButton];
-	self.projectsButton.titleLabel.font = [UIFont fontForSectionButton];
+	// The title for each segment (corresponds to the names of segues).
+	self.segments = @[@"About Me", @"Background", @"Projects"];
+	
+	self.segmentedControl.font = [UIFont fontForSectionButton];
+	self.segmentedControl.delegate = self;
 	
 	_index = -1;
 	
 	// Load first view controller.
-	self.index = 0;
+	[self setSelectedIndex:0];
 }
 
 - (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
@@ -70,9 +69,14 @@
 	}
 }
 
-- (void)setIndex:(NSUInteger)index
+- (void)setSelectedIndex:(NSUInteger)index
 {
-	if ( _index == index) {
+	// Out of bounds.
+	if ( index > [self.segments count] - 1 ) {
+		return;
+	}
+	
+	if ( _index == index ) {
 		// Ask the section to scroll to top.
 		[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) scrollToTop];
 		return;
@@ -80,26 +84,30 @@
 	
 	_index = index;
 	
-	switch ( index ) {
-		case 0:
-			// Load About view controller by default.
-			[self performSegueWithIdentifier:@"About Me" sender:self];
-			[self updateSelectedSegment:self.aboutMeButton];
-			break;
-		case 1:
-			[self performSegueWithIdentifier:@"Background" sender:self];
-			[self updateSelectedSegment:self.backgroundButton];
-			break;
-		case 2:
-			[self performSegueWithIdentifier:@"Projects" sender:self];
-			[self updateSelectedSegment:self.projectsButton];
-			break;
-		default:
-			break;
-	}
+	[self performSegueWithIdentifier:self.segments[index] sender:self];
 	
 	// Ask child view controller to flash scroll indicators.
 	[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
+}
+
+
+#pragma mark - Segmented Control Delegate
+
+- (NSUInteger)numberOfSegmentsIn3DSegmentedControl:(RS3DSegmentedControl *)segmentedControl
+{
+	return [self.segments count];
+}
+
+- (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex
+					segmentedControl:(RS3DSegmentedControl *)segmentedControl
+{
+	return self.segments[segmentIndex];
+}
+
+- (void)didSelectSegmentAtIndex:(NSUInteger)segmentIndex
+			   segmentedControl:(RS3DSegmentedControl *)segmentedControl
+{
+	[self setSelectedIndex:segmentIndex];
 }
 
 
@@ -139,40 +147,14 @@
 
 #pragma mark - Actions
 
-/// Tapped the button for the "About Me" section.
-/// @param sender The segment that was tapped.
-- (IBAction)tappedAboutMeSectionButton:(id)sender
+- (IBAction)didChangeSelectedSegment:(UISegmentedControl *)sender
 {
-	self.index = 0;
+	[self setSelectedIndex:sender.selectedSegmentIndex];
 }
 
-/// Tapped the button for the "Background" section.
-/// @param sender The segment that was tapped.
-- (IBAction)tappedBackgroundSectionButton:(id)sender
+- (IBAction)didTapSegmentedControl:(UISegmentedControl *)sender
 {
-	self.index = 1;
-}
-
-/// Tapped the button for the "Projects" section.
-/// @param sender The segment that was tapped.
-- (IBAction)tappedProjectsSectionButton:(id)sender
-{
-	self.index = 2;
-}
-
-/// Update the position of the selected segment view to represent the selected segment.
-///	@param sender The segment that was selected.
-- (void)updateSelectedSegment:(id)sender
-{
-	[UIView animateWithDuration:0.5f
-						  delay:0.0f
-		 usingSpringWithDamping:0.75f
-		  initialSpringVelocity:0.0f
-						options:UIViewAnimationOptionBeginFromCurrentState
-					 animations:^{
-						 self.selectedView.center = CGPointMake(((UIView *)sender).center.x, self.selectedView.center.y);
-					 }
-					 completion:^(BOOL finished) {}];
+	[self setSelectedIndex:sender.selectedSegmentIndex];
 }
 
 
