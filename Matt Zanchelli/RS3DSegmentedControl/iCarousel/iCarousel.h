@@ -180,6 +180,8 @@ typedef NS_ENUM(NSUInteger, iCarouselOption)
 - (void)carouselWillBeginDecelerating:(iCarousel *)carousel;
 - (void)carouselDidEndDecelerating:(iCarousel *)carousel;
 
+- (void)carousel:(iCarousel *)carousel willSelectItemAtIndex:(NSUInteger)index;
+
 - (BOOL)carousel:(iCarousel *)carousel shouldSelectItemAtIndex:(NSInteger)index;
 - (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index;
 

@@ -52,6 +52,7 @@
 
 - (void)commonInit
 {
+#warning expose image as property
 	static UIImageView *bg = nil;
 	if ( !bg ) {
 		NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
@@ -80,21 +81,6 @@
 	self.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
-- (void)setDelegate:(id<RS3DSegmentedControlDelegate>)delegate
-{
-    _delegate = delegate;
-    
-    NSUInteger itemToScrollTo = 0;
-    
-    [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
-    
-    _delegateJustSet = YES;
-    
-    _carousel.delegate = self;
-    
-    [_carousel reloadData];
-}
-
 - (void)setDataSource:(id<RS3DSegmentedControlDataSource>)dataSource
 {
 	_dataSource = dataSource;
@@ -104,6 +90,21 @@
     [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
     
 	_dataSourceJustSet = YES;
+    
+    _carousel.delegate = self;
+    
+    [_carousel reloadData];
+}
+
+- (void)setDelegate:(id<RS3DSegmentedControlDelegate>)delegate
+{
+    _delegate = delegate;
+    
+    NSUInteger itemToScrollTo = 0;
+    
+    [_carousel scrollByNumberOfItems:_carousel.numberOfItems + itemToScrollTo duration:0.9f];
+    
+    _delegateJustSet = YES;
     
     _carousel.delegate = self;
     
@@ -157,11 +158,6 @@
     return view;
 }
 
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index;
-{
-    
-}
-
 - (CGFloat)carousel:(iCarousel *)carousel
 	 valueForOption:(iCarouselOption)option
 		withDefault:(CGFloat)value;
@@ -174,7 +170,7 @@
         case iCarouselOptionFadeMin:
             return 0.0f;
         case iCarouselOptionFadeRange:
-            return 3.0f;
+            return 3.25f;
         case iCarouselOptionOffsetMultiplier:
             return 1.0f;
         default:
@@ -200,14 +196,26 @@
     return CATransform3DTranslate(transform, radius * sin(angle), 0.0f, radius * cos(angle) - radius);
 }
 
-- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel
+- (void)carousel:(iCarousel *)carousel willSelectItemAtIndex:(NSUInteger)index
 {
-    if ( _delegateJustSet ) {
+	NSLog(@"DID CHG %ld", index);
+	
+	if ( _delegateJustSet ) {
         _delegateJustSet = NO;
         return;
     }
+	
+	[_delegate segmentedControl:self didSelectSegmentAtIndex:index];
+}
 
-	[_delegate segmentedControl:self didSelectSegmentAtIndex:carousel.currentItemIndex];
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
+{
+	NSLog(@"Did SEL %ld", index);
+}
+
+- (void)carouselDidEndScrollingAnimation:(iCarousel *)carousel
+{
+	NSLog(@"Did END %ld", (long)carousel.currentItemIndex);
 }
 
 @end

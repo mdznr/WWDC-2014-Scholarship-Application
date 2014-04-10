@@ -52,6 +52,11 @@
 	[self setSelectedIndex:0];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+	return YES;
+}
+
 - (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
 {
 #warning TODO: Enable scrollview panning horizontally between sections.
@@ -143,20 +148,6 @@
 	[childController willMoveToParentViewController:nil];
 	[childController.view removeFromSuperview];
 	[childController removeFromParentViewController];
-}
-
-
-#pragma mark - UIViewController Misc.
-
-- (BOOL)prefersStatusBarHidden
-{
-	return YES;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

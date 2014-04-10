@@ -1431,6 +1431,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 
 - (void)scrollToItemAtIndex:(NSInteger)index duration:(NSTimeInterval)duration
 {
+	[_delegate carousel:self willSelectItemAtIndex:index];
     [self scrollToOffset:index duration:duration];
 }
 

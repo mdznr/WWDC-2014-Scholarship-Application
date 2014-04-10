@@ -27,6 +27,7 @@
 
 @end
 
+
 @protocol RS3DSegmentedControlDelegate <NSObject>
 
 ///	Tells the delegate that the specified segment is now selected.
@@ -39,11 +40,11 @@
 
 @interface RS3DSegmentedControl : UIView
 
-///	The object that acts as the delegate of the receiving segmented control.
-@property (nonatomic, weak) id<RS3DSegmentedControlDelegate> delegate;
-
 ///	The object that acts as the data source of the receiving segmented control.
 @property (nonatomic, weak) id<RS3DSegmentedControlDataSource> dataSource;
+
+///	The object that acts as the delegate of the receiving segmented control.
+@property (nonatomic, weak) id<RS3DSegmentedControlDelegate> delegate;
 
 ///	The index number identifying the selected segment.
 @property (nonatomic, assign) NSUInteger selectedSegmentIndex;
