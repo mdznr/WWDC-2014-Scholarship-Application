@@ -199,7 +199,7 @@ forAlternateState:(BOOL)selected
 	NSUInteger count = 640;
 	
 	// The spacing between items.
-	CGFloat spacing = 1.2f;
+	CGFloat spacing = 1.15f;
 	
 	CGFloat arc = M_PI * 1.0f;
 	
