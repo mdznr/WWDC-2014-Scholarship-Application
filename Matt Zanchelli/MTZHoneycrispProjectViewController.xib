@@ -7,7 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZHoneycrispProjectViewController">
             <connections>
                 <outlet property="abstract" destination="Hfd-V2-nMD" id="vJ4-Zy-g4B"/>
-                <outlet property="content1" destination="1sd-mA-R4W" id="iTJ-2w-VsP"/>
+                <outlet property="content1" destination="1sd-mA-R4W" id="7hQ-cO-3xe"/>
+                <outlet property="content2" destination="ckD-iY-Mfm" id="uAa-AF-w0L"/>
                 <outlet property="contentDescription" destination="T4S-ru-llh" id="ov2-yn-qig"/>
                 <outlet property="contentHeader" destination="Hll-GX-Ny8" id="Bwf-cw-2jX"/>
                 <outlet property="contentQuote" destination="CoE-a1-27h" id="gA3-o2-cah"/>

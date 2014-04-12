@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentDescription;
 @property (weak, nonatomic) IBOutlet UILabel *contentQuote;
 @property (weak, nonatomic) IBOutlet UILabel *content1;
+@property (weak, nonatomic) IBOutlet UILabel *content2;
 
 @property (weak, nonatomic) IBOutlet UILabel *interactionHeader;
 @property (weak, nonatomic) IBOutlet UILabel *interactionDescription;
@@ -52,6 +53,19 @@
 	[self.contextDescription applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.context1 applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.context2 applyMTZStyle:MTZStyleProjectSectionDescription];
+	
+	[self.contentHeader applyMTZStyle:MTZStyleProjectSectionHeader];
+	[self.contentDescription applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.contentQuote applyMTZStyle:MTZStyleProjectSectionQuote];
+	[self.content1 applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.content2 applyMTZStyle:MTZStyleProjectSectionDescription];
+	
+	[self.interactionHeader applyMTZStyle:MTZStyleProjectSectionHeader];
+	[self.interactionDescription applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.interaction1 applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.interaction1Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
+	[self.interaction2 applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.interaction2Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
 }
 
 @end
