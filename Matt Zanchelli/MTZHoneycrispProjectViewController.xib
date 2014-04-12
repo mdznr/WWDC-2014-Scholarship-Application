@@ -17,6 +17,7 @@
                 <outlet property="context2" destination="GcQ-e0-4iF" id="lJH-X1-G4u"/>
                 <outlet property="contextDescription" destination="kvc-k4-cxl" id="vWt-cf-XtU"/>
                 <outlet property="contextHeader" destination="NaE-JD-4O7" id="DmC-Bj-e9m"/>
+                <outlet property="contextualVibrationAmplification" destination="gnH-V5-vg9" id="Hug-C4-lgl"/>
                 <outlet property="description" destination="eeX-NY-eIx" id="rEX-FA-DLE"/>
                 <outlet property="headerView" destination="YvV-Ra-1i8" id="r7S-RY-CJn"/>
                 <outlet property="honeycrisp" destination="Jdc-x6-xeq" id="JM5-he-GOE"/>
@@ -137,11 +138,21 @@ When receiving a notification on a mobile device, the internal vibrator is trigg
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Contextual Vibration Amplification" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-RH-5Jn" userLabel="Contextual Vibration Amplification">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Contextual Vibration Amplification Vibration" translatesAutoresizingMaskIntoConstraints="NO" id="Hbu-uc-Aun" userLabel="Contextual Vibration Amplification Vibration">
                                     <rect key="frame" x="608" y="1222" width="320" height="390"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-V5-vg9" userLabel="Contextual Vibration Amplification Vibration Phone">
+                                    <rect key="frame" x="608" y="1222" width="320" height="390"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" backgroundImage="Honeycrisp - Contextual Vibration Amplification Phone">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didTapVibratingPhone:" destination="-1" eventType="touchUpInside" id="92Y-3p-1Tn"/>
+                                    </connections>
+                                </button>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-e0-4iF" userLabel="Context 2">
                                     <rect key="frame" x="522" y="1721" width="405" height="156"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -471,7 +482,8 @@ out of the way from the user’s hand.</string>
     <resources>
         <image name="Honeycrisp - Adaptive Visual Contrast" width="150" height="314"/>
         <image name="Honeycrisp - Colors" width="472" height="247"/>
-        <image name="Honeycrisp - Contextual Vibration Amplification" width="322" height="416"/>
+        <image name="Honeycrisp - Contextual Vibration Amplification Phone" width="320" height="390"/>
+        <image name="Honeycrisp - Contextual Vibration Amplification Vibration" width="320" height="390"/>
         <image name="Honeycrisp - Crop" width="341" height="230"/>
         <image name="Honeycrisp - Handedness" width="262" height="340"/>
         <image name="Honeycrisp - iPhone" width="1016" height="664"/>
