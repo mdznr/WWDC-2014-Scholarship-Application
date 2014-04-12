@@ -72,5 +72,31 @@
 //	return [UIFont fontWithName:@"MyriadSetPro-Regular" size:21];
 }
 
++ (instancetype)fontForSectionHeader
+{
+	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:34];
+}
+
++ (instancetype)fontForSectionDescriptionFirstLine
+{
+	return [UIFont fontWithName:@"MyriadPro-Bold" size:18];
+}
+
++ (instancetype)fontForSectionDescription
+{
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+}
+
++ (instancetype)fontForSectionQuote
+{
+	return [UIFont fontWithName:@"MyriadSetPro-Thin" size:18];
+}
+
++ (instancetype)fontForSectionAnnotation
+{
+	// TODO: Italics?
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+}
+
 
 @end

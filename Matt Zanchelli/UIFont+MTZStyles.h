@@ -48,4 +48,19 @@
 ///	The font used for project descriptions.
 + (instancetype)fontForProjectDescription;
 
+///	The font used for heading project sections.
++ (instancetype)fontForSectionHeader;
+
+///	The font used for the first line of a section description.
++ (instancetype)fontForSectionDescriptionFirstLine;
+
+///	The font used for the description of a project section.
++ (instancetype)fontForSectionDescription;
+
+///	The font used for a quote in a section.
++ (instancetype)fontForSectionQuote;
+
+/// The font used for an annotation.
++ (instancetype)fontForSectionAnnotation;
+
 @end

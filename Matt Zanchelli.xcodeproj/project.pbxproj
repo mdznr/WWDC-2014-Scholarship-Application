@@ -8,18 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */; };
-		C998220018EDAC1E00983B36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99821FF18EDAC1E00983B36 /* Foundation.framework */; };
-		C998220218EDAC1E00983B36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C998220118EDAC1E00983B36 /* CoreGraphics.framework */; };
-		C998220418EDAC1E00983B36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C998220318EDAC1E00983B36 /* UIKit.framework */; };
 		C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C998220818EDAC1E00983B36 /* InfoPlist.strings */; };
 		C998220C18EDAC1E00983B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220B18EDAC1E00983B36 /* main.m */; };
 		C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220F18EDAC1E00983B36 /* MTZAppDelegate.m */; };
 		C998221318EDAC1E00983B36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C998221118EDAC1E00983B36 /* Main.storyboard */; };
 		C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998221518EDAC1E00983B36 /* MTZViewController.m */; };
 		C998221818EDAC1E00983B36 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C998221718EDAC1E00983B36 /* Images.xcassets */; };
-		C998221F18EDAC1E00983B36 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C998221E18EDAC1E00983B36 /* XCTest.framework */; };
-		C998222018EDAC1E00983B36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99821FF18EDAC1E00983B36 /* Foundation.framework */; };
-		C998222118EDAC1E00983B36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C998220318EDAC1E00983B36 /* UIKit.framework */; };
 		C998222918EDAC1E00983B36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C998222718EDAC1E00983B36 /* InfoPlist.strings */; };
 		C998222B18EDAC1E00983B36 /* Matt_ZanchelliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C998222A18EDAC1E00983B36 /* Matt_ZanchelliTests.m */; };
 		C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C998232118F2050800983B36 /* MTZStoryboardSegue.m */; };
@@ -35,8 +29,6 @@
 		C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF887618F62CF7005E0CEC /* iCarousel.m */; };
 		C9AF888618F6660E005E0CEC /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF888318F6660E005E0CEC /* AUIAnimatableLabel.m */; };
 		C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */; };
-		C9AF888918F6661C005E0CEC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AF888818F6661C005E0CEC /* CoreText.framework */; };
-		C9AF888B18F66622005E0CEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AF888A18F66622005E0CEC /* QuartzCore.framework */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
@@ -63,9 +55,6 @@
 		C9196F3318F2669A003D2E51 /* UILabel+MTZStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MTZStyles.h"; sourceTree = "<group>"; };
 		C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MTZStyles.m"; sourceTree = "<group>"; };
 		C99821FC18EDAC1E00983B36 /* Matt Zanchelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matt Zanchelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C99821FF18EDAC1E00983B36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C998220118EDAC1E00983B36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C998220318EDAC1E00983B36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C998220718EDAC1E00983B36 /* Matt Zanchelli-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Matt Zanchelli-Info.plist"; sourceTree = "<group>"; };
 		C998220918EDAC1E00983B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C998220B18EDAC1E00983B36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,7 +66,6 @@
 		C998221518EDAC1E00983B36 /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
 		C998221718EDAC1E00983B36 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C998221D18EDAC1E00983B36 /* Matt ZanchelliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Matt ZanchelliTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C998221E18EDAC1E00983B36 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C998222618EDAC1E00983B36 /* Matt ZanchelliTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Matt ZanchelliTests-Info.plist"; sourceTree = "<group>"; };
 		C998222818EDAC1E00983B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C998222A18EDAC1E00983B36 /* Matt_ZanchelliTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Matt_ZanchelliTests.m; sourceTree = "<group>"; };
@@ -108,8 +96,6 @@
 		C9AF888318F6660E005E0CEC /* AUIAnimatableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AUIAnimatableLabel.m; sourceTree = "<group>"; };
 		C9AF888418F6660E005E0CEC /* UIFont+CoreTextExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CoreTextExtensions.h"; sourceTree = "<group>"; };
 		C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
-		C9AF888818F6661C005E0CEC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		C9AF888A18F66622005E0CEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9AF888C18F6669A005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
 		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
@@ -134,11 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AF888B18F66622005E0CEC /* QuartzCore.framework in Frameworks */,
-				C9AF888918F6661C005E0CEC /* CoreText.framework in Frameworks */,
-				C998220218EDAC1E00983B36 /* CoreGraphics.framework in Frameworks */,
-				C998220418EDAC1E00983B36 /* UIKit.framework in Frameworks */,
-				C998220018EDAC1E00983B36 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C998221F18EDAC1E00983B36 /* XCTest.framework in Frameworks */,
-				C998222118EDAC1E00983B36 /* UIKit.framework in Frameworks */,
-				C998222018EDAC1E00983B36 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,12 +155,6 @@
 		C99821FE18EDAC1E00983B36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9AF888A18F66622005E0CEC /* QuartzCore.framework */,
-				C9AF888818F6661C005E0CEC /* CoreText.framework */,
-				C99821FF18EDAC1E00983B36 /* Foundation.framework */,
-				C998220118EDAC1E00983B36 /* CoreGraphics.framework */,
-				C998220318EDAC1E00983B36 /* UIKit.framework */,
-				C998221E18EDAC1E00983B36 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
