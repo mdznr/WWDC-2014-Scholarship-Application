@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZHoneycrispProjectViewController">
             <connections>
                 <outlet property="abstract" destination="Hfd-V2-nMD" id="vJ4-Zy-g4B"/>
+                <outlet property="adaptiveVisualContrastDarknessView" destination="Cr4-Cr-Ibp" id="yeZ-NF-K3D"/>
+                <outlet property="adaptiveVisualContrastHigh" destination="TVr-cs-foH" id="kq9-3M-BHu"/>
                 <outlet property="content1" destination="1sd-mA-R4W" id="7hQ-cO-3xe"/>
                 <outlet property="content2" destination="ckD-iY-Mfm" id="uAa-AF-w0L"/>
                 <outlet property="contentDescription" destination="T4S-ru-llh" id="ov2-yn-qig"/>
@@ -178,10 +180,31 @@ The contrast of key on-screen elements can be selectively increased when the app
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Adaptive Visual Contrast" translatesAutoresizingMaskIntoConstraints="NO" id="fFZ-kO-BxS" userLabel="Adaptive Visual Contrast">
-                                    <rect key="frame" x="223" y="1636" width="150" height="314"/>
+                                    <rect key="frame" x="223" y="1610" width="150" height="314"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </imageView>
+                                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Adaptive Visual Contrast High" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-cs-foH" userLabel="Adaptive Visual Contrast High">
+                                    <rect key="frame" x="223" y="1610" width="150" height="314"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <view opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cr4-Cr-Ibp" userLabel="Darkness View">
+                                    <rect key="frame" x="236" y="1656" width="125" height="223"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="71e-Lr-VqP" userLabel="Contrast Control">
+                                    <rect key="frame" x="223" y="1940" width="150" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="Indoors"/>
+                                        <segment title="Outdoors"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="didChangeContrast:" destination="-1" eventType="valueChanged" id="o4H-P9-OYc"/>
+                                    </connections>
+                                </segmentedControl>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hll-GX-Ny8" userLabel="Content">
                                     <rect key="frame" x="96" y="2062" width="405" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -481,6 +504,7 @@ out of the way from the user’s hand.</string>
     </objects>
     <resources>
         <image name="Honeycrisp - Adaptive Visual Contrast" width="150" height="314"/>
+        <image name="Honeycrisp - Adaptive Visual Contrast High" width="150" height="314"/>
         <image name="Honeycrisp - Colors" width="472" height="247"/>
         <image name="Honeycrisp - Contextual Vibration Amplification Phone" width="320" height="390"/>
         <image name="Honeycrisp - Contextual Vibration Amplification Vibration" width="320" height="390"/>
