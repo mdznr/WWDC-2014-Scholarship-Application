@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentDescription;
 @property (weak, nonatomic) IBOutlet UILabel *contentQuote;
 @property (weak, nonatomic) IBOutlet UILabel *content1;
+@property (weak, nonatomic) IBOutlet UIView *photoCropper;
+@property (weak, nonatomic) IBOutlet UIView *photoCropLeft;
+@property (weak, nonatomic) IBOutlet UIView *photoCropRight;
+@property (weak, nonatomic) IBOutlet UIImageView *photoCrop;
 @property (weak, nonatomic) IBOutlet UILabel *content2;
 
 @property (weak, nonatomic) IBOutlet UILabel *interactionHeader;
@@ -45,9 +49,16 @@
 	[self.honeycrisp applyMTZStyle:MTZStyleProjectTitle];
 	[self.description applyMTZStyle:MTZStyleProjectDescription];
 	
-	// TODO: Apply 26 line height
-#warning incorrect line height.
 	self.abstract.font = [UIFont fontWithName:@"MyriadSetPro-Thin" size:18.0f];
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.abstract.text];
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 8.0f;
+	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:
+	 NSMakeRange(0, attributedString.length)];
+	self.abstract.attributedText = attributedString;
 	
 	[self.contextHeader applyMTZStyle:MTZStyleProjectSectionHeader];
 	[self.contextDescription applyMTZStyle:MTZStyleProjectSectionDescription];
@@ -67,5 +78,44 @@
 	[self.interaction2 applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.interaction2Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
 }
+
+- (IBAction)didChangeCropType:(UISegmentedControl *)sender
+{
+	// Hardcoded positions for performance.
+	// Honeycrisp slightly too slow for effective demo.
+	[UIView animateWithDuration:0.3f
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+						 switch ( sender.selectedSegmentIndex ) {
+							 case 2: // Honeycrisp
+							 {
+								 // Shift photo.
+								 self.photoCrop.frame = CGRectOffset(self.photoCropper.bounds, 27, 0);
+								 // Bring in crop.
+								 self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
+								 self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
+							 }	break;
+							 case 1: // Center
+							 {
+								 // Reset photo position.
+								 self.photoCrop.frame = self.photoCropper.bounds;
+								 // Bring in crop.
+								 self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
+								 self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
+							 }	break;
+							 case 0: // Original
+							 {
+								 // Reset photo position.
+								 self.photoCrop.frame = self.photoCropper.bounds;
+								 // Pull back crop.
+								 self.photoCropLeft.frame = CGRectMake(0, 0, 0, self.photoCropper.bounds.size.height);
+								 self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width, 0, 0, self.photoCropper.bounds.size.height);
+							 }	break;
+						 }
+					 }
+					 completion:^(BOOL finished) {}];
+}
+
 
 @end

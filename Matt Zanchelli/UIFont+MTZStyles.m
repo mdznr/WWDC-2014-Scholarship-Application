@@ -95,7 +95,7 @@
 + (instancetype)fontForSectionAnnotation
 {
 	// TODO: Italics?
-	return [UIFont fontWithName:@"MyriadPro-Regular" size:18];
+	return [UIFont fontWithName:@"MyriadPro-Regular" size:13];
 }
 
 

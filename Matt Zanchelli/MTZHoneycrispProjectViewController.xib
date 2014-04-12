@@ -26,6 +26,10 @@
                 <outlet property="interaction2Annotation" destination="RNI-WW-XST" id="Fg6-ov-qux"/>
                 <outlet property="interactionDescription" destination="7fk-oQ-YE2" id="5ld-K4-lNf"/>
                 <outlet property="interactionHeader" destination="G6g-b7-x6b" id="wV0-fg-IKh"/>
+                <outlet property="photoCrop" destination="NFC-fw-rVi" id="2XP-LU-BsJ"/>
+                <outlet property="photoCropLeft" destination="CcG-Jj-MTO" id="4Uf-Wv-VaV"/>
+                <outlet property="photoCropRight" destination="6B6-AF-sJC" id="yk4-7Z-XTp"/>
+                <outlet property="photoCropper" destination="Yq6-NA-Qdr" id="v2I-Fm-4er"/>
                 <outlet property="scrollView" destination="kXY-0w-7v7" id="oJV-bL-DqK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -48,42 +52,47 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
-                                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="e5M-SU-LT6" userLabel="iPhone">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="e5M-SU-LT6" userLabel="iPhone">
                                     <rect key="frame" x="131" y="101" width="1016" height="664"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </imageView>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Honeycrisp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-x6-xeq" userLabel="Honeycrisp">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Honeycrisp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-x6-xeq" userLabel="Honeycrisp">
                                     <rect key="frame" x="96" y="128" width="405" height="55"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A collection of advanced user interface components and tools for developers to use in the next generation of iOS apps." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="345" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-NY-eIx" userLabel="Description">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A collection of advanced user interface components and tools for developers to use in the next generation of iOS apps." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="345" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-NY-eIx" userLabel="Description">
                                     <rect key="frame" x="96" y="187" width="345" height="78"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                     <color key="textColor" red="0.42467421293258667" green="0.42466148734092712" blue="0.42466869950294495" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="662" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-V2-nMD" userLabel="Abstract">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="662" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-V2-nMD" userLabel="Abstract">
                                     <rect key="frame" x="181" y="862" width="662" height="104"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <string key="text">Honeycrisp takes advantage of the unique strengths of post-PC computing devices to create more dynamic, intellegent, and friendly user interfaces. The ideas behind Honeycrisp can be categorized into three sections—or three new connections—to the user interface:
 Context, Content, and User Interaction.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <color key="textColor" red="0.42467421290000001" green="0.42466148729999997" blue="0.42466869950000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Context" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-JD-4O7" userLabel="Context">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Context" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaE-JD-4O7" userLabel="Context">
                                     <rect key="frame" x="96" y="1074" width="405" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-k4-cxl" userLabel="Context Description">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-k4-cxl" userLabel="Context Description">
                                     <rect key="frame" x="96" y="1123" width="405" height="104"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Connecting UI with the environment.">
                                             <attributes>
@@ -104,9 +113,10 @@ The user interface can take advantage of sensors available on these devices—li
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="cdd-UR-23a" userLabel="Context 1">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="cdd-UR-23a" userLabel="Context 1">
                                     <rect key="frame" x="96" y="1305" width="405" height="260"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Contextual Vibration Amplification.">
                                             <attributes>
@@ -127,9 +137,15 @@ When receiving a notification on a mobile device, the internal vibrator is trigg
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-e0-4iF" userLabel="Context 2">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Contextual Vibration Amplification" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-RH-5Jn" userLabel="Contextual Vibration Amplification">
+                                    <rect key="frame" x="608" y="1222" width="320" height="390"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-e0-4iF" userLabel="Context 2">
                                     <rect key="frame" x="522" y="1721" width="405" height="156"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Adaptive Visual Contrast.">
                                             <attributes>
@@ -150,16 +166,23 @@ The contrast of key on-screen elements can be selectively increased when the app
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hll-GX-Ny8" userLabel="Content">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Adaptive Visual Contrast" translatesAutoresizingMaskIntoConstraints="NO" id="fFZ-kO-BxS" userLabel="Adaptive Visual Contrast">
+                                    <rect key="frame" x="223" y="1636" width="150" height="314"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hll-GX-Ny8" userLabel="Content">
                                     <rect key="frame" x="96" y="2062" width="405" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="T4S-ru-llh" userLabel="Content Description">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="T4S-ru-llh" userLabel="Content Description">
                                     <rect key="frame" x="96" y="2111" width="405" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">Connecting the UI with the User's Content.
@@ -181,9 +204,10 @@ The contrast of key on-screen elements can be selectively increased when the app
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-a1-27h" userLabel="Content Quote">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-a1-27h" userLabel="Content Quote">
                                     <rect key="frame" x="522" y="2136" width="405" height="104"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">“Design should never say ‘Look at me’.
@@ -208,9 +232,10 @@ It should always say ‘Look at this’.”
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="1sd-mA-R4W" userLabel="Content 1">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="1sd-mA-R4W" userLabel="Content 1">
                                     <rect key="frame" x="522" y="2319" width="405" height="286"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">Keeping the Subject in a Cropped Photo.
@@ -232,9 +257,45 @@ It should always say ‘Look at this’.”
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="ckD-iY-Mfm" userLabel="Content 2">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yq6-NA-Qdr" userLabel="Photo Cropper">
+                                    <rect key="frame" x="96" y="2324" width="341" height="230"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Crop" translatesAutoresizingMaskIntoConstraints="NO" id="NFC-fw-rVi" userLabel="Cropped Photo">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="230"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcG-Jj-MTO" userLabel="Photo Crop Left">
+                                            <rect key="frame" x="-55" y="0.0" width="55" height="230"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6B6-AF-sJC" userLabel="Photo Crop Right">
+                                            <rect key="frame" x="341" y="0.0" width="55" height="230"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </view>
+                                <segmentedControl contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TCu-UN-icm" userLabel="Crop Type Control">
+                                    <rect key="frame" x="96" y="2569" width="341" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <segments>
+                                        <segment title="Original"/>
+                                        <segment title="Center"/>
+                                        <segment title="Honeycrisp"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="didChangeCropType:" destination="-1" eventType="valueChanged" id="ZRI-Ad-xM3"/>
+                                    </connections>
+                                </segmentedControl>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="ckD-iY-Mfm" userLabel="Content 2">
                                     <rect key="frame" x="96" y="2709" width="405" height="156"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Dynamically Select Interface Colors.">
                                             <attributes>
@@ -255,15 +316,22 @@ The color of interface elements can be chosen dynamically from dominant colors i
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Interaction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6g-b7-x6b" userLabel="User Interaction">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Colors" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-xq-FGd" userLabel="Colors">
+                                    <rect key="frame" x="488" y="2663" width="472" height="247"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Interaction" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6g-b7-x6b" userLabel="User Interaction">
                                     <rect key="frame" x="96" y="2998" width="405" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="7fk-oQ-YE2" userLabel="Interaction Description">
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="7fk-oQ-YE2" userLabel="Interaction Description">
                                     <rect key="frame" x="96" y="3047" width="405" height="156"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">Connecting the UI with user interactions.
@@ -285,9 +353,10 @@ The color of interface elements can be chosen dynamically from dominant colors i
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="lUS-UT-P8h" userLabel="Interaction 1">
-                                    <rect key="frame" x="96" y="3255" width="405" height="312"/>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="410" translatesAutoresizingMaskIntoConstraints="NO" id="lUS-UT-P8h" userLabel="Interaction 1">
+                                    <rect key="frame" x="96" y="3255" width="410" height="312"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">Determining and Adapting to Handedness.
@@ -309,9 +378,10 @@ The color of interface elements can be chosen dynamically from dominant colors i
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="dkR-7J-r5C" userLabel="Interaction 1 Annotation">
-                                    <rect key="frame" x="523" y="3516" width="405" height="52"/>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="dkR-7J-r5C" userLabel="Interaction 1 Annotation">
+                                    <rect key="frame" x="523" y="3512" width="405" height="52"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">The zoom percentage popover appears
@@ -325,9 +395,10 @@ out of the way from the user’s hand.</string>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="8s1-iB-QjZ" userLabel="Interaction 2">
-                                    <rect key="frame" x="521" y="3645" width="405" height="286"/>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="410" translatesAutoresizingMaskIntoConstraints="NO" id="8s1-iB-QjZ" userLabel="Interaction 2">
+                                    <rect key="frame" x="521" y="3645" width="410" height="286"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
                                             <string key="content">Non-Binary Taps.
@@ -349,9 +420,10 @@ out of the way from the user’s hand.</string>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNI-WW-XST" userLabel="Interaction 2 Annotation">
-                                    <rect key="frame" x="96" y="3853" width="405" height="26"/>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNI-WW-XST" userLabel="Interaction 2 Annotation">
+                                    <rect key="frame" x="96" y="3849" width="405" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Tap around to see the effect.">
                                             <attributes>
@@ -363,6 +435,10 @@ out of the way from the user’s hand.</string>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Handedness" translatesAutoresizingMaskIntoConstraints="NO" id="knK-0x-Hgu" userLabel="Handedness">
+                                    <rect key="frame" x="616" y="3157" width="262" height="340"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <constraints>
@@ -393,6 +469,11 @@ out of the way from the user’s hand.</string>
         </view>
     </objects>
     <resources>
+        <image name="Honeycrisp - Adaptive Visual Contrast" width="150" height="314"/>
+        <image name="Honeycrisp - Colors" width="472" height="247"/>
+        <image name="Honeycrisp - Contextual Vibration Amplification" width="322" height="416"/>
+        <image name="Honeycrisp - Crop" width="341" height="230"/>
+        <image name="Honeycrisp - Handedness" width="262" height="340"/>
         <image name="Honeycrisp - iPhone" width="1016" height="664"/>
     </resources>
 </document>
