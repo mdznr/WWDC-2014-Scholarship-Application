@@ -33,6 +33,7 @@
                 <outlet property="photoCropLeft" destination="CcG-Jj-MTO" id="4Uf-Wv-VaV"/>
                 <outlet property="photoCropRight" destination="6B6-AF-sJC" id="yk4-7Z-XTp"/>
                 <outlet property="photoCropper" destination="Yq6-NA-Qdr" id="v2I-Fm-4er"/>
+                <outlet property="pushBackButton" destination="Xxm-SL-LGK" id="rTs-Hy-tGG"/>
                 <outlet property="scrollView" destination="kXY-0w-7v7" id="oJV-bL-DqK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -412,6 +413,10 @@ The color of interface elements can be chosen dynamically from dominant colors i
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Handedness" translatesAutoresizingMaskIntoConstraints="NO" id="knK-0x-Hgu" userLabel="Handedness">
+                                    <rect key="frame" x="616" y="3157" width="262" height="340"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="dkR-7J-r5C" userLabel="Interaction 1 Annotation">
                                     <rect key="frame" x="523" y="3512" width="405" height="52"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -454,6 +459,14 @@ out of the way from the user’s hand.</string>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxm-SL-LGK" userLabel="Push Back Button" customClass="MTZAppIcon">
+                                    <rect key="frame" x="222" y="3686" width="152" height="152"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNI-WW-XST" userLabel="Interaction 2 Annotation">
                                     <rect key="frame" x="96" y="3849" width="405" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -469,10 +482,6 @@ out of the way from the user’s hand.</string>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Handedness" translatesAutoresizingMaskIntoConstraints="NO" id="knK-0x-Hgu" userLabel="Handedness">
-                                    <rect key="frame" x="616" y="3157" width="262" height="340"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <constraints>
