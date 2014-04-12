@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contextHeader;
 @property (weak, nonatomic) IBOutlet UILabel *contextDescription;
 @property (weak, nonatomic) IBOutlet UILabel *context1;
+@property (weak, nonatomic) IBOutlet UIButton *contextualVibrationAmplification;
 @property (weak, nonatomic) IBOutlet UILabel *context2;
 
 @property (weak, nonatomic) IBOutlet UILabel *contentHeader;
@@ -56,8 +57,7 @@
 	paragrahStyle.alignment = NSTextAlignmentCenter;
 	[attributedString addAttribute:NSParagraphStyleAttributeName
 							 value:paragrahStyle
-							 range:
-	 NSMakeRange(0, attributedString.length)];
+							 range:NSMakeRange(0, attributedString.length)];
 	self.abstract.attributedText = attributedString;
 	
 	[self.contextHeader applyMTZStyle:MTZStyleProjectSectionHeader];
@@ -77,6 +77,48 @@
 	[self.interaction1Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
 	[self.interaction2 applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.interaction2Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
+}
+
+- (IBAction)didTapVibratingPhone:(UIButton *)sender
+{
+#warning TODO: Playback vibration sound.
+	
+	// Reset transform.
+	sender.layer.transform = CATransform3DIdentity;
+	
+	[UIView animateKeyframesWithDuration:5.0 delay:0.0 options:0 animations:^{
+		// Rotate clockwise.
+		[UIView addKeyframeWithRelativeStartTime:0.0f relativeDuration:0.33f animations:^{
+			sender.layer.transform = CATransform3DRotate(sender.layer.transform, 12*(M_PI_4/90), 0, 0, 1);
+		}];
+		
+		// Vibrate.
+		double duration = 0.001f;
+		for ( double startTime = 0.0f; startTime < 0.33f; startTime += duration ) {
+			[UIView addKeyframeWithRelativeStartTime:startTime relativeDuration:duration/2 animations:^{
+				sender.layer.transform = CATransform3DRotate(sender.layer.transform, M_PI_4/10, 0, 0, 1);
+			}];
+			[UIView addKeyframeWithRelativeStartTime:startTime+(duration/2) relativeDuration:duration/2 animations:^{
+				sender.layer.transform = CATransform3DRotate(sender.layer.transform, M_PI_4/10, 0, 0, -1);
+			}];
+		}
+		
+		// Rotate back (counter-clockwise).
+		[UIView addKeyframeWithRelativeStartTime:0.66f relativeDuration:0.33f animations:^{
+			sender.layer.transform = CATransform3DRotate(sender.layer.transform, 12*(M_PI_4/90), 0, 0, -1);
+		}];
+		
+		// Vibrate.
+		for ( double startTime = 0.66f; startTime < 0.33f; startTime += duration ) {
+			[UIView addKeyframeWithRelativeStartTime:startTime relativeDuration:duration/2 animations:^{
+				sender.layer.transform = CATransform3DRotate(sender.layer.transform, M_PI_4/10, 0, 0, 1);
+			}];
+			[UIView addKeyframeWithRelativeStartTime:startTime+(duration/2) relativeDuration:duration/2 animations:^{
+				sender.layer.transform = CATransform3DRotate(sender.layer.transform, M_PI_4/10, 0, 0, -1);
+			}];
+		}
+		
+	} completion:nil];
 }
 
 - (IBAction)didChangeCropType:(UISegmentedControl *)sender
