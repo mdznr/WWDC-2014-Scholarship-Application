@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *context1;
 @property (weak, nonatomic) IBOutlet UIButton *contextualVibrationAmplification;
 @property (weak, nonatomic) IBOutlet UILabel *context2;
+@property (weak, nonatomic) IBOutlet UIImageView *adaptiveVisualContrastHigh;
+@property (weak, nonatomic) IBOutlet UIView *adaptiveVisualContrastDarknessView;
 
 @property (weak, nonatomic) IBOutlet UILabel *contentHeader;
 @property (weak, nonatomic) IBOutlet UILabel *contentDescription;
@@ -118,6 +120,32 @@
 			}];
 		}
 		
+	} completion:nil];
+}
+
+- (IBAction)didChangeContrast:(UISegmentedControl *)sender
+{
+	CGFloat brightness = 0.0f;
+	CGFloat contrast = 0.0f;
+	
+	switch ( sender.selectedSegmentIndex ) {
+		case 0: // Indoors
+			brightness = 0.0f;
+			contrast = 0.0f;
+			break;
+		case 1: // Outdoors
+			brightness = 0.7f;
+			contrast = 1.0f;
+			break;
+	}
+	
+	[UIView animateKeyframesWithDuration:1.0f delay:0.0f options:0 animations:^{
+		[UIView addKeyframeWithRelativeStartTime:0.0f relativeDuration:0.75f animations:^{
+			self.adaptiveVisualContrastDarknessView.alpha = brightness;
+		}];
+		[UIView addKeyframeWithRelativeStartTime:0.75f relativeDuration:0.25f animations:^{
+			self.adaptiveVisualContrastHigh.alpha = contrast;
+		}];
 	} completion:nil];
 }
 
