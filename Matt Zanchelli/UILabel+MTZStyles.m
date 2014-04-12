@@ -276,6 +276,7 @@
 - (void)applyMTZStyleProjectSectionAnnotation
 {
 	self.font = [UIFont fontForSectionAnnotation];
+	self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
 }
 
 @end
