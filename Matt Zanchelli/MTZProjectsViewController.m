@@ -10,7 +10,7 @@
 
 #import "MTZPageViewController.h"
 
-@interface MTZProjectsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface MTZProjectsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, MTZPageViewControllerDelegate>
 
 ///	The names of the .xib child view controllers.
 @property (strong, nonatomic) NSArray *childViewControllerNibNames;
@@ -18,29 +18,23 @@
 ///	The page control to indicate which page is currently shown.
 @property (strong, nonatomic) UIPageControl *pageControl;
 
+///	The view behind @c pageControl to aid with readability.
+@property (strong, nonatomic) UIView *pageControlHoldingView;
+
 @end
 
 @implementation MTZProjectsViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	UIView *pageControlHoldingView = [[UIView alloc] initWithFrame:CGRectMake(483, 729, 58, 26)];
-	pageControlHoldingView.layer.cornerRadius = 13.0f;
-	pageControlHoldingView.backgroundColor = [UIColor whiteColor];
-	pageControlHoldingView.alpha = 0.93f;
-	[self.view addSubview:pageControlHoldingView];
+	self.pageControlHoldingView = [[UIView alloc] initWithFrame:CGRectMake(483, 729, 58, 26)];
+	self.pageControlHoldingView.layer.cornerRadius = 13.0f;
+	self.pageControlHoldingView.backgroundColor = [UIColor whiteColor];
+	self.pageControlHoldingView.alpha = 0.93f;
+	[self.view addSubview:self.pageControlHoldingView];
 	
 	self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-31, self.view.frame.size.width, 10)];
 	self.pageControl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
@@ -75,6 +69,7 @@
 	NSString *className = self.childViewControllerNibNames[index];
 	Class pageViewControllerSubclass = NSClassFromString(className);
 	MTZPageViewController *childViewController = [[pageViewControllerSubclass alloc] initWithNibName:className bundle:nil];
+	childViewController.delegate = self;
 	childViewController.index = index;
 
 #warning Try not to clip.
@@ -180,6 +175,23 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers
 	NSUInteger index = currentViewController.index;
 //	NSLog(@"%@, %lu", currentViewController, (unsigned long)index);
 	self.pageControl.currentPage = index;
+}
+
+
+#pragma mark - MTZPageViewControllerDelegate Protocol
+
+- (void)pageViewControllerDidScroll:(MTZPageViewController *)pageViewController offset:(CGPoint)offset
+{
+	NSLog(@"Page view controller did scroll %@", NSStringFromCGPoint(offset) );
+	
+	CGFloat alpha = 1.0f - (offset.y / (pageViewController.view.frame.size.height/4));
+	self.pageControlHoldingView.alpha = alpha;
+	self.pageControl.alpha = alpha;
+	
+	// Do not allow swiping between pages anymore.
+	if ( offset.y > (pageViewController.view.frame.size.height/4) ) {
+		// TODO: Disable scrollview scrolling on self (UIPageViewController).
+	}
 }
 
 @end

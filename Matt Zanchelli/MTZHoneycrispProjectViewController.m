@@ -83,6 +83,8 @@
 	[self.interaction2 applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.interaction2Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
 	
+	// TODO: Make handedness interactive.
+	
 	self.pushBackButton.iconImage = [UIImage imageNamed:@"Honeycrisp - AppIcon"];
 }
 
