@@ -52,6 +52,11 @@
 	} else {
 		self.headerView.transform = CGAffineTransformIdentity;
 	}
+	
+	// Tell the delegate about this.
+	if ( [_delegate respondsToSelector:@selector(pageViewControllerDidScroll:offset:)] ) {
+		[_delegate pageViewControllerDidScroll:self offset:self.scrollView.contentOffset];
+	}
 }
 
 @end
