@@ -8,6 +8,8 @@
 
 #import "MTZHoneycrispProjectViewController.h"
 
+#import "MTZAppIcon.h"
+
 @interface MTZHoneycrispProjectViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *honeycrisp;
@@ -39,6 +41,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *interaction1Annotation;
 @property (weak, nonatomic) IBOutlet UILabel *interaction2;
 @property (weak, nonatomic) IBOutlet UILabel *interaction2Annotation;
+@property (weak, nonatomic) IBOutlet MTZAppIcon *pushBackButton;
 
 @end
 
@@ -79,6 +82,8 @@
 	[self.interaction1Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
 	[self.interaction2 applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.interaction2Annotation applyMTZStyle:MTZStyleProjectSectionAnnotation];
+	
+	self.pushBackButton.iconImage = [UIImage imageNamed:@"Honeycrisp - AppIcon"];
 }
 
 - (IBAction)didTapVibratingPhone:(UIButton *)sender

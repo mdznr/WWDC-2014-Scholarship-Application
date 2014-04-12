@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */; };
+		C98BD52218F9F50300F0F61B /* MTZAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD51F18F9F50300F0F61B /* MTZAppIcon.m */; };
+		C98BD52318F9F50300F0F61B /* MTZPushBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52118F9F50300F0F61B /* MTZPushBackButton.m */; };
+		C98BD52818F9F61B00F0F61B /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52518F9F61B00F0F61B /* UIImage+Alpha.m */; };
+		C98BD52918F9F61B00F0F61B /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52718F9F61B00F0F61B /* UIImage+Mask.m */; };
 		C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C998220818EDAC1E00983B36 /* InfoPlist.strings */; };
 		C998220C18EDAC1E00983B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220B18EDAC1E00983B36 /* main.m */; };
 		C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220F18EDAC1E00983B36 /* MTZAppDelegate.m */; };
@@ -54,6 +58,14 @@
 /* Begin PBXFileReference section */
 		C9196F3318F2669A003D2E51 /* UILabel+MTZStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MTZStyles.h"; sourceTree = "<group>"; };
 		C9196F3418F2669A003D2E51 /* UILabel+MTZStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MTZStyles.m"; sourceTree = "<group>"; };
+		C98BD51E18F9F50300F0F61B /* MTZAppIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAppIcon.h; sourceTree = "<group>"; };
+		C98BD51F18F9F50300F0F61B /* MTZAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZAppIcon.m; sourceTree = "<group>"; };
+		C98BD52018F9F50300F0F61B /* MTZPushBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZPushBackButton.h; sourceTree = "<group>"; };
+		C98BD52118F9F50300F0F61B /* MTZPushBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZPushBackButton.m; sourceTree = "<group>"; };
+		C98BD52418F9F61B00F0F61B /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		C98BD52518F9F61B00F0F61B /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		C98BD52618F9F61B00F0F61B /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
+		C98BD52718F9F61B00F0F61B /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
 		C99821FC18EDAC1E00983B36 /* Matt Zanchelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matt Zanchelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C998220718EDAC1E00983B36 /* Matt Zanchelli-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Matt Zanchelli-Info.plist"; sourceTree = "<group>"; };
 		C998220918EDAC1E00983B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -133,6 +145,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C98BD51D18F9F50300F0F61B /* MTZPushBackButton */ = {
+			isa = PBXGroup;
+			children = (
+				C98BD51E18F9F50300F0F61B /* MTZAppIcon.h */,
+				C98BD51F18F9F50300F0F61B /* MTZAppIcon.m */,
+				C98BD52018F9F50300F0F61B /* MTZPushBackButton.h */,
+				C98BD52118F9F50300F0F61B /* MTZPushBackButton.m */,
+				C98BD52418F9F61B00F0F61B /* UIImage+Alpha.h */,
+				C98BD52518F9F61B00F0F61B /* UIImage+Alpha.m */,
+				C98BD52618F9F61B00F0F61B /* UIImage+Mask.h */,
+				C98BD52718F9F61B00F0F61B /* UIImage+Mask.m */,
+			);
+			path = MTZPushBackButton;
+			sourceTree = "<group>";
+		};
 		C99821F318EDAC1E00983B36 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +203,7 @@
 				C9AF888118F6660E005E0CEC /* AUIAnimatableLabel */,
 				C9AF886E18F62C9A005E0CEC /* RS3DSegmentedControl */,
 				C9AF881C18F5E613005E0CEC /* PSPushPopPressView */,
+				C98BD51D18F9F50300F0F61B /* MTZPushBackButton */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998233018F25C5900983B36 /* Fonts */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
@@ -443,11 +471,14 @@
 			files = (
 				C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */,
 				C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */,
+				C98BD52218F9F50300F0F61B /* MTZAppIcon.m in Sources */,
 				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
 				C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */,
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
 				C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */,
 				C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */,
+				C98BD52318F9F50300F0F61B /* MTZPushBackButton.m in Sources */,
+				C98BD52918F9F61B00F0F61B /* UIImage+Mask.m in Sources */,
 				C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */,
 				C9B4632418F4C388000D480D /* MTZHoneycrispProjectViewController.m in Sources */,
 				C998220C18EDAC1E00983B36 /* main.m in Sources */,
@@ -458,6 +489,7 @@
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
 				C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */,
+				C98BD52818F9F61B00F0F61B /* UIImage+Alpha.m in Sources */,
 				C9AF881F18F5E613005E0CEC /* PSPushPopPressView.m in Sources */,
 				C9AF888618F6660E005E0CEC /* AUIAnimatableLabel.m in Sources */,
 				C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */,
