@@ -271,12 +271,38 @@
 - (void)applyMTZStyleProjectSectionQuote
 {
 	self.font = [UIFont fontForSectionQuote];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 7.0f;
+	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:
+	 NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
 }
 
 - (void)applyMTZStyleProjectSectionAnnotation
 {
 	self.font = [UIFont fontForSectionAnnotation];
 	self.textColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 4.0f;
+	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:
+	 NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
 }
 
 @end
