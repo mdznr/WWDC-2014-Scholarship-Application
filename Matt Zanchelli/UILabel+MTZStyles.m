@@ -40,6 +40,18 @@
 		case MTZStyleProjectDescriptionCenter:
 			[self applyMTZStyleProjectDescriptionCentered];
 			break;
+		case MTZStyleProjectSectionHeader:
+			[self applyMTZStyleProjectSectionHeader];
+			break;
+		case MTZStyleProjectSectionDescription:
+			[self applyMTZStyleProjectSectionDescription];
+			break;
+		case MTZStyleProjectSectionQuote:
+			[self applyMTZStyleProjectSectionQuote];
+			break;
+		case MTZStyleProjectSectionAnnotation:
+			[self applyMTZStyleProjectSectionAnnotation];
+			break;
 		default:
 			break;
 	}
@@ -210,6 +222,60 @@
 							 value:paragrahStyle
 							 range:NSMakeRange(0, attributedString.length)];
 	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleProjectSectionHeader
+{
+	self.font = [UIFont fontForSectionHeader];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = -8.0f; // 26 - 34
+	paragrahStyle.alignment = NSTextAlignmentLeft;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleProjectSectionDescription
+{
+	self.font = [UIFont fontForSectionDescription];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	// Left align, 26pt line spacing.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 8.0f; // 26 - 18
+	paragrahStyle.alignment = NSTextAlignmentLeft;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:
+	 NSMakeRange(0, attributedString.length)];
+	
+	// Make the first line bold..
+	NSRange firstNewline = [self.text rangeOfString:@"\n"];
+	NSRange firstLine = NSMakeRange(0, firstNewline.location-1);
+	[attributedString addAttribute:NSFontAttributeName
+							 value:[UIFont fontForSectionDescriptionFirstLine]
+							 range:firstLine];
+	
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleProjectSectionQuote
+{
+	self.font = [UIFont fontForSectionQuote];
+}
+
+- (void)applyMTZStyleProjectSectionAnnotation
+{
+	self.font = [UIFont fontForSectionAnnotation];
 }
 
 @end
