@@ -83,37 +83,40 @@
 {
 	// Hardcoded positions for performance.
 	// Honeycrisp slightly too slow for effective demo.
+	void (^animations)() = ^{
+		switch ( sender.selectedSegmentIndex ) {
+			case 2: // Honeycrisp
+			{
+				// Shift photo.
+				self.photoCrop.frame = CGRectOffset(self.photoCropper.bounds, 27, 0);
+				// Bring in crop.
+				self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
+				self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
+			}	break;
+			case 1: // Center
+			{
+				// Reset photo position.
+				self.photoCrop.frame = self.photoCropper.bounds;
+				// Bring in crop.
+				self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
+				self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
+			}	break;
+			case 0: // Original
+			{
+				// Reset photo position.
+				self.photoCrop.frame = self.photoCropper.bounds;
+				// Pull back crop.
+				self.photoCropLeft.frame = CGRectMake(0, 0, 0, self.photoCropper.bounds.size.height);
+				self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width, 0, 0, self.photoCropper.bounds.size.height);
+			}	break;
+		}
+	};
+	
+	// Animate.
 	[UIView animateWithDuration:0.3f
 						  delay:0.0f
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
-					 animations:^{
-						 switch ( sender.selectedSegmentIndex ) {
-							 case 2: // Honeycrisp
-							 {
-								 // Shift photo.
-								 self.photoCrop.frame = CGRectOffset(self.photoCropper.bounds, 27, 0);
-								 // Bring in crop.
-								 self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
-								 self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
-							 }	break;
-							 case 1: // Center
-							 {
-								 // Reset photo position.
-								 self.photoCrop.frame = self.photoCropper.bounds;
-								 // Bring in crop.
-								 self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
-								 self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
-							 }	break;
-							 case 0: // Original
-							 {
-								 // Reset photo position.
-								 self.photoCrop.frame = self.photoCropper.bounds;
-								 // Pull back crop.
-								 self.photoCropLeft.frame = CGRectMake(0, 0, 0, self.photoCropper.bounds.size.height);
-								 self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width, 0, 0, self.photoCropper.bounds.size.height);
-							 }	break;
-						 }
-					 }
+					 animations:animations
 					 completion:^(BOOL finished) {}];
 }
 
