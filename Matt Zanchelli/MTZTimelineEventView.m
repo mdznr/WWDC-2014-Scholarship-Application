@@ -9,6 +9,7 @@
 #import "MTZTimelineEventView.h"
 
 #import "PSPushPopPressView/PSPushPopPressView.h"
+#import "CGRectManipulation.h"
 
 @interface MTZTimelineEventView ()
 
@@ -24,8 +25,11 @@
 ///	The view to load content to expand/manipulate.
 @property (strong, nonatomic) PSPushPopPressView *pushPopPressView;
 
+///	The original frame for @c pushPopPressView.
+@property (nonatomic) CGRect pushPopPressViewFrame;
+
 ///	The image view to put the image in.
-@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *photoView;
 
 ///	The mark on the timeline for the event.
 @property (strong, nonatomic) UIImageView *dotView;
@@ -37,19 +41,24 @@
 
 @implementation MTZTimelineEventView
 
-- (id)initWithTimelineEvent:(MTZTimelineEvent *)timelineEvent
+- (void)setUpWithTimelineEvent:(MTZTimelineEvent *)timelineEvent
 {
-	self = [super initWithFrame:CGRectMake(0, 0, 1024, 130)];
+	self.date = timelineEvent.date;
+	self.title = timelineEvent.title;
+	self.description = timelineEvent.description;
+	self.image = timelineEvent.image;
+}
+
+/*
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+	self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 	if (self) {
 		[self setUpMTZTimeLineEventView];
-		
-		self.date = timelineEvent.date;
-		self.title = timelineEvent.title;
-		self.description = timelineEvent.description;
-		self.image = timelineEvent.image;
 	}
 	return self;
 }
+ */
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -95,20 +104,21 @@
 	[self addSubview:self.dotView];
 	
 	// Add PPP view.
-	self.pushPopPressView = [[PSPushPopPressView alloc] initWithFrame:CGRectMake(660, 0, 344, 150)];
+	self.pushPopPressViewFrame = CGRectMake(660, 0, 344, 150);
+	self.pushPopPressView = [[PSPushPopPressView alloc] initWithFrame:self.pushPopPressViewFrame];
 	self.pushPopPressView.backgroundColor = [UIColor whiteColor];
 	[self addSubview:self.pushPopPressView];
 	
 	// Add image view.
-	self.imageView = [[UIImageView alloc] initWithFrame:self.pushPopPressView.bounds];
-	self.imageView.backgroundColor = [UIColor whiteColor];
-	self.imageView.opaque = YES;
-	self.imageView.clipsToBounds = YES;
-	self.imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	self.imageView.contentMode = UIViewContentModeScaleAspectFit;// UIViewContentModeScaleAspectFill;
+	self.photoView = [[UIImageView alloc] initWithFrame:self.pushPopPressView.bounds];
+	self.photoView.backgroundColor = [UIColor blackColor];
+	self.photoView.opaque = YES;
+	self.photoView.clipsToBounds = YES;
+	self.photoView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	self.photoView.contentMode = UIViewContentModeScaleAspectFit;// UIViewContentModeScaleAspectFill;
 #warning The delegate should be the corresponding view controller.
-//	self.imageView.pushPopPressViewDelegate = self;
-	[self.pushPopPressView addSubview:self.imageView];
+//	self.photoView.pushPopPressViewDelegate = self;
+	[self.pushPopPressView addSubview:self.photoView];
 	
 	// Set up labels frames.
 	self.dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(21, 5, 88, 25)];
@@ -171,9 +181,20 @@
 
 - (void)setImage:(UIImage *)image
 {
+	if ( !image ) {
+		_image = nil;
+		self.photoView.image = nil;
+		return;
+	}
+	
 	_image = image;
+	
+	self.photoView.image = image;
+	
 #warning TODO: set the size of imageView to fit properly.
-	self.imageView.image = image;
+	CGRect imageRect = CGRectMake(0, 0, _image.size.width, _image.size.height);
+	CGRect newFrame = CGRectScaledRectToFitInRect(imageRect, self.pushPopPressViewFrame);
+	self.pushPopPressView.frame = newFrame;
 }
 
 

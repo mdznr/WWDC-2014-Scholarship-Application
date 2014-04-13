@@ -20,6 +20,8 @@
 		C98BD53718FA66A700F0F61B /* MacBook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53618FA66A700F0F61B /* MacBook.jpg */; };
 		C98BD53918FA672C00F0F61B /* Started HS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53818FA672C00F0F61B /* Started HS.jpg */; };
 		C98BD53B18FA676300F0F61B /* Computer Graphics.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53A18FA676300F0F61B /* Computer Graphics.jpg */; };
+		C98BD54118FB3F4300F0F61B /* CGAspectRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD53E18FB3F4300F0F61B /* CGAspectRatio.m */; };
+		C98BD54218FB3F4300F0F61B /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD54018FB3F4300F0F61B /* CGRectManipulation.m */; };
 		C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C998220818EDAC1E00983B36 /* InfoPlist.strings */; };
 		C998220C18EDAC1E00983B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220B18EDAC1E00983B36 /* main.m */; };
 		C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220F18EDAC1E00983B36 /* MTZAppDelegate.m */; };
@@ -82,6 +84,10 @@
 		C98BD53618FA66A700F0F61B /* MacBook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MacBook.jpg; sourceTree = "<group>"; };
 		C98BD53818FA672C00F0F61B /* Started HS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Started HS.jpg"; sourceTree = "<group>"; };
 		C98BD53A18FA676300F0F61B /* Computer Graphics.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Computer Graphics.jpg"; sourceTree = "<group>"; };
+		C98BD53D18FB3F4300F0F61B /* CGAspectRatio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGAspectRatio.h; sourceTree = "<group>"; };
+		C98BD53E18FB3F4300F0F61B /* CGAspectRatio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGAspectRatio.m; sourceTree = "<group>"; };
+		C98BD53F18FB3F4300F0F61B /* CGRectManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectManipulation.h; sourceTree = "<group>"; };
+		C98BD54018FB3F4300F0F61B /* CGRectManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectManipulation.m; sourceTree = "<group>"; };
 		C99821FC18EDAC1E00983B36 /* Matt Zanchelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matt Zanchelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C998220718EDAC1E00983B36 /* Matt Zanchelli-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Matt Zanchelli-Info.plist"; sourceTree = "<group>"; };
 		C998220918EDAC1E00983B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -176,6 +182,17 @@
 			path = MTZPushBackButton;
 			sourceTree = "<group>";
 		};
+		C98BD53C18FB3F4300F0F61B /* PhotoThumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				C98BD53D18FB3F4300F0F61B /* CGAspectRatio.h */,
+				C98BD53E18FB3F4300F0F61B /* CGAspectRatio.m */,
+				C98BD53F18FB3F4300F0F61B /* CGRectManipulation.h */,
+				C98BD54018FB3F4300F0F61B /* CGRectManipulation.m */,
+			);
+			path = PhotoThumbnail;
+			sourceTree = "<group>";
+		};
 		C99821F318EDAC1E00983B36 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +237,7 @@
 				C9AF886E18F62C9A005E0CEC /* RS3DSegmentedControl */,
 				C9AF881C18F5E613005E0CEC /* PSPushPopPressView */,
 				C98BD51D18F9F50300F0F61B /* MTZPushBackButton */,
+				C98BD53C18FB3F4300F0F61B /* PhotoThumbnail */,
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998233018F25C5900983B36 /* Fonts */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
@@ -506,6 +524,7 @@
 				C98BD52218F9F50300F0F61B /* MTZAppIcon.m in Sources */,
 				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
 				C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */,
+				C98BD54118FB3F4300F0F61B /* CGAspectRatio.m in Sources */,
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
 				C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */,
 				C998233518F260FB00983B36 /* UIFont+MTZStyles.m in Sources */,
@@ -520,6 +539,7 @@
 				C9B4632918F4C3BF000D480D /* MTZPasscodeProjectViewController.m in Sources */,
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
+				C98BD54218FB3F4300F0F61B /* CGRectManipulation.m in Sources */,
 				C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */,
 				C98BD52818F9F61B00F0F61B /* UIImage+Alpha.m in Sources */,
 				C9AF881F18F5E613005E0CEC /* PSPushPopPressView.m in Sources */,

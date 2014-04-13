@@ -9,13 +9,15 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define kPSAnimationDuration 0.55f
-#define kPSAnimationMoveToOriginalPositionDuration 0.55f
+#define kPSAnimationMoveToOriginalPositionDuration 0.45f
 
 #define kPSShadowFadeDuration 0.4f
 #define kPSShadowOpacity 0.2f
 
-#define kPSSpringDamping 0.7f
-#define kPSSpringVelocity 0.5f
+#define kPSSpringDampingOut 0.7f
+#define kPSSpringDampingIn 0.85f
+#define kPSSpringVelocityIn 0.5f
+#define kPSSpringVelocityOut 1.0f
 
 @interface PSPushPopPressView() {
 	UITapGestureRecognizer *_tapRecognizer;
@@ -271,8 +273,8 @@
 	
 	[UIView animateWithDuration:animated ? kPSAnimationMoveToOriginalPositionDuration : 0.0f
 						  delay:0.0f
-		 usingSpringWithDamping:kPSSpringDamping
-		  initialSpringVelocity:kPSSpringVelocity
+		 usingSpringWithDamping:kPSSpringDampingIn
+		  initialSpringVelocity:kPSSpringVelocityIn
 						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionAllowUserInteraction
 					 animations:^{
                          // Always reset transforms.
@@ -308,8 +310,8 @@
 	
 	[UIView animateWithDuration:animated ? kPSAnimationDuration : 0.0f
 						  delay:0.0f
-		 usingSpringWithDamping:kPSSpringDamping
-		  initialSpringVelocity:kPSSpringVelocity
+		 usingSpringWithDamping:kPSSpringDampingOut
+		  initialSpringVelocity:kPSSpringVelocityOut
 						options:(viewChanged ? 0 : UIViewAnimationOptionBeginFromCurrentState) | UIViewAnimationOptionAllowUserInteraction
 					 animations:^{
                          _scaleTransform = CGAffineTransformIdentity;
