@@ -172,7 +172,7 @@
 - (void)setImage:(UIImage *)image
 {
 	_image = image;
-#warning set the size of imageView to fit properly.
+#warning TODO: set the size of imageView to fit properly.
 	self.imageView.image = image;
 }
 

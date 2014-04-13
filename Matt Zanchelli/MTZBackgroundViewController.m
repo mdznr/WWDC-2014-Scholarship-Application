@@ -30,7 +30,7 @@
 	
 	self.tableView.contentInset = UIEdgeInsetsMake(44+31, 0, 0, 0);
 	
-	MTZTimelineEvent *event0 = [MTZTimelineEvent eventWithDate:@""
+	MTZTimelineEvent *event0 = [MTZTimelineEvent eventWithDate:@"Early Life"
 														 title:@"Interested in Computers & Computer Graphics."
 												   description:@"As a kid, I was fascinated with computers and what was possible with them. I made artwork in various programs to give to my parents. I much preferred drawing in computer programs over traditional crayons and markers."
 														 image:[UIImage imageNamed:@"Computer Graphics.jpg"]];
