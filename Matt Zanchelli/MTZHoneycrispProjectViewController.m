@@ -146,7 +146,7 @@
 			break;
 	}
 	
-	[UIView animateKeyframesWithDuration:1.0f delay:0.0f options:0 animations:^{
+	[UIView animateKeyframesWithDuration:1.0f delay:0.0f options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
 		[UIView addKeyframeWithRelativeStartTime:0.0f relativeDuration:0.75f animations:^{
 			self.adaptiveVisualContrastDarknessView.alpha = brightness;
 		}];
