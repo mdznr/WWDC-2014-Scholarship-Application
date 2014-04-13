@@ -13,10 +13,9 @@
 
 @interface MTZTimelineEventView : UIView
 
-///	Create a new timeline event view with a timeline event object.
+///	Set up a timeline event view with a timeline event object.
 ///	@param timelineEvent The timeline event object to create the view from.
-///	@return A new @c MTZTimelineEventView.
-- (id)initWithTimelineEvent:(MTZTimelineEvent *)timelineEvent;
+- (void)setUpWithTimelineEvent:(MTZTimelineEvent *)timelineEvent;
 
 ///	Date of the event (as a string).
 @property (nonatomic, copy) NSString *date;

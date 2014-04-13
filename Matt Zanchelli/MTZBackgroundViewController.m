@@ -32,7 +32,7 @@
 	
 	MTZTimelineEvent *event0 = [MTZTimelineEvent eventWithDate:@"Early Life"
 														 title:@"Interested in Computers & Computer Graphics."
-												   description:@"As a kid, I was fascinated with computers and what was possible with them. I made artwork in various programs to give to my parents. I much preferred drawing in computer programs over traditional crayons and markers."
+												   description:@"As a kid, I was fascinated with computers and what was possible with them. I made artwork in various programs to give to my parents. I much preferred drawing with computer programs over traditional crayons and markers."
 														 image:[UIImage imageNamed:@"Computer Graphics.jpg"]];
 	
 	MTZTimelineEvent *event1 = [MTZTimelineEvent eventWithDate:@"Dec. 2004"
@@ -101,8 +101,14 @@
 	[cell.contentView addSubview:timelineStripeView];
 	
 	MTZTimelineEvent *event = (MTZTimelineEvent *) self.content[indexPath.row];
-	MTZTimelineEventView *eventView = [[MTZTimelineEventView alloc] initWithTimelineEvent:event];
-	[cell.contentView addSubview:eventView];
+	MTZTimelineEventView *timelineEventView = (MTZTimelineEventView *) [cell.contentView viewWithTag:111];
+	if ( !timelineEventView ) {
+		timelineEventView = [[MTZTimelineEventView alloc] initWithFrame:cell.bounds];
+		timelineEventView.tag = 111;
+		[cell.contentView addSubview:timelineEventView];
+	}
+	
+	[timelineEventView setUpWithTimelineEvent:event];
 	
 	return cell;
 }
