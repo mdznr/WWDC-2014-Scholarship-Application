@@ -440,7 +440,7 @@ out of the way from the user’s hand.</string>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <attributedString key="attributedText">
                                         <fragment>
-                                            <string key="content">Improving Responsiveness of Taps.
+                                            <string key="content">Improving Feedback of Taps.
 </string>
                                             <attributes>
                                                 <font key="NSFont" size="18" name="MyriadSet-Bold"/>

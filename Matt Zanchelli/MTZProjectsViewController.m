@@ -182,7 +182,7 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers
 
 - (void)pageViewControllerDidScroll:(MTZPageViewController *)pageViewController offset:(CGPoint)offset
 {
-	NSLog(@"Page view controller did scroll %@", NSStringFromCGPoint(offset) );
+//	NSLog(@"Page view controller did scroll %@", NSStringFromCGPoint(offset) );
 	
 	CGFloat alpha = 1.0f - (offset.y / (pageViewController.view.frame.size.height/4));
 	self.pageControlHoldingView.alpha = alpha;
@@ -190,7 +190,7 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers
 	
 	// Do not allow swiping between pages anymore.
 	if ( offset.y > (pageViewController.view.frame.size.height/4) ) {
-		// TODO: Disable scrollview scrolling on self (UIPageViewController).
+#warning Disable scrollview scrolling on self (UIPageViewController).
 	}
 }
 

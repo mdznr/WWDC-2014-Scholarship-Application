@@ -96,15 +96,16 @@
 	
 	// Add PPP view.
 	self.pushPopPressView = [[PSPushPopPressView alloc] initWithFrame:CGRectMake(660, 0, 344, 150)];
-	self.pushPopPressView.backgroundColor = [UIColor redColor];
+	self.pushPopPressView.backgroundColor = [UIColor whiteColor];
 	[self addSubview:self.pushPopPressView];
 	
 	// Add image view.
 	self.imageView = [[UIImageView alloc] initWithFrame:self.pushPopPressView.bounds];
-	self.imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	self.imageView.backgroundColor = [UIColor whiteColor];
+	self.imageView.opaque = YES;
 	self.imageView.clipsToBounds = YES;
-	self.imageView.backgroundColor = [UIColor blackColor];
-	self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+	self.imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	self.imageView.contentMode = UIViewContentModeScaleAspectFit;// UIViewContentModeScaleAspectFill;
 #warning The delegate should be the corresponding view controller.
 //	self.imageView.pushPopPressViewDelegate = self;
 	[self.pushPopPressView addSubview:self.imageView];
@@ -171,6 +172,7 @@
 - (void)setImage:(UIImage *)image
 {
 	_image = image;
+#warning set the size of imageView to fit properly.
 	self.imageView.image = image;
 }
 
