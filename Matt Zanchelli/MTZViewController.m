@@ -183,4 +183,16 @@
 					 completion:nil];
 }
 
+- (void)pushPopPressViewDidStartManipulation:(PSPushPopPressView *)pushPopPressView
+{
+	// Partly show the dimming view.
+	[UIView animateWithDuration:0.5f
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+						 self.myDimmingView.alpha = 0.5f;
+					 }
+					 completion:nil];
+}
+
 @end
