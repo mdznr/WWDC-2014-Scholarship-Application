@@ -185,7 +185,7 @@ The contrast of key on-screen elements can be selectively increased when the app
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </imageView>
-                                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Adaptive Visual Contrast High" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-cs-foH" userLabel="Adaptive Visual Contrast High">
+                                <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Honeycrisp - Adaptive Visual Contrast High" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-cs-foH" userLabel="Adaptive Visual Contrast High">
                                     <rect key="frame" x="223" y="1610" width="150" height="314"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
