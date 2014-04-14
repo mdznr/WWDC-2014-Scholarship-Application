@@ -81,6 +81,10 @@ CGRect CGRectScaledRectToFitInRect(CGRect rect, CGRect inRect)
 			} else {
 				scale = inRect.size.height / rect.size.height;
 			}
+		} else {
+			// NSOrderedSame
+			// Equal, doesn't matter which dimension.
+			scale = inRect.size.width / rect.size.width;
 		}
 	} else {
 		// The inner and outer aspect ratios conflict
