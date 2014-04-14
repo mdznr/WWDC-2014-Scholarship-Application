@@ -71,10 +71,6 @@
 /// @c YES if one or more fingers are on the view.
 @property (nonatomic, readonly, getter=isBeingDragged) BOOL beingDragged;
 
-///	The relative scale of the view compared to it's fullscreen size.
-#warning Utilize this property internally.
-@property (nonatomic, readonly) CGFloat scale;
-
 /// Determine if the receiver is currently being displayed fullscreen.
 @property (nonatomic, readonly, getter=isFullscreen) BOOL fullscreen;
 

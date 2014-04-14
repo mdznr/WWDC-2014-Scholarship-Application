@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *goodMorning;
 @property (weak, nonatomic) IBOutlet UILabel *goodMorning2;
 
+@property (nonatomic) NSUInteger page;
+
 @end
 
 @implementation MTZGoodnightProjectViewController
@@ -43,6 +45,8 @@
 	[self.haveAGoodNight2 applyMTZStyle:MTZStyleGoodnightSectionSubtitle];
 	[self.restEasy2 applyMTZStyle:MTZStyleGoodnightSectionSubtitle];
 	[self.goodMorning2 applyMTZStyle:MTZStyleGoodnightSectionSubtitle];
+	
+	_page = 0;
 }
 
 
@@ -51,55 +55,34 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
 	[super scrollViewDidScroll:scrollView];
+
+	/*
+	CGFloat offsetFromPage = fmodf(scrollView.contentOffset.y + (scrollView.frame.size.height/2), scrollView.frame.size.height);
+	CGFloat percentage = offsetFromPage / scrollView.frame.size.height;
+	self.screenshot.alpha = 2 * percentage;
+	 */
 	
 	NSUInteger page = round(scrollView.contentOffset.y / scrollView.frame.size.height);
-	switch (page) {
-		case 0: {
-			[UIView animateWithDuration:0.4f
-								  delay:0.0f
-								options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
-							 animations:^{
-								 self.screenshot.image = [UIImage imageNamed:@"Goodnight-Time Set"];
-							 }
-							 completion:nil];
-		} break;
-		case 1: {
-			[UIView animateWithDuration:0.4f
-								  delay:0.0f
-								options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
-							 animations:^{
-								 self.screenshot.image = [UIImage imageNamed:@"Goodnight-Wake Times"];
-							 }
-							 completion:nil];
-		} break;
-		case 2: {
-			[UIView animateWithDuration:0.4f
-								  delay:0.0f
-								options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
-							 animations:^{
-								 self.screenshot.image = [UIImage imageNamed:@"Goodnight-Alarm"];
-							 }
-							 completion:nil];
-
-		} break;
-		case 3: {
-			[UIView animateWithDuration:0.4f
-								  delay:0.0f
-								options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
-							 animations:^{
-								 self.screenshot.image = [UIImage imageNamed:@"Goodnight-Good Morning"];
-							 }
-							 completion:nil];
-		} break;
-		default: {
-			[UIView animateWithDuration:0.4f
-								  delay:0.0f
-								options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
-							 animations:^{
-								 self.screenshot.image = nil;
-							 }
-							 completion:nil];
-		} break;
+	
+	if ( _page != page ) {
+		_page = page;
+		switch (page) {
+			case 0: {
+				self.screenshot.image = [UIImage imageNamed:@"Goodnight-Time Set"];
+			} break;
+			case 1: {
+				self.screenshot.image = [UIImage imageNamed:@"Goodnight-Wake Times"];
+			} break;
+			case 2: {
+				self.screenshot.image = [UIImage imageNamed:@"Goodnight-Alarm"];
+			} break;
+			case 3: {
+				self.screenshot.image = [UIImage imageNamed:@"Goodnight-Good Morning"];
+			} break;
+			default: {
+				self.screenshot.image = nil;
+			} break;
+		}
 	}
 }
 

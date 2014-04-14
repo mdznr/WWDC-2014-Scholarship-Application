@@ -13,9 +13,6 @@
 		C98BD52818F9F61B00F0F61B /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52518F9F61B00F0F61B /* UIImage+Alpha.m */; };
 		C98BD52918F9F61B00F0F61B /* UIImage+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52718F9F61B00F0F61B /* UIImage+Mask.m */; };
 		C98BD52B18FA643300F0F61B /* DJ BMZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD52A18FA643300F0F61B /* DJ BMZ.jpg */; };
-		C98BD52F18FA646100F0F61B /* Biking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD52E18FA646100F0F61B /* Biking.jpg */; };
-		C98BD53118FA668500F0F61B /* Music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53018FA668500F0F61B /* Music.jpg */; };
-		C98BD53318FA668800F0F61B /* Photography.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53218FA668800F0F61B /* Photography.jpg */; };
 		C98BD53518FA669F00F0F61B /* iPod.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53418FA669F00F0F61B /* iPod.jpg */; };
 		C98BD53718FA66A700F0F61B /* MacBook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53618FA66A700F0F61B /* MacBook.jpg */; };
 		C98BD53918FA672C00F0F61B /* Started HS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD53818FA672C00F0F61B /* Started HS.jpg */; };
@@ -78,9 +75,6 @@
 		C98BD52618F9F61B00F0F61B /* UIImage+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Mask.h"; sourceTree = "<group>"; };
 		C98BD52718F9F61B00F0F61B /* UIImage+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Mask.m"; sourceTree = "<group>"; };
 		C98BD52A18FA643300F0F61B /* DJ BMZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DJ BMZ.jpg"; sourceTree = "<group>"; };
-		C98BD52E18FA646100F0F61B /* Biking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Biking.jpg; sourceTree = "<group>"; };
-		C98BD53018FA668500F0F61B /* Music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Music.jpg; sourceTree = "<group>"; };
-		C98BD53218FA668800F0F61B /* Photography.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Photography.jpg; sourceTree = "<group>"; };
 		C98BD53418FA669F00F0F61B /* iPod.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPod.jpg; sourceTree = "<group>"; };
 		C98BD53618FA66A700F0F61B /* MacBook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MacBook.jpg; sourceTree = "<group>"; };
 		C98BD53818FA672C00F0F61B /* Started HS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Started HS.jpg"; sourceTree = "<group>"; };
@@ -313,9 +307,6 @@
 				C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */,
 				C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */,
 				C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */,
-				C98BD52E18FA646100F0F61B /* Biking.jpg */,
-				C98BD53018FA668500F0F61B /* Music.jpg */,
-				C98BD53218FA668800F0F61B /* Photography.jpg */,
 				C98BD53A18FA676300F0F61B /* Computer Graphics.jpg */,
 				C98BD53418FA669F00F0F61B /* iPod.jpg */,
 				C98BD53618FA66A700F0F61B /* MacBook.jpg */,
@@ -491,7 +482,6 @@
 				C98BD53718FA66A700F0F61B /* MacBook.jpg in Resources */,
 				C98BD53518FA669F00F0F61B /* iPod.jpg in Resources */,
 				C998232E18F25C5400983B36 /* MyriadSetPro-Thin.ttf in Resources */,
-				C98BD52F18FA646100F0F61B /* Biking.jpg in Resources */,
 				C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */,
 				C9B4632F18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib in Resources */,
 				C98BD54418FB963600F0F61B /* 10th Grade.jpg in Resources */,
@@ -501,9 +491,7 @@
 				C998221818EDAC1E00983B36 /* Images.xcassets in Resources */,
 				C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */,
 				C98BD53918FA672C00F0F61B /* Started HS.jpg in Resources */,
-				C98BD53118FA668500F0F61B /* Music.jpg in Resources */,
 				C998221318EDAC1E00983B36 /* Main.storyboard in Resources */,
-				C98BD53318FA668800F0F61B /* Photography.jpg in Resources */,
 				C9AF881918F5ADF3005E0CEC /* College.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

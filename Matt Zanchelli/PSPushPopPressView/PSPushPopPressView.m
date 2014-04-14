@@ -293,7 +293,7 @@
                          _scaleTransform = CGAffineTransformIdentity;
                          self.transform = CGAffineTransformIdentity;
                          
-#warning Fix issue of moving frame when it's in a scrollview/tableview.
+// TODO: Fix issue of moving frame when it's in a scrollview/tableview.
                          CGRect correctedInitialFrame = [self superviewCorrectedInitialFrame];
 						 [self setFrame:correctedInitialFrame];
 					 }

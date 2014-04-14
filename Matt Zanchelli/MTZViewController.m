@@ -90,7 +90,7 @@
 
 - (void)didPanFromEdge:(UIGestureRecognizer *)sender
 {
-#warning TODO: Enable scrollview panning horizontally between sections.
+	// TODO: Enable scrollview panning horizontally between sections.
 	NSLog(@"Did Pan");
 	switch ( sender.state ) {
 		case UIGestureRecognizerStateBegan:

@@ -90,7 +90,7 @@
 
 - (IBAction)didTapVibratingPhone:(UIButton *)sender
 {
-#warning TODO: Playback vibration sound.
+	// TODO: Playback vibration sound.
 	
 	// Reset transform.
 	sender.layer.transform = CATransform3DIdentity;
