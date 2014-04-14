@@ -145,6 +145,10 @@ By combining the domain and master password, then running it through an encrypti
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passcode-Secure" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-eU-W6a" userLabel="Secure By Design">
+                                    <rect key="frame" x="702" y="1577" width="45" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-Gu-Yfw" userLabel="Secure By Design">
                                     <rect key="frame" x="96" y="1565" width="405" height="104"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -169,7 +173,11 @@ Passcode was designed to be secure from the start. User information is not store
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="QEw-P1-na7" userLabel="Its Algorithmic">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passcode-Algorithmic" translatesAutoresizingMaskIntoConstraints="NO" id="8r2-Bc-aaC" userLabel="It's Algorithmic">
+                                    <rect key="frame" x="239" y="1760" width="119" height="183"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="QEw-P1-na7" userLabel="It's Algorithmic">
                                     <rect key="frame" x="522" y="1747" width="405" height="208"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,6 +201,10 @@ To generate passwords, Passcode uses a standard SHA-256 encrpytion algorithm. Th
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passcode-Ubiquitous" translatesAutoresizingMaskIntoConstraints="NO" id="ja4-0L-J0D" userLabel="It’s Ubiquitous">
+                                    <rect key="frame" x="683" y="2056" width="84" height="84"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="oLO-Z9-7kZ" userLabel="It’s Ubiquitous">
                                     <rect key="frame" x="92" y="2033" width="405" height="130"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -217,6 +229,10 @@ Since Passcode algorithmically generates passcodes, and doesn’t rely on server
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passcode-Multi-Platform" translatesAutoresizingMaskIntoConstraints="NO" id="OPV-pr-1U7" userLabel="Available Multi-Platform">
+                                    <rect key="frame" x="108" y="2246" width="371" height="173"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="lOP-Nf-ITc" userLabel="Available Multi-Platform">
                                     <rect key="frame" x="522" y="2241" width="405" height="182"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -241,6 +257,10 @@ No matter what computing platform you’re on, Your passwords are available. Pas
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Passcode-Open-Source" translatesAutoresizingMaskIntoConstraints="NO" id="r06-cl-OQw" userLabel="Free &amp; Open Source">
+                                    <rect key="frame" x="683" y="2512" width="84" height="82"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="410" translatesAutoresizingMaskIntoConstraints="NO" id="lBq-dZ-IpP" userLabel="Free &amp; Open Source">
                                     <rect key="frame" x="96" y="2501" width="410" height="104"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -295,9 +315,14 @@ The source code for Passcode, and all its applications is available for free. Be
         </view>
     </objects>
     <resources>
+        <image name="Passcode-Algorithmic" width="119" height="183"/>
         <image name="Passcode-Circle 1" width="48" height="48"/>
         <image name="Passcode-Circle 2" width="48" height="48"/>
         <image name="Passcode-Circle 3" width="48" height="48"/>
+        <image name="Passcode-Multi-Platform" width="371" height="173"/>
+        <image name="Passcode-Open-Source" width="84" height="82"/>
+        <image name="Passcode-Secure" width="45" height="80"/>
+        <image name="Passcode-Ubiquitous" width="84" height="84"/>
         <image name="Passcode-iPhone" width="391" height="753"/>
     </resources>
 </document>
