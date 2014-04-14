@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *passcode;
 @property (weak, nonatomic) IBOutlet UILabel *description;
 
+@property (weak, nonatomic) IBOutlet UILabel *step1Label;
+@property (weak, nonatomic) IBOutlet UILabel *step2Label;
+@property (weak, nonatomic) IBOutlet UILabel *step3Label;
+
 @end
 
 @implementation MTZPasscodeProjectViewController
@@ -24,6 +28,10 @@
 	
 	[self.passcode applyMTZStyle:MTZStyleProjectTitle];
 	[self.description applyMTZStyle:MTZStyleProjectDescriptionCenter];
+	
+	[self.step1Label applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.step2Label applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.step3Label applyMTZStyle:MTZStyleProjectSectionDescription];
 }
 
 @end
