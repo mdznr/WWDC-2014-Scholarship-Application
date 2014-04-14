@@ -11,7 +11,7 @@
 #import "PSPushPopPressView/PSPushPopPressView.h"
 #import "CGRectManipulation.h"
 
-@interface MTZTimelineEventView ()
+@interface MTZTimelineEventView () <PSPushPopPressViewDelegate>
 
 ///	Label for the date.
 @property (strong, nonatomic) UILabel *dateLabel;
@@ -106,7 +106,9 @@
 	// Add PPP view.
 	self.pushPopPressViewFrame = CGRectMake(660, 0, 344, 150);
 	self.pushPopPressView = [[PSPushPopPressView alloc] initWithFrame:self.pushPopPressViewFrame];
+	self.pushPopPressView.delegate = (id<PSPushPopPressViewDelegate>)[[UIApplication sharedApplication] keyWindow].rootViewController;
 	self.pushPopPressView.backgroundColor = [UIColor whiteColor];
+	self.pushPopPressView.retainAspectRatio = YES;
 	[self addSubview:self.pushPopPressView];
 	
 	// Add image view.
@@ -116,8 +118,6 @@
 	self.photoView.clipsToBounds = YES;
 	self.photoView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.photoView.contentMode = UIViewContentModeScaleAspectFit;
-#warning The delegate should be the corresponding view controller.
-//	self.photoView.pushPopPressViewDelegate = self;
 	[self.pushPopPressView addSubview:self.photoView];
 	
 	// Set up labels frames.
@@ -195,6 +195,5 @@
 	CGRect newFrame = CGRectScaledRectToFitInRect(imageRect, self.pushPopPressViewFrame);
 	self.pushPopPressView.frame = newFrame;
 }
-
 
 @end

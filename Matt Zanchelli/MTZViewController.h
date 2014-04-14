@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTZViewController : UIViewController
+#import "PSPushPopPressView.h"
+
+@interface MTZViewController : UIViewController <PSPushPopPressViewDelegate>
 
 ///	The section view controller to display.
 @property (nonatomic) UIViewController *containingViewController;

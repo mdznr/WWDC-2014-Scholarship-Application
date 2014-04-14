@@ -23,6 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet RS3DSegmentedControl *segmentedControl;
 
+///	The view to help dim the rest of the view.
+@property (weak, nonatomic) IBOutlet UIView *myDimmingView;
+
 @end
 
 @implementation MTZViewController
@@ -149,6 +152,35 @@
 	[childController willMoveToParentViewController:nil];
 	[childController.view removeFromSuperview];
 	[childController removeFromParentViewController];
+}
+
+
+#pragma mark - PSPushPopPressViewDelegate Protocol
+
+- (void)pushPopPressViewWillAnimateToFullscreenWindowFrame:(PSPushPopPressView *)pushPopPressView
+												  duration:(NSTimeInterval)duration
+{
+	// Show the dimming view.
+	[UIView animateWithDuration:duration/2
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+						 self.myDimmingView.alpha = 1.0f;
+					 }
+					 completion:nil];
+}
+
+- (void)pushPopPressViewWillAnimateToOriginalFrame:(PSPushPopPressView *)pushPopPressView
+										  duration:(NSTimeInterval)duration
+{
+	// Hide the dimming view.
+	[UIView animateWithDuration:duration/2
+						  delay:0.0f
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+						 self.myDimmingView.alpha = 0.0f;
+					 }
+					 completion:nil];
 }
 
 @end
