@@ -43,7 +43,6 @@
 	self.pageControl.numberOfPages = 3;
 	self.pageControl.currentPage = 0;
 	self.pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.3f];
-#warning change tint color depending on which page it's on (purple for Goodnight, red for honeycrisp, green for passcode, etc.)
 	self.pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
 	[self.pageControl addTarget:self action:@selector(pageDidChangeOnPageControl:) forControlEvents:UIControlEventValueChanged];
 	[self.view addSubview:self.pageControl];
@@ -190,8 +189,6 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers
 		return;
 	}
 	
-#warning not always accurate.
-	
 	// Find the index of current page.
 	MTZPageViewController *currentViewController = (MTZPageViewController *) [self.viewControllers lastObject];
 	NSUInteger index = currentViewController.index;
@@ -212,7 +209,6 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers
 	
 	// Do not allow swiping between pages anymore.
 	if ( offset.y > (pageViewController.view.frame.size.height/4) ) {
-#warning Disable scrollview scrolling on self (UIPageViewController).
 		self.scrollEnabled = NO;
 	} else {
 		self.scrollEnabled = YES;

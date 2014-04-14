@@ -89,7 +89,7 @@
 //	return YES;
 }
 
-#warning Use Gesture Recognizers.
+// TODO: Use Gesture Recognizers.
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	[_myTouches unionSet:touches];
