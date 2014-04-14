@@ -113,12 +113,6 @@ CGAspectRatio CGAspectRatioMake(CGFloat width, CGFloat height)
 	return (CGAspectRatio) {width, height};
 }
 
-bool CGAspectRatioMakeWithDictionaryRepresentation(CFDictionaryRef dict, CGAspectRatio *aspectRatio)
-{
-#warning Implement CGAspectRatioMakeWithDictionaryRepresentation
-	return NO;
-}
-
 CGAspectRatio CGAspectRatioFromSize(CGSize size)
 {
 	CGAspectRatio aspectRatio = CGAspectRatioMake(size.width, size.height);
@@ -145,13 +139,6 @@ CGAspectRatio CGAspectRatioReduce(CGAspectRatio aspectRatio)
 	
 	// Return reduced aspect ratio
 	return CGAspectRatioMake(w, h);
-}
-
-CGAspectRatio CGAspectRatioFromString(NSString *string)
-{
-#warning Implement CGAspectRatioFromString
-//	return CGAspectRatioZero;
-	return CGAspectRatioMake(0, 0);
 }
 
 NSString * NSStringFromCGAspectRatio(CGAspectRatio aspectRatio)

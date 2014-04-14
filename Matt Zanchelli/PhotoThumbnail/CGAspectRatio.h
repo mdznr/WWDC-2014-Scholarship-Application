@@ -59,12 +59,6 @@ NSComparisonResult CGAspectRatioComparison(CGAspectRatio aspectRatio1, CGAspectR
 /// @return Returns a CGAspectRatio structure with the specified width and height.
 CGAspectRatio CGAspectRatioMake(CGFloat width, CGFloat height);
 
-/// Fills in an aspect ratio using the contents of the specified dictionary.
-/// @param dict A dictionary that was previously returned from the function CGAspectRatioCreateDictionaryRepresentation.
-/// @param aspectRatio On return, the aspect ratio created from the specified dictionary.
-/// @return @c true if successful; otherwise, @c false.
-bool CGAspectRatioMakeWithDictionaryRepresentation(CFDictionaryRef dict, CGAspectRatio *aspectRatio);
-
 /// Returns an aspect ratio from the given structure size.
 /// @param size The Core Graphics size structure to convert to aspect ratio.
 /// @return A Core Graphics aspect ratio structure created from the specified size structure.
@@ -79,12 +73,6 @@ CGAspectRatio CGAspectRatioFlip(CGAspectRatio aspectRatio);
 /// @param aspectRatio The aspect ratio to reduce.
 /// @return A reduced aspect ratio.
 CGAspectRatio CGAspectRatioReduce(CGAspectRatio aspectRatio);
-
-/// Returns a Core Graphics aspect ratio structure corresponding to the data in a given string.
-/// @param string A string whose contents are of the form “{w, h}”, where w is the width and h is the height. The w and h values can be integer or float values. An example of a valid string is @”{16.0,9.0}”. The string is not localized, so items are always separated with a comma.
-/// @return A Core Graphics structure that represents an aspect ratio. If the string is not well-formed, the function returns CGAspectRatioZero.
-/// @discussion In general, you should use this function only to convert strings that were previously created using the NSStringFromCGAspectRatio function.
-CGAspectRatio CGAspectRatioFromString (NSString *string);
 
 /// Returns a string formatted to contain the data from an aspect ratio data structure.
 /// @param aspectRatio A Core Graphics structure representing an aspect ratio.
