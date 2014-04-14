@@ -6,11 +6,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZPasscodeProjectViewController">
             <connections>
+                <outlet property="availableMultiPlatform" destination="lOP-Nf-ITc" id="lpI-Lm-1dM"/>
                 <outlet property="contentView" destination="s9a-Pj-lNg" id="hh4-2S-HoD"/>
                 <outlet property="description" destination="DYH-H7-tcF" id="6K0-RE-epz"/>
+                <outlet property="freeAndOpenSource" destination="lBq-dZ-IpP" id="Fmg-17-7ch"/>
                 <outlet property="headerView" destination="XCU-KM-NdB" id="nQu-uc-oAv"/>
+                <outlet property="itsAlgorithmic" destination="QEw-P1-na7" id="b5s-sc-2ge"/>
+                <outlet property="itsUbiquitous" destination="oLO-Z9-7kZ" id="Hid-3C-iR3"/>
                 <outlet property="passcode" destination="Hu9-4v-Q6u" id="iwM-dz-4ue"/>
                 <outlet property="scrollView" destination="DOH-3B-SaZ" id="yzI-Yq-8md"/>
+                <outlet property="secureByDesign" destination="ehC-Gu-Yfw" id="loh-Yz-Zb5"/>
                 <outlet property="step1Label" destination="hmp-t5-f5l" id="W0M-OG-8Zc"/>
                 <outlet property="step2Label" destination="PDK-FU-0Oc" id="Pg9-6H-Ldt"/>
                 <outlet property="step3Label" destination="vt0-UM-2ha" id="yVh-k1-ucZ"/>
@@ -26,7 +31,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="2683"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-Pj-lNg" userLabel="Content View">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-Pj-lNg" userLabel="Content View">
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="2683"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -130,7 +135,127 @@ This keeps your passwords secure and different from anyone else’s for the same
                                         </fragment>
                                         <fragment>
                                             <string key="content">
-By combining the domain and master password, then running it through an encrpytion algorithm, a unique passcode is generated for you to use for that service.</string>
+By combining the domain and master password, then running it through an encryption algorithm, a unique passcode is generated for you to use for that service.</string>
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Text"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="ehC-Gu-Yfw" userLabel="Secure By Design">
+                                    <rect key="frame" x="96" y="1565" width="405" height="104"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Secure by Design.">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+Passcode was designed to be secure from the start. User information is not stored on a server. In fact, no data ever leaves the app running on the device itself.</string>
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Text"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="QEw-P1-na7" userLabel="Its Algorithmic">
+                                    <rect key="frame" x="522" y="1747" width="405" height="208"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="It’s Algorithmic.">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+To generate passwords, Passcode uses a standard SHA-256 encrpytion algorithm. This means that when Passcode is given the same input, it gives the same output. Already using a generated passcode and need to retrieve it? Simply generate it again. Since the algorithm is one-way, the master password cannot be retrieved given the outputted password.</string>
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Text"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="oLO-Z9-7kZ" userLabel="It’s Ubiquitous">
+                                    <rect key="frame" x="92" y="2033" width="405" height="130"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="It’s Ubiquitous.">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+Since Passcode algorithmically generates passcodes, and doesn’t rely on servers and networks to sync them, all your passwords are available at all times—even when not connected to the internet.</string>
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Text"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="405" translatesAutoresizingMaskIntoConstraints="NO" id="lOP-Nf-ITc" userLabel="Available Multi-Platform">
+                                    <rect key="frame" x="522" y="2241" width="405" height="182"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Available Multi-Platform.">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+No matter what computing platform you’re on, Your passwords are available. Passcode is available natively for iOS, and Android. Browser extensions are available for Firefox, Chrome, and Safari. A website is available for easy access on any computer. Even a command-line application is available.</string>
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Text"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="410" translatesAutoresizingMaskIntoConstraints="NO" id="lBq-dZ-IpP" userLabel="Free &amp; Open Source">
+                                    <rect key="frame" x="96" y="2501" width="410" height="104"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Free &amp; Open Source.">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="MyriadSet-Bold"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment>
+                                            <string key="content">
+The source code for Passcode, and all its applications is available for free. Because of this, Passcode will always be free and support for new platforms is easily added.</string>
                                             <attributes>
                                                 <font key="NSFont" size="18" name="MyriadSet-Text"/>
                                                 <real key="NSKern" value="0.0"/>
@@ -143,7 +268,7 @@ By combining the domain and master password, then running it through an encrpyti
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="2048" id="0yM-su-NNI"/>
+                                <constraint firstAttribute="height" constant="2683" id="0yM-su-NNI"/>
                                 <constraint firstAttribute="width" constant="1024" id="SXC-eO-H3y"/>
                             </constraints>
                         </view>
