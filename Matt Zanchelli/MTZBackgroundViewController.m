@@ -53,7 +53,7 @@
 	MTZTimelineEvent *event4 = [MTZTimelineEvent eventWithDate:@"Oct. 2007"
 														 title:@"Began Freelancing."
 												   description:@"I had enough experience with designing and building websites that I could do freelance design and web work. I loved my time designing logos, business cards, and websites for friends and locals in my community."
-														 image:[UIImage imageNamed:@""]];
+														 image:[UIImage imageNamed:@"10th Grade.jpg"]];
 	
 	MTZTimelineEvent *event5 = [MTZTimelineEvent eventWithDate:@"Apr. 2008"
 														 title:@"Started DJ BMZ."
