@@ -20,7 +20,7 @@
 @end
 
 
-@interface MTZPageViewController : UIViewController
+@interface MTZPageViewController : UIViewController <UIScrollViewDelegate>
 
 ///	The delegate to send messages to.
 @property (nonatomic, weak) id<MTZPageViewControllerDelegate> delegate;

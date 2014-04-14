@@ -10,6 +10,8 @@
 
 @interface MTZGoodnightProjectViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *screenshot;
+
 @property (weak, nonatomic) IBOutlet UILabel *goodnight;
 @property (weak, nonatomic) IBOutlet UILabel *description;
 
@@ -42,5 +44,33 @@
 	[self.haveAGoodNight2 applyMTZStyle:MTZStyleGoodnightSectionSubtitle];
 	[self.goodMorning2 applyMTZStyle:MTZStyleGoodnightSectionSubtitle];
 }
+
+
+#pragma mark - UIScrollViewDelegate Protocol
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	[super scrollViewDidScroll:scrollView];
+	
+	NSUInteger page = round(scrollView.contentOffset.y / scrollView.frame.size.height);
+	switch (page) {
+		case 0:
+			self.screenshot.image = [UIImage imageNamed:@"Goodnight-Time Set"];
+			break;
+		case 1:
+			self.screenshot.image = [UIImage imageNamed:@"Goodnight-Alarm"];
+			break;
+		case 2:
+			self.screenshot.image = [UIImage imageNamed:@"Goodnight-Wake Times"];
+			break;
+		case 3:
+			self.screenshot.image = [UIImage imageNamed:@"Goodnight-Good Morning"];
+			break;
+		default:
+			self.screenshot.image = nil;
+			break;
+	}
+}
+
 
 @end
