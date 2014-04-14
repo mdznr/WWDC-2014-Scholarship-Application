@@ -36,11 +36,24 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	// Add edge gesture recognizer.
+	/*
 	UIScreenEdgePanGestureRecognizer *edge = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(didPanFromEdge:)];
+	edge.edges = UIRectEdgeLeft | UIRectEdgeRight;
 	edge.minimumNumberOfTouches = 1;
 	edge.maximumNumberOfTouches = 1;
-	edge.edges = UIRectEdgeLeft | UIRectEdgeRight;
 	[self.view addGestureRecognizer:edge];
+	 */
+	
+	// Or add swipe gesture recognizer.
+	/*
+	UISwipeGestureRecognizer *swipeL = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+	swipeL.direction = UISwipeGestureRecognizerDirectionLeft;
+	[self.view addGestureRecognizer:swipeL];
+	
+	UISwipeGestureRecognizer *swipeR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+	swipeR.direction = UISwipeGestureRecognizerDirectionRight;
+	[self.view addGestureRecognizer:swipeR];
+	 */
 	
 	// The title for each segment (corresponds to the names of segues).
 	self.segments = @[@"About Me", @"Background", @"Projects"];
@@ -61,7 +74,21 @@
 	return YES;
 }
 
-- (IBAction)didPanFromEdge:(UIGestureRecognizer *)sender
+- (void)didSwipe:(UISwipeGestureRecognizer *)sender
+{
+	switch ( sender.direction) {
+		case UISwipeGestureRecognizerDirectionRight:
+			[self setSelectedIndex:self.index-1];
+			break;
+		case UISwipeGestureRecognizerDirectionLeft:
+			[self setSelectedIndex:self.index+1];
+			break;
+		default:
+			break;
+	}
+}
+
+- (void)didPanFromEdge:(UIGestureRecognizer *)sender
 {
 #warning TODO: Enable scrollview panning horizontally between sections.
 	NSLog(@"Did Pan");
