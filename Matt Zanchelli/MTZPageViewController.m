@@ -8,7 +8,7 @@
 
 #import "MTZPageViewController.h"
 
-@interface MTZPageViewController () <UIScrollViewDelegate>
+@interface MTZPageViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;

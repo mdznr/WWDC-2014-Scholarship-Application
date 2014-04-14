@@ -15,6 +15,7 @@
                 <outlet property="haveAGoodNight2" destination="U5N-SL-Tqt" id="hwR-ME-cQF"/>
                 <outlet property="restEasy" destination="37g-tS-x4f" id="BUV-3h-KJf"/>
                 <outlet property="restEasy2" destination="nMW-Bu-JJU" id="IeL-LR-5Pn"/>
+                <outlet property="screenshot" destination="ENd-vr-PSR" id="AxJ-OY-Esa"/>
                 <outlet property="scrollView" destination="wN7-WI-6Nx" id="OYa-sE-aFJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -120,6 +121,10 @@
                     <rect key="frame" x="571" y="30" width="390" height="752"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goodnight-Time Set" translatesAutoresizingMaskIntoConstraints="NO" id="ENd-vr-PSR" userLabel="SS">
+                    <rect key="frame" x="632" y="164" width="272" height="483"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -135,6 +140,7 @@
     </objects>
     <resources>
         <image name="Goodnight-Background" width="1024" height="702"/>
+        <image name="Goodnight-Time Set" width="274" height="485"/>
         <image name="Goodnight-iPhone" width="390" height="752"/>
     </resources>
 </document>
