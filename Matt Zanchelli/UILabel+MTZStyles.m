@@ -52,6 +52,12 @@
 		case MTZStyleProjectSectionAnnotation:
 			[self applyMTZStyleProjectSectionAnnotation];
 			break;
+		case MTZStyleGoodnightSectionTitle:
+			[self applyMTZStyleGoodnightSectionTitle];
+			break;
+		case MTZStyleGoodnightSectionSubtitle:
+			[self applyMTZStyleGoodnightSectionSubtitle];
+			break;
 		default:
 			break;
 	}
@@ -298,6 +304,40 @@
 	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
 	paragrahStyle.lineSpacing = 4.0f;
 	paragrahStyle.alignment = NSTextAlignmentCenter;
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:
+	 NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleGoodnightSectionTitle
+{
+	self.font = [UIFont fontWithName:@"MyriadSetPro-Thin" size:48];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 16.0f; // 64 - 48
+	[attributedString addAttribute:NSParagraphStyleAttributeName
+							 value:paragrahStyle
+							 range:
+	 NSMakeRange(0, attributedString.length)];
+	self.attributedText = attributedString;
+}
+
+- (void)applyMTZStyleGoodnightSectionSubtitle
+{
+	self.font = [UIFont fontWithName:@"MyriadSetPro-Thin" size:24];
+	
+	// Get the attributed string.
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
+	
+	// Add the paragraph style.
+	NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+	paragrahStyle.lineSpacing = 8.0f; // 32 - 24
 	[attributedString addAttribute:NSParagraphStyleAttributeName
 							 value:paragrahStyle
 							 range:

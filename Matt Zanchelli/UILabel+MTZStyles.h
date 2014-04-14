@@ -27,6 +27,8 @@ typedef NS_ENUM(NSUInteger, MTZStyle){
 	MTZStyleProjectSectionDescription,
 	MTZStyleProjectSectionQuote,
 	MTZStyleProjectSectionAnnotation,
+	MTZStyleGoodnightSectionTitle,
+	MTZStyleGoodnightSectionSubtitle
 };
 
 @interface UILabel (MTZStyles)
