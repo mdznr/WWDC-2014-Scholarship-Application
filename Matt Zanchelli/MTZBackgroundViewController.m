@@ -91,16 +91,19 @@
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Event"];
 	
-	if (cell == nil) {
+	if ( !cell ) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Event"];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	
-	UIView *timelineStripeView = [[UIView alloc] initWithFrame:CGRectMake(128, 0, 1, cell.frame.size.height)];
-	timelineStripeView.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
-	[cell.contentView addSubview:timelineStripeView];
+	UIView *timelineStripeView = [cell.contentView viewWithTag:222];
+	if ( !timelineStripeView ) {
+		timelineStripeView = [[UIView alloc] initWithFrame:CGRectMake(128, 0, 1, cell.frame.size.height)];
+		timelineStripeView.tag = 222;
+		timelineStripeView.backgroundColor = [UIColor colorWithWhite:0.85f alpha:1.0f];
+		[cell.contentView addSubview:timelineStripeView];
+	}
 	
-	MTZTimelineEvent *event = (MTZTimelineEvent *) self.content[indexPath.row];
 	MTZTimelineEventView *timelineEventView = (MTZTimelineEventView *) [cell.contentView viewWithTag:111];
 	if ( !timelineEventView ) {
 		timelineEventView = [[MTZTimelineEventView alloc] initWithFrame:cell.bounds];
@@ -108,6 +111,7 @@
 		[cell.contentView addSubview:timelineEventView];
 	}
 	
+	MTZTimelineEvent *event = (MTZTimelineEvent *) self.content[indexPath.row];
 	[timelineEventView setUpWithTimelineEvent:event];
 	
 	return cell;
