@@ -117,7 +117,7 @@
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
                 </scrollView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goodnight-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="YEN-Ro-EQM" userLabel="iPhone">
-                    <rect key="frame" x="571" y="94" width="390" height="752"/>
+                    <rect key="frame" x="571" y="30" width="390" height="752"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
