@@ -65,11 +65,15 @@
 @interface PSPushPopPressView : UIView <UIGestureRecognizerDelegate>
 
 /// The delegate for the @c PushPopPressView.
-@property (nonatomic, unsafe_unretained) id<PSPushPopPressViewDelegate> pushPopPressViewDelegate;
+@property (nonatomic, unsafe_unretained) id<PSPushPopPressViewDelegate> delegate;
 
-/// Determine if the receiver is currently being dragged/
+/// Determine if the receiver is currently being dragged.
 /// @c YES if one or more fingers are on the view.
 @property (nonatomic, readonly, getter=isBeingDragged) BOOL beingDragged;
+
+///	The relative scale of the view compared to it's fullscreen size.
+#warning Utilize this property internally.
+@property (nonatomic, readonly) CGFloat scale;
 
 /// Determine if the receiver is currently being displayed fullscreen.
 @property (nonatomic, readonly, getter=isFullscreen) BOOL fullscreen;
@@ -87,6 +91,10 @@
 
 ///	Show a shadow below the view. Default: @c YES.
 @property (nonatomic, assign) BOOL showShadow;
+
+///	When making full-screen, simply scale the frame size keeping the same aspect ratio.
+/// @discussion If @c NO, the view is scaled to the bounds of the window. If @c YES, the view is scaled to fit within the bounds of the window (in one dimension).
+@property (nonatomic, assign) BOOL retainAspectRatio;
 
 ///	Move the view to fullscreen mode.
 ///	@param animated Whether or not this change should be animated.

@@ -6,7 +6,10 @@
 //
 
 #import "PSPushPopPressView.h"
+
 #import <QuartzCore/QuartzCore.h>
+
+#import "CGRectManipulation.h"
 
 #define kPSAnimationDuration 0.55f
 #define kPSAnimationMoveToOriginalPositionDuration 0.45f
@@ -70,15 +73,16 @@
 		_initialIndex = 0;
 		_allowSingleTapSwitch = YES;
 		_showShadow = YES;
+		_retainAspectRatio = NO;
 
-        UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchPanRotate:)];
+        UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchPanRotate:)];
         pinchRecognizer.cancelsTouchesInView = NO;
         pinchRecognizer.delaysTouchesBegan = NO;
         pinchRecognizer.delaysTouchesEnded = NO;
         pinchRecognizer.delegate = self;
         [self addGestureRecognizer: pinchRecognizer];
 
-        UIRotationGestureRecognizer* rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(pinchPanRotate:)];
+        UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(pinchPanRotate:)];
         rotationRecognizer.cancelsTouchesInView = NO;
         rotationRecognizer.delaysTouchesBegan = NO;
         rotationRecognizer.delaysTouchesEnded = NO;
@@ -119,7 +123,10 @@
         // manually track rotations and adapt fullscreen
         // needed if we rotate within a fullscreen animation and miss the autorotate event
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(detectOrientation) name:UIDeviceOrientationDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(detectOrientation)
+													 name:UIDeviceOrientationDidChangeNotification
+												   object:nil];
     }
 
     return self;
@@ -129,7 +136,7 @@
 {
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    _pushPopPressViewDelegate = nil;
+    _delegate = nil;
 }
 
 - (void)setFrame:(CGRect)frame
@@ -158,10 +165,9 @@
 
 - (CGRect)windowBounds
 {
-    // Completely fullscreen.
-    CGRect windowBounds = [self rootView].bounds;
-
-    if ( self.ignoreStatusBar ) {
+	CGRect windowBounds = [self rootView].bounds;
+	
+	if ( self.ignoreStatusBar ) {
         windowBounds = [UIScreen mainScreen].bounds;
         if (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
             windowBounds.size.width = windowBounds.size.height;
@@ -169,7 +175,11 @@
         }
     }
 	
-    return windowBounds;
+	if ( self.retainAspectRatio ) {
+		windowBounds = CGRectScaledRectToFitInRect(self.frame, windowBounds);
+	}
+	
+	return windowBounds;
 }
 
 - (CGRect)superviewCorrectedInitialFrame
@@ -267,8 +277,8 @@
 {
     self.fullscreen = NO;
 
-    if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewWillAnimateToOriginalFrame:duration:)]) {
-        [self.pushPopPressViewDelegate pushPopPressViewWillAnimateToOriginalFrame:self duration:kPSAnimationMoveToOriginalPositionDuration*1.5f];
+    if ([self.delegate respondsToSelector:@selector(pushPopPressViewWillAnimateToOriginalFrame:duration:)]) {
+        [self.delegate pushPopPressViewWillAnimateToOriginalFrame:self duration:kPSAnimationMoveToOriginalPositionDuration*1.5f];
     }
 	
 	[UIView animateWithDuration:animated ? kPSAnimationMoveToOriginalPositionDuration : 0.0f
@@ -293,16 +303,16 @@
 						if ( !self.isBeingDragged && finished ) {
 							[self detachViewToWindow:NO];
 						}
-						if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidAnimateToOriginalFrame:)]) {
-							[self.pushPopPressViewDelegate pushPopPressViewDidAnimateToOriginalFrame:self];
+						if ([self.delegate respondsToSelector:@selector(pushPopPressViewDidAnimateToOriginalFrame:)]) {
+							[self.delegate pushPopPressViewDidAnimateToOriginalFrame:self];
 						}
                      }];
 }
 
 - (void)moveToFullscreenAnimated:(BOOL)animated bounces:(BOOL)bounces
 {
-    if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewWillAnimateToFullscreenWindowFrame:duration:)]) {
-		[self.pushPopPressViewDelegate pushPopPressViewWillAnimateToFullscreenWindowFrame:self duration:kPSAnimationDuration];
+    if ([self.delegate respondsToSelector:@selector(pushPopPressViewWillAnimateToFullscreenWindowFrame:duration:)]) {
+		[self.delegate pushPopPressViewWillAnimateToFullscreenWindowFrame:self duration:kPSAnimationDuration];
     }
 	
 	BOOL viewChanged = [self detachViewToWindow:YES];
@@ -322,8 +332,8 @@
 						 [self setFrame:windowBounds];
                      }
                      completion:^(BOOL finished) {
-						 if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidAnimateToFullscreenWindowFrame:)]) {
-							 [self.pushPopPressViewDelegate pushPopPressViewDidAnimateToFullscreenWindowFrame:self];
+						 if ([self.delegate respondsToSelector:@selector(pushPopPressViewDidAnimateToFullscreenWindowFrame:)]) {
+							 [self.delegate pushPopPressViewDidAnimateToFullscreenWindowFrame:self];
 						 }
 						 _anchorPointUpdated = NO;
                      }];
@@ -457,8 +467,8 @@
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan: {
             self.beingDragged = YES;
-            if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidStartManipulation:)]) {
-                [self.pushPopPressViewDelegate pushPopPressViewDidStartManipulation:self];
+            if ([self.delegate respondsToSelector:@selector(pushPopPressViewDidStartManipulation:)]) {
+                [self.delegate pushPopPressViewDidStartManipulation:self];
             }
             break; 
         }
@@ -468,8 +478,8 @@
         case UIGestureRecognizerStateCancelled: {
             self.beingDragged = NO;
             [self resetGestureRecognizers];
-            if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidFinishManipulation:)]) {
-                [self.pushPopPressViewDelegate pushPopPressViewDidFinishManipulation:self];
+            if ([self.delegate respondsToSelector:@selector(pushPopPressViewDidFinishManipulation:)]) {
+                [self.delegate pushPopPressViewDidFinishManipulation:self];
             }
             break;
         } 
@@ -482,8 +492,8 @@
         case UIGestureRecognizerStateEnded: {
             self.beingDragged = NO;
             [self resetGestureRecognizers];
-            if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidFinishManipulation:)]) {
-                [self.pushPopPressViewDelegate pushPopPressViewDidFinishManipulation:self];
+            if ([self.delegate respondsToSelector:@selector(pushPopPressViewDidFinishManipulation:)]) {
+                [self.delegate pushPopPressViewDidFinishManipulation:self];
             }
             break;
         }
@@ -494,19 +504,19 @@
 {
     if ( self.allowSingleTapSwitch ) {
         if ( tap.state == UIGestureRecognizerStateEnded ) {
-            if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewDidReceiveTap:)]) {
-                [self.pushPopPressViewDelegate pushPopPressViewDidReceiveTap:self];
+            if ([self.delegate respondsToSelector:@selector(pushPopPressViewDidReceiveTap:)]) {
+                [self.delegate pushPopPressViewDidReceiveTap:self];
             }
 
              if ( !self.isFullscreen ) {
-                if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewShouldAllowTapToAnimateToFullscreenWindowFrame:)]) {
-                    if ([self.pushPopPressViewDelegate pushPopPressViewShouldAllowTapToAnimateToFullscreenWindowFrame:self] == NO) return;
+                if ([self.delegate respondsToSelector:@selector(pushPopPressViewShouldAllowTapToAnimateToFullscreenWindowFrame:)]) {
+                    if ([self.delegate pushPopPressViewShouldAllowTapToAnimateToFullscreenWindowFrame:self] == NO) return;
                 }
 
                 [self moveToFullscreenWindowAnimated:YES];
             } else {
-                if ([self.pushPopPressViewDelegate respondsToSelector:@selector(pushPopPressViewShouldAllowTapToAnimateToOriginalFrame:)]) {
-                    if ([self.pushPopPressViewDelegate pushPopPressViewShouldAllowTapToAnimateToOriginalFrame:self] == NO) return;
+                if ([self.delegate respondsToSelector:@selector(pushPopPressViewShouldAllowTapToAnimateToOriginalFrame:)]) {
+                    if ([self.delegate pushPopPressViewShouldAllowTapToAnimateToOriginalFrame:self] == NO) return;
                 }
 
                 [self moveToOriginalFrameAnimated:YES];
