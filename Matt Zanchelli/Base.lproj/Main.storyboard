@@ -55,6 +55,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hV-FD-Qgr" userLabel="Dimming View">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -64,6 +69,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="containerView" destination="H9U-6M-2hx" id="2iC-8B-ZEG"/>
+                        <outlet property="myDimmingView" destination="0hV-FD-Qgr" id="f6d-vH-bVB"/>
                         <outlet property="segmentedControl" destination="96a-UP-4BE" id="05d-ku-V3n"/>
                         <segue destination="usf-5j-UWD" kind="custom" identifier="About Me" customClass="MTZStoryboardSegue" id="abP-JQ-7fF"/>
                         <segue destination="FGp-Z3-zL5" kind="custom" identifier="Background" customClass="MTZStoryboardSegue" id="V9z-Xs-bDv"/>
