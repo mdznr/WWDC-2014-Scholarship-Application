@@ -111,11 +111,11 @@
 	
 	// Add image view.
 	self.photoView = [[UIImageView alloc] initWithFrame:self.pushPopPressView.bounds];
-	self.photoView.backgroundColor = [UIColor blackColor];
+	self.photoView.backgroundColor = [UIColor whiteColor];
 	self.photoView.opaque = YES;
 	self.photoView.clipsToBounds = YES;
 	self.photoView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	self.photoView.contentMode = UIViewContentModeScaleAspectFit;// UIViewContentModeScaleAspectFill;
+	self.photoView.contentMode = UIViewContentModeScaleAspectFit;
 #warning The delegate should be the corresponding view controller.
 //	self.photoView.pushPopPressViewDelegate = self;
 	[self.pushPopPressView addSubview:self.photoView];
@@ -191,7 +191,6 @@
 	
 	self.photoView.image = image;
 	
-#warning TODO: set the size of imageView to fit properly.
 	CGRect imageRect = CGRectMake(0, 0, _image.size.width, _image.size.height);
 	CGRect newFrame = CGRectScaledRectToFitInRect(imageRect, self.pushPopPressViewFrame);
 	self.pushPopPressView.frame = newFrame;
