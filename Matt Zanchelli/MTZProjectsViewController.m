@@ -71,8 +71,6 @@
 	MTZPageViewController *childViewController = [[pageViewControllerSubclass alloc] initWithNibName:className bundle:nil];
 	childViewController.delegate = self;
 	childViewController.index = index;
-
-#warning Try not to clip.
 	childViewController.view.clipsToBounds = NO;
 	
 	return childViewController;

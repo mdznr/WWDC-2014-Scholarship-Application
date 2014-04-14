@@ -203,26 +203,28 @@
     [self setNeedsLayout];
 }
 
-- (void)layoutSubviews {
+- (void)layoutSubviews
+{
     [super layoutSubviews];
     
     if ( self.adjustsFontSizeToFitWidth ) {
         // Calculate the new font size:
         CGFloat newFontSize;
-        float minimumFontSize;
-        if ([self respondsToSelector:@selector(minimumScaleFactor)]) {
-            minimumFontSize = self.minimumScaleFactor;
-        } else {
-            minimumFontSize = self.minimumFontSize;
-        }
+		float minimumFontSize = self.minimumScaleFactor;
         [textLayer.string sizeWithFont:self.font minFontSize:minimumFontSize actualFontSize:&newFontSize forWidth:self.bounds.size.width lineBreakMode:self.lineBreakMode];
         self.font = [UIFont fontWithName:self.font.fontName size:newFontSize];
     }
     
-    // Resize the text so that the text will be vertically aligned according to the set alignment
-    CGSize stringSize = [self.text sizeWithFont:self.font
-                              constrainedToSize:self.bounds.size
-                                  lineBreakMode:self.lineBreakMode];
+    // Resize the text so that the text will be vertically aligned according to the set alignment	
+	NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+	[style setLineBreakMode:self.lineBreakMode];
+	NSDictionary *attributes = @{NSFontAttributeName: self.font,
+								 NSParagraphStyleAttributeName: style};
+	CGRect boundingRect = [self.text boundingRectWithSize:self.bounds.size
+												  options:0
+											   attributes:attributes
+												  context:nil];
+	CGSize stringSize = boundingRect.size;
     
     CGRect newLayerFrame = self.layer.bounds;
     newLayerFrame.size.height = stringSize.height;
