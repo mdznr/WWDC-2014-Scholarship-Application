@@ -403,7 +403,7 @@ The color of interface elements can be chosen dynamically from dominant colors i
                                             </attributes>
                                         </fragment>
                                         <fragment>
-                                            <mutableString key="content">When using a touch-screen interface, part of the interface will be out of visible view. The hand interacting with the device will inherently obstruct part of the screen. This leads to an interesting predicament. How can the interface still show relevant information to the user while they’re interacting with it? Honeycrisp can determine the handedness of some gestures by the location and behaviour of touches. The areas that are likely out of view can be determined based on this. Now the user interface can adapt given that additional bit of information.</mutableString>
+                                            <string key="content">When using a touch-screen interface, part of the interface will be out of visible view. The hand interacting with the device will inherently obstruct part of the screen. This leads to an interesting predicament. How can the interface still show relevant information to the user while they’re interacting with it? Honeycrisp can determine the handedness of some gestures by the location and behaviour of touches. The areas that are likely out of view can be determined based on this. Now the user interface can adapt given that additional bit of information.</string>
                                             <attributes>
                                                 <font key="NSFont" size="18" name="MyriadSet-Text"/>
                                                 <real key="NSKern" value="0.0"/>
@@ -449,7 +449,7 @@ out of the way from the user’s hand.</string>
                                             </attributes>
                                         </fragment>
                                         <fragment>
-                                            <mutableString key="content">Even though a touch screen interface allows for much richer means of input than a traditional mouse and keyboard-based PC, app designers still often treat them as such. Controls don’t have to just be tapped or not tapped, they can be more dynamic and adaptive. Honeycrisp allows developers to easily determine how something was tapped. Controls can now behave in a more natural way. This creates a stronger connection between the user’s input and the visual feedback. This leads to a more friendly, and intuitive interface.</mutableString>
+                                            <string key="content">Even though a touch screen interface allows for much richer means of input than a traditional mouse and keyboard-based PC, app designers still often treat them as such. Controls don’t have to just be tapped or not tapped, they can be more dynamic and adaptive. Honeycrisp allows developers to easily determine how something was tapped. Controls can now behave in a more natural way. This creates a stronger connection between the user’s input and the visual feedback. This leads to a more friendly, and intuitive interface.</string>
                                             <attributes>
                                                 <font key="NSFont" size="18" name="MyriadSet-Text"/>
                                                 <real key="NSKern" value="0.0"/>

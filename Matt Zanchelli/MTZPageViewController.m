@@ -29,7 +29,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	[self.scrollView flashScrollIndicators];
+	[self flashScrollIndicators];
 }
 
 - (void)flashScrollIndicators
