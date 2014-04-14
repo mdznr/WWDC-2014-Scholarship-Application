@@ -17,6 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *step2Label;
 @property (weak, nonatomic) IBOutlet UILabel *step3Label;
 
+@property (weak, nonatomic) IBOutlet UILabel *secureByDesign;
+@property (weak, nonatomic) IBOutlet UILabel *itsAlgorithmic;
+@property (weak, nonatomic) IBOutlet UILabel *itsUbiquitous;
+@property (weak, nonatomic) IBOutlet UILabel *availableMultiPlatform;
+@property (weak, nonatomic) IBOutlet UILabel *freeAndOpenSource;
+
 @end
 
 @implementation MTZPasscodeProjectViewController
@@ -32,6 +38,12 @@
 	[self.step1Label applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.step2Label applyMTZStyle:MTZStyleProjectSectionDescription];
 	[self.step3Label applyMTZStyle:MTZStyleProjectSectionDescription];
+	
+	[self.secureByDesign applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.itsAlgorithmic applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.itsUbiquitous applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.availableMultiPlatform applyMTZStyle:MTZStyleProjectSectionDescription];
+	[self.freeAndOpenSource applyMTZStyle:MTZStyleProjectSectionDescription];
 }
 
 @end
