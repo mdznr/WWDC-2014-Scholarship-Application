@@ -25,6 +25,8 @@
 
 @implementation MTZProjectsViewController
 
+@synthesize scrollEnabled = _scrollEnabled;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,6 +51,8 @@
 	self.dataSource = self;
 	self.delegate = self;
 	
+	_scrollEnabled = YES;
+	
 	self.childViewControllerNibNames = @[@"MTZHoneycrispProjectViewController",
 										 @"MTZPasscodeProjectViewController",
 										 @"MTZGoodnightProjectViewController"];
@@ -58,6 +62,26 @@
 				   direction:UIPageViewControllerNavigationDirectionForward
 					animated:NO
 				  completion:^(BOOL finished) {}];
+}
+
+- (void)setScrollEnabled:(BOOL)scrollEnabled
+{
+	if ( scrollEnabled == self.scrollEnabled ) {
+		return;
+	}
+	
+	_scrollEnabled = scrollEnabled;
+	
+	for (UIScrollView *view in self.view.subviews) {
+		if ([view isKindOfClass:[UIScrollView class]]) {
+			view.scrollEnabled = scrollEnabled;
+		}
+	}
+}
+
+- (BOOL)isScrollEnabled
+{
+	return _scrollEnabled;
 }
 
 - (MTZPageViewController *)viewControllerAtIndex:(NSUInteger)index
@@ -189,6 +213,9 @@ willTransitionToViewControllers:(NSArray *)pendingViewControllers
 	// Do not allow swiping between pages anymore.
 	if ( offset.y > (pageViewController.view.frame.size.height/4) ) {
 #warning Disable scrollview scrolling on self (UIPageViewController).
+		self.scrollEnabled = NO;
+	} else {
+		self.scrollEnabled = YES;
 	}
 }
 
