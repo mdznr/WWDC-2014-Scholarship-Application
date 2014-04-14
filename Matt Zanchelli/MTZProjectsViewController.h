@@ -12,4 +12,8 @@
 
 @interface MTZProjectsViewController : UIPageViewController <MTZSectionViewControllerProtocol>
 
+///	A Boolean value that determines whether scrolling is enabled.
+/// @discussion If the value of this property is @c YES , scrolling is enabled, and if it is @c NO , scrolling is disabled. The default is @c YES. When scrolling is disabled, the scroll view does not accept touch events; it forwards them up the responder chain.
+@property (nonatomic, getter = isScrollEnabled) BOOL scrollEnabled;
+
 @end

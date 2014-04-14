@@ -95,9 +95,6 @@
 	_index = index;
 	
 	[self performSegueWithIdentifier:self.segments[index] sender:self];
-	
-	// Ask child view controller to flash scroll indicators.
-	[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
 }
 
 
@@ -133,6 +130,9 @@
 	// Update to the new child view controller.
 	_containingViewController = containingViewController;
 	[self addChildViewController:_containingViewController];
+	
+	// Ask child view controller to flash scroll indicators.
+	[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
 }
 
 ///	Add a child view controller.
