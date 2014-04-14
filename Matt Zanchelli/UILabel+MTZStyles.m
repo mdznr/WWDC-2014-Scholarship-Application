@@ -331,6 +331,7 @@
 - (void)applyMTZStyleGoodnightSectionSubtitle
 {
 	self.font = [UIFont fontWithName:@"MyriadSetPro-Thin" size:24];
+	self.textColor = [UIColor colorWithWhite:1.0f alpha:0.8f];
 	
 	// Get the attributed string.
 	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
