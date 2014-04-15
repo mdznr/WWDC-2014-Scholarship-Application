@@ -3,104 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>app</key>
-	<string>com.bohemiancoding.sketch.internal</string>
+	<string>com.bohemiancoding.sketch3.beta</string>
 	<key>build</key>
-	<integer>7553</integer>
+	<integer>7593</integer>
 	<key>commit</key>
-	<string>2e8a9f7d290f4ec997fd5b57d99c5be4eecfb90a</string>
+	<string>c858c593597ad033a3327238bde8223482b0820d</string>
 	<key>fonts</key>
 	<array>
+		<string>MyriadSetPro-Thin</string>
 		<string>MyriadSet-Text</string>
 		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Bold</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
-		<string>MyriadSet-Text</string>
+		<string>MyriadSet-TextItalic</string>
+		<string>HelveticaNeue</string>
+		<string>MyriadSetPro-Ultralight</string>
 	</array>
 	<key>length</key>
-	<integer>285564</integer>
+	<integer>20624199</integer>
 	<key>version</key>
 	<integer>36</integer>
 </dict>
