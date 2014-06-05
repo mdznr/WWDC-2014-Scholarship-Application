@@ -21,8 +21,6 @@
 		C98BD54218FB3F4300F0F61B /* CGRectManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD54018FB3F4300F0F61B /* CGRectManipulation.m */; };
 		C98BD54418FB963600F0F61B /* 10th Grade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C98BD54318FB963500F0F61B /* 10th Grade.jpg */; };
 		C998220A18EDAC1E00983B36 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C998220818EDAC1E00983B36 /* InfoPlist.strings */; };
-		C998220C18EDAC1E00983B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220B18EDAC1E00983B36 /* main.m */; };
-		C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C998220F18EDAC1E00983B36 /* MTZAppDelegate.m */; };
 		C998221318EDAC1E00983B36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C998221118EDAC1E00983B36 /* Main.storyboard */; };
 		C998221618EDAC1E00983B36 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C998221518EDAC1E00983B36 /* MTZViewController.m */; };
 		C998221818EDAC1E00983B36 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C998221718EDAC1E00983B36 /* Images.xcassets */; };
@@ -51,6 +49,7 @@
 		C9B4632E18F4C3DC000D480D /* MTZGoodnightProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4632C18F4C3DC000D480D /* MTZGoodnightProjectViewController.m */; };
 		C9B4632F18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4632D18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib */; };
 		C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4633418F4C5DD000D480D /* MTZPageViewController.m */; };
+		C9E1BE7E19401B3B00EB72B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E1BE7D19401B3A00EB72B0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +86,7 @@
 		C99821FC18EDAC1E00983B36 /* Matt Zanchelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matt Zanchelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C998220718EDAC1E00983B36 /* Matt Zanchelli-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Matt Zanchelli-Info.plist"; sourceTree = "<group>"; };
 		C998220918EDAC1E00983B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C998220B18EDAC1E00983B36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C998220D18EDAC1E00983B36 /* Matt Zanchelli-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matt Zanchelli-Prefix.pch"; sourceTree = "<group>"; };
-		C998220E18EDAC1E00983B36 /* MTZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZAppDelegate.h; sourceTree = "<group>"; };
-		C998220F18EDAC1E00983B36 /* MTZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZAppDelegate.m; sourceTree = "<group>"; };
 		C998221218EDAC1E00983B36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C998221418EDAC1E00983B36 /* MTZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
 		C998221518EDAC1E00983B36 /* MTZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
@@ -143,6 +139,8 @@
 		C9B4632D18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZGoodnightProjectViewController.xib; sourceTree = "<group>"; };
 		C9B4633318F4C5DD000D480D /* MTZPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZPageViewController.h; sourceTree = "<group>"; };
 		C9B4633418F4C5DD000D480D /* MTZPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZPageViewController.m; sourceTree = "<group>"; };
+		C9E1BE7C19401B3A00EB72B0 /* Matt Zanchelli-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matt Zanchelli-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9E1BE7D19401B3A00EB72B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +216,7 @@
 		C998220518EDAC1E00983B36 /* Matt Zanchelli */ = {
 			isa = PBXGroup;
 			children = (
-				C998220E18EDAC1E00983B36 /* MTZAppDelegate.h */,
-				C998220F18EDAC1E00983B36 /* MTZAppDelegate.m */,
+				C9E1BE7D19401B3A00EB72B0 /* AppDelegate.swift */,
 				C998221118EDAC1E00983B36 /* Main.storyboard */,
 				C998232018F2050800983B36 /* MTZStoryboardSegue.h */,
 				C998232118F2050800983B36 /* MTZStoryboardSegue.m */,
@@ -237,6 +234,7 @@
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998233018F25C5900983B36 /* Fonts */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
+				C9E1BE7C19401B3A00EB72B0 /* Matt Zanchelli-Bridging-Header.h */,
 			);
 			path = "Matt Zanchelli";
 			sourceTree = "<group>";
@@ -246,7 +244,6 @@
 			children = (
 				C998220718EDAC1E00983B36 /* Matt Zanchelli-Info.plist */,
 				C998220818EDAC1E00983B36 /* InfoPlist.strings */,
-				C998220B18EDAC1E00983B36 /* main.m */,
 				C998220D18EDAC1E00983B36 /* Matt Zanchelli-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -514,7 +511,6 @@
 				C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */,
 				C998232218F2050800983B36 /* MTZStoryboardSegue.m in Sources */,
 				C98BD52218F9F50300F0F61B /* MTZAppIcon.m in Sources */,
-				C998221018EDAC1E00983B36 /* MTZAppDelegate.m in Sources */,
 				C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */,
 				C98BD54118FB3F4300F0F61B /* CGAspectRatio.m in Sources */,
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
@@ -524,7 +520,6 @@
 				C98BD52918F9F61B00F0F61B /* UIImage+Mask.m in Sources */,
 				C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */,
 				C9B4632418F4C388000D480D /* MTZHoneycrispProjectViewController.m in Sources */,
-				C998220C18EDAC1E00983B36 /* main.m in Sources */,
 				C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */,
 				C9B4632E18F4C3DC000D480D /* MTZGoodnightProjectViewController.m in Sources */,
 				C9AF887118F62C9A005E0CEC /* RS3DSegmentedControl.m in Sources */,
@@ -532,6 +527,7 @@
 				C998232518F255C100983B36 /* MTZAboutViewController.m in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
 				C98BD54218FB3F4300F0F61B /* CGRectManipulation.m in Sources */,
+				C9E1BE7E19401B3B00EB72B0 /* AppDelegate.swift in Sources */,
 				C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */,
 				C98BD52818F9F61B00F0F61B /* UIImage+Alpha.m in Sources */,
 				C9AF881F18F5E613005E0CEC /* PSPushPopPressView.m in Sources */,
@@ -663,10 +659,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matt Zanchelli/Matt Zanchelli-Prefix.pch";
 				INFOPLIST_FILE = "Matt Zanchelli/Matt Zanchelli-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Matt Zanchelli/Matt Zanchelli-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -676,10 +676,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matt Zanchelli/Matt Zanchelli-Prefix.pch";
 				INFOPLIST_FILE = "Matt Zanchelli/Matt Zanchelli-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Matt Zanchelli/Matt Zanchelli-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
