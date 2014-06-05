@@ -13,6 +13,7 @@
 		C9596BBE19402E3F00B074C2 /* SectionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */; };
 		C9596BC2194033D700B074C2 /* MTZPasscodeProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BC1194033D700B074C2 /* MTZPasscodeProjectViewController.swift */; };
 		C974585D194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974585C194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift */; };
+		C974585F194046880085AAE4 /* MTZHoneycrispProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974585E194046880085AAE4 /* MTZHoneycrispProjectViewController.swift */; };
 		C98BD52218F9F50300F0F61B /* MTZAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD51F18F9F50300F0F61B /* MTZAppIcon.m */; };
 		C98BD52318F9F50300F0F61B /* MTZPushBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52118F9F50300F0F61B /* MTZPushBackButton.m */; };
 		C98BD52818F9F61B00F0F61B /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = C98BD52518F9F61B00F0F61B /* UIImage+Alpha.m */; };
@@ -45,7 +46,6 @@
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
 		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
-		C9B4632418F4C388000D480D /* MTZHoneycrispProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4632218F4C388000D480D /* MTZHoneycrispProjectViewController.m */; };
 		C9B4632518F4C388000D480D /* MTZHoneycrispProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4632318F4C388000D480D /* MTZHoneycrispProjectViewController.xib */; };
 		C9B4632A18F4C3BF000D480D /* MTZPasscodeProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4632818F4C3BF000D480D /* MTZPasscodeProjectViewController.xib */; };
 		C9B4632F18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4632D18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib */; };
@@ -71,6 +71,7 @@
 		C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C9596BC1194033D700B074C2 /* MTZPasscodeProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZPasscodeProjectViewController.swift; sourceTree = "<group>"; };
 		C974585C194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZGoodnightProjectViewController.swift; sourceTree = "<group>"; };
+		C974585E194046880085AAE4 /* MTZHoneycrispProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZHoneycrispProjectViewController.swift; sourceTree = "<group>"; };
 		C98BD51E18F9F50300F0F61B /* MTZAppIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZAppIcon.h; sourceTree = "<group>"; };
 		C98BD51F18F9F50300F0F61B /* MTZAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZAppIcon.m; sourceTree = "<group>"; };
 		C98BD52018F9F50300F0F61B /* MTZPushBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZPushBackButton.h; sourceTree = "<group>"; };
@@ -129,8 +130,6 @@
 		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
 		C9B4631E18F4831F000D480D /* MTZTimelineEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEvent.h; sourceTree = "<group>"; };
 		C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEvent.m; sourceTree = "<group>"; };
-		C9B4632118F4C388000D480D /* MTZHoneycrispProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZHoneycrispProjectViewController.h; sourceTree = "<group>"; };
-		C9B4632218F4C388000D480D /* MTZHoneycrispProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZHoneycrispProjectViewController.m; sourceTree = "<group>"; };
 		C9B4632318F4C388000D480D /* MTZHoneycrispProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZHoneycrispProjectViewController.xib; sourceTree = "<group>"; };
 		C9B4632818F4C3BF000D480D /* MTZPasscodeProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZPasscodeProjectViewController.xib; sourceTree = "<group>"; };
 		C9B4632D18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZGoodnightProjectViewController.xib; sourceTree = "<group>"; };
@@ -357,8 +356,7 @@
 		C9B4633018F4C3F8000D480D /* Honeycrisp */ = {
 			isa = PBXGroup;
 			children = (
-				C9B4632118F4C388000D480D /* MTZHoneycrispProjectViewController.h */,
-				C9B4632218F4C388000D480D /* MTZHoneycrispProjectViewController.m */,
+				C974585E194046880085AAE4 /* MTZHoneycrispProjectViewController.swift */,
 				C9B4632318F4C388000D480D /* MTZHoneycrispProjectViewController.xib */,
 			);
 			name = Honeycrisp;
@@ -505,8 +503,8 @@
 				C974585D194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift in Sources */,
 				C98BD52318F9F50300F0F61B /* MTZPushBackButton.m in Sources */,
 				C98BD52918F9F61B00F0F61B /* UIImage+Mask.m in Sources */,
+				C974585F194046880085AAE4 /* MTZHoneycrispProjectViewController.swift in Sources */,
 				C9196F3518F2669A003D2E51 /* UILabel+MTZStyles.m in Sources */,
-				C9B4632418F4C388000D480D /* MTZHoneycrispProjectViewController.m in Sources */,
 				C9596BBE19402E3F00B074C2 /* SectionViewControllerProtocol.swift in Sources */,
 				C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */,
 				C9AF887118F62C9A005E0CEC /* RS3DSegmentedControl.m in Sources */,

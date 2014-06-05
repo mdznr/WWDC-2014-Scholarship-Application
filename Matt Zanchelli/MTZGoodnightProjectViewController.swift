@@ -31,7 +31,7 @@ class MTZGoodnightProjectViewController: MTZPageViewController, UIScrollViewDele
 		
 		// Do any additional setup after loading the view from its nib.
 		
-		// Apply the approprite styles to each set of labels
+		// Apply the approprite styles to each set of labels.
 		
 		goodnight.applyMTZStyle(.ProjectTitle)
 		descriptionLabel.applyMTZStyle(.ProjectDescription)

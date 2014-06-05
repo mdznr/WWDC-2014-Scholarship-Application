@@ -8,8 +8,6 @@
 
 #import "MTZProjectsViewController.h"
 
-#import "MTZHoneycrispProjectViewController.h"
-
 @interface MTZProjectsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, MTZPageViewControllerDelegate>
 
 /// The names of the .xib child view controllers

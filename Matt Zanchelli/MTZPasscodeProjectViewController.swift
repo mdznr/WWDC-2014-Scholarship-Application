@@ -28,7 +28,7 @@ class MTZPasscodeProjectViewController: MTZPageViewController {
 		
 		// Do any additional setup after loading the view from its nib.
 		
-		// Apply the approprite styles to each set of labels
+		// Apply the approprite styles to each set of labels.
 		
 		passcodeLabel.applyMTZStyle(.ProjectTitle)
 		descriptionLabel.applyMTZStyle(.ProjectDescriptionCenter)
