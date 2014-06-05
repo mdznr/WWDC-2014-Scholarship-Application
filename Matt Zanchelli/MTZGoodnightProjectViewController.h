@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MTZPageViewController.h"
-
 @interface MTZGoodnightProjectViewController : MTZPageViewController <UIScrollViewDelegate>
 
 @end

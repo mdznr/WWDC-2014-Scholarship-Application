@@ -3,4 +3,5 @@
 //
 
 #import "MTZViewController.h"
+#import "MTZPageViewController.h"
 #import "UILabel+MTZStyles.h"

@@ -8,12 +8,16 @@
 
 #import "MTZProjectsViewController.h"
 
-#import "MTZPageViewController.h"
+#import "MTZHoneycrispProjectViewController.h"
+#import "MTZGoodnightProjectViewController.h"
 
 @interface MTZProjectsViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, MTZPageViewControllerDelegate>
 
-///	The names of the .xib child view controllers.
-@property (strong, nonatomic) NSArray *childViewControllerNibNames;
+/// The names of the .xib child view controllers
+@property (strong, nonatomic) NSArray *childViewControllerNames;
+
+///	The classes of the child view controllers.
+@property (strong, nonatomic) NSArray *childViewControllerClasses;
 
 ///	The page control to indicate which page is currently shown.
 @property (strong, nonatomic) UIPageControl *pageControl;
@@ -52,9 +56,13 @@
 	
 	_scrollEnabled = YES;
 	
-	self.childViewControllerNibNames = @[@"MTZHoneycrispProjectViewController",
-										 @"MTZPasscodeProjectViewController",
-										 @"MTZGoodnightProjectViewController"];
+	self.childViewControllerNames = @[@"MTZHoneycrispProjectViewController",
+									  @"MTZPasscodeProjectViewController",
+									  @"MTZGoodnightProjectViewController"];
+	
+	self.childViewControllerClasses = @[[MTZHoneycrispProjectViewController class],
+										[MTZPasscodeProjectViewController class],
+										[MTZGoodnightProjectViewController class]];
 	
 	// Load first view controller.
 	[self setViewControllers:@[[self viewControllerAtIndex:0]]
@@ -85,12 +93,12 @@
 
 - (MTZPageViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-	if ( index >= [self.childViewControllerNibNames count] ) {
+	if ( index >= [self.childViewControllerNames count] ) {
 		return nil;
 	}
 	
-	NSString *className = self.childViewControllerNibNames[index];
-	Class pageViewControllerSubclass = NSClassFromString(className);
+	Class pageViewControllerSubclass = self.childViewControllerClasses[index];
+	NSString *className = self.childViewControllerNames[index];
 	MTZPageViewController *childViewController = [[pageViewControllerSubclass alloc] initWithNibName:className bundle:nil];
 	childViewController.delegate = self;
 	childViewController.index = index;
@@ -161,7 +169,7 @@
 	NSUInteger index = [(MTZPageViewController *)viewController index];
 	
 	// No view controllers beyond the last one.
-	if (index == [self.childViewControllerNibNames count]-1) {
+	if (index == [self.childViewControllerNames count]-1) {
 		return nil;
 	}
 	
