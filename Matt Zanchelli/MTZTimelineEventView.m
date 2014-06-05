@@ -162,21 +162,21 @@
 {
 	_date = date;
 	self.dateLabel.text = date;
-	[self.dateLabel applyMTZStyle:MTZStyleEventDate];
+	[self.dateLabel applyMTZStyleEventDate];
 }
 
 - (void)setTitle:(NSString *)title
 {
 	_title = title;
 	self.titleLabel.text = title;
-	[self.titleLabel applyMTZStyle:MTZStyleEventTitle];
+	[self.titleLabel applyMTZStyleEventTitle];
 }
 
 - (void)setDescription:(NSString *)description
 {
 	_description = description;
 	self.descriptionLabel.text = description;
-	[self.descriptionLabel applyMTZStyle:MTZStyleEventDetail];
+	[self.descriptionLabel applyMTZStyleEventDetail];
 }
 
 - (void)setImage:(UIImage *)image
