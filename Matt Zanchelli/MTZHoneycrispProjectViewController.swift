@@ -156,22 +156,22 @@ class MTZHoneycrispProjectViewController: MTZPageViewController, UIScrollViewDel
 			switch ( sender.selectedSegmentIndex ) {
 				case 2: // Honeycrisp
 					// Shift photo.
-					self.photoCrop.frame = CGRectOffset(self.photoCropper.bounds, 27, 0);
+					self.photoCrop.frame = CGRectOffset(photoCropper.bounds, 27, 0);
 					// Bring in crop.
-					self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
-					self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
+					self.photoCropLeft.frame = CGRect(x: 0, y: 0, width: 55, height: photoCropper.bounds.size.height)
+					self.photoCropRight.frame = CGRect(x:photoCropper.bounds.size.width-55, y: 0, width: 55, height: photoCropper.bounds.size.height);
 				case 1: // Center
 					// Reset photo position.
 					self.photoCrop.frame = self.photoCropper.bounds;
 					// Bring in crop.
-					self.photoCropLeft.frame = CGRectMake(0, 0, 55, self.photoCropper.bounds.size.height);
-					self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width-55, 0, 55, self.photoCropper.bounds.size.height);
+					self.photoCropLeft.frame = CGRect(x: 0, y: 0, width: 55, height: photoCropper.bounds.size.height);
+					self.photoCropRight.frame = CGRect(x: self.photoCropper.bounds.size.width-55, y: 0, width: 55, height: photoCropper.bounds.size.height);
 				case 0: // Original
 					// Reset photo position.
 					self.photoCrop.frame = self.photoCropper.bounds;
 					// Pull back crop.
-					self.photoCropLeft.frame = CGRectMake(0, 0, 0, self.photoCropper.bounds.size.height);
-					self.photoCropRight.frame = CGRectMake(self.photoCropper.bounds.size.width, 0, 0, self.photoCropper.bounds.size.height);
+					self.photoCropLeft.frame = CGRect(x: 0, y: 0, width: 0, height: photoCropper.bounds.size.height);
+					self.photoCropRight.frame = CGRect(x: photoCropper.bounds.size.width, y: 0, width: 0, height: photoCropper.bounds.size.height);
 				default:
 					break
 			}
