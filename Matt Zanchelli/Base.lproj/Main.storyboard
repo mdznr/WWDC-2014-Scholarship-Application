@@ -66,9 +66,9 @@
                         <outlet property="containerView" destination="H9U-6M-2hx" id="2iC-8B-ZEG"/>
                         <outlet property="myDimmingView" destination="0hV-FD-Qgr" id="f6d-vH-bVB"/>
                         <outlet property="segmentedControl" destination="96a-UP-4BE" id="05d-ku-V3n"/>
-                        <segue destination="usf-5j-UWD" kind="custom" identifier="About Me" customClass="MTZStoryboardSegue" id="abP-JQ-7fF"/>
-                        <segue destination="FGp-Z3-zL5" kind="custom" identifier="Background" customClass="MTZStoryboardSegue" id="V9z-Xs-bDv"/>
-                        <segue destination="Pc8-xI-Faj" kind="custom" identifier="Projects" customClass="MTZStoryboardSegue" id="2V2-B7-ea5"/>
+                        <segue destination="usf-5j-UWD" kind="custom" identifier="About Me" customClass="MTZStoryboardSegue" customModule="Matt_Zanchelli" id="abP-JQ-7fF"/>
+                        <segue destination="FGp-Z3-zL5" kind="custom" identifier="Background" customClass="MTZStoryboardSegue" customModule="Matt_Zanchelli" id="V9z-Xs-bDv"/>
+                        <segue destination="Pc8-xI-Faj" kind="custom" identifier="Projects" customClass="MTZStoryboardSegue" customModule="Matt_Zanchelli" id="2V2-B7-ea5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,7 +77,7 @@
         <!--About Me View Controller-->
         <scene sceneID="lZi-Hi-iGB">
             <objects>
-                <viewController title="About Me" automaticallyAdjustsScrollViewInsets="NO" id="usf-5j-UWD" userLabel="About Me View Controller" customClass="MTZAboutViewController" sceneMemberID="viewController">
+                <viewController title="About Me" automaticallyAdjustsScrollViewInsets="NO" id="usf-5j-UWD" userLabel="About Me View Controller" customClass="MTZAboutViewController" customModule="Matt_Zanchelli" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kE0-jG-MCS"/>
                         <viewControllerLayoutGuide type="bottom" id="IJV-g1-qgV"/>
@@ -145,12 +145,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="biking" destination="zmM-R5-tZn" id="OO9-Ud-Jqe"/>
-                        <outlet property="description" destination="xjg-uG-ID6" id="Fgx-aq-goL"/>
-                        <outlet property="interests" destination="XDH-4b-cbv" id="JKx-vy-TeP"/>
-                        <outlet property="music" destination="eHw-8N-GZn" id="J5K-ID-WhS"/>
-                        <outlet property="name" destination="X8u-yi-cc8" id="T4u-C7-GrX"/>
-                        <outlet property="photography" destination="Z7A-gZ-pGf" id="Yel-SX-9j1"/>
+                        <outlet property="bikingInterestLabel" destination="zmM-R5-tZn" id="Y5O-lA-MPj"/>
+                        <outlet property="interestsLabel" destination="XDH-4b-cbv" id="tz8-Qv-V4e"/>
+                        <outlet property="musicInterestLabel" destination="eHw-8N-GZn" id="FoE-zE-zri"/>
+                        <outlet property="nameLabel" destination="X8u-yi-cc8" id="nqg-Ip-Kg8"/>
+                        <outlet property="personalDescriptionLabel" destination="xjg-uG-ID6" id="eAv-vO-hW6"/>
+                        <outlet property="photographyInterestLabel" destination="Z7A-gZ-pGf" id="CWy-hB-d1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvd-9n-HGz" userLabel="First Responder" sceneMemberID="firstResponder"/>

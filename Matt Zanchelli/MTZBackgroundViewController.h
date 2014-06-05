@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MTZSectionViewControllerProtocol.h"
-
-@interface MTZBackgroundViewController : UIViewController <MTZSectionViewControllerProtocol>
+@interface MTZBackgroundViewController : UIViewController <SectionViewControllerProtocol>
 
 @end

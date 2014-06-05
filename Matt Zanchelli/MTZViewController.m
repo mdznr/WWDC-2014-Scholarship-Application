@@ -8,10 +8,7 @@
 
 #import "MTZViewController.h"
 
-#import "MTZSectionViewControllerProtocol.h"
 #import "RS3DSegmentedControl/RS3DSegmentedControl.h"
-
-#import "Matt_Zanchelli-Swift.h"
 
 @interface MTZViewController () <RS3DSegmentedControlDelegate, RS3DSegmentedControlDataSource>
 
@@ -117,7 +114,7 @@
 	
 	if ( _index == index ) {
 		// Ask the section to scroll to top.
-		[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) scrollToTop];
+		[((UIViewController<SectionViewControllerProtocol> *)self.containingViewController) scrollToTop];
 		return;
 	}
 	
@@ -161,7 +158,7 @@
 	[self addChildViewController:_containingViewController];
 	
 	// Ask child view controller to flash scroll indicators.
-	[((UIViewController<MTZSectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
+	[((UIViewController<SectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
 }
 
 ///	Add a child view controller.
