@@ -17,7 +17,6 @@
 	#import "MTZPageViewController.h"
 	#import "MTZAppIcon.h"
 
-	#import "UIFont+MTZStyles.h"
 	#import "UILabel+MTZStyles.h"
 
 	#import "Matt_Zanchelli-Swift.h"
