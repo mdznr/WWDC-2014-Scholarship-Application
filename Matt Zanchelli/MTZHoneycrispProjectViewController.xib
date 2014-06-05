@@ -32,6 +32,7 @@
                 <outlet property="photoCropRight" destination="6B6-AF-sJC" id="s5s-Rn-Thw"/>
                 <outlet property="photoCropper" destination="Yq6-NA-Qdr" id="UTC-DP-1rW"/>
                 <outlet property="pushBackButton" destination="Xxm-SL-LGK" id="RfS-Tl-bWk"/>
+                <outlet property="scrollView" destination="kXY-0w-7v7" id="erB-D2-nk1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

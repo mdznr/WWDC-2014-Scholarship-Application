@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class MTZHoneycrispProjectViewController: MTZPageViewController, UIScrollViewDelegate {
+class MTZHoneycrispProjectViewController: MTZPageViewController {
 	
 	@IBOutlet var honeycrisp: UILabel
 	@IBOutlet var descriptionLabel: UILabel
@@ -180,4 +180,5 @@ class MTZHoneycrispProjectViewController: MTZPageViewController, UIScrollViewDel
 		// Animate.
 		UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.BeginFromCurrentState|UIViewAnimationOptions.CurveEaseInOut, animations: animations, completion: nil)
 	}
+	
 }

@@ -12,6 +12,7 @@
                 <outlet property="itsAlgorithmicLabel" destination="QEw-P1-na7" id="7g5-2y-SOi"/>
                 <outlet property="itsUbiquitousLabel" destination="oLO-Z9-7kZ" id="Apa-Jb-PeU"/>
                 <outlet property="passcodeLabel" destination="Hu9-4v-Q6u" id="ap5-O4-O0a"/>
+                <outlet property="scrollView" destination="DOH-3B-SaZ" id="Or5-Va-yjR"/>
                 <outlet property="secureByDesignLabel" destination="ehC-Gu-Yfw" id="dN1-nc-t2Z"/>
                 <outlet property="step1Label" destination="hmp-t5-f5l" id="0kc-yJ-y2p"/>
                 <outlet property="step2Label" destination="PDK-FU-0Oc" id="vpv-2i-IyE"/>
