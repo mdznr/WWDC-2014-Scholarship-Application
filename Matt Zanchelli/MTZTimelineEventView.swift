@@ -66,7 +66,7 @@ class MTZTimelineEventView: UIView, MTZTimelineEventViewInterface {
 	func setUpWithTimelineEvent(timelineEvent: MTZTimelineEvent) {
 		date = timelineEvent.date;
 		title = timelineEvent.title;
-		descriptionString = timelineEvent.description;
+		descriptionString = timelineEvent.descriptionString;
 		image = timelineEvent.image;
 	}
 	

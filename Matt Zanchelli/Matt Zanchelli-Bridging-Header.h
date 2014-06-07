@@ -4,7 +4,6 @@
 
 #import "MTZViewController.h"
 #import "MTZPageViewController.h"
-#import "MTZTimelineEvent.h"
 #import "MTZAppIcon.h"
 #import "CGRectManipulation.h"
 #import "PSPushPopPressView.h"
