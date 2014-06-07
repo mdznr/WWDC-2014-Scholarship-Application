@@ -9,9 +9,6 @@
 #import "MTZBackgroundViewController.h"
 
 #import "MTZTimelineEvent.h"
-#import "MTZTimelineEventView.h"
-
-#import "PSPushPopPressView.h"
 
 @interface MTZBackgroundViewController () <UITableViewDataSource, UITableViewDelegate>
 

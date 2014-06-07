@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9109ED6194314AE004E001A /* MTZTimelineEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9109ED5194314AE004E001A /* MTZTimelineEventView.swift */; };
 		C9596BB71940222100B074C2 /* MTZStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BB61940222100B074C2 /* MTZStoryboardSegue.swift */; };
 		C9596BBC1940283400B074C2 /* MTZAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BBB1940283400B074C2 /* MTZAboutViewController.swift */; };
 		C9596BBE19402E3F00B074C2 /* SectionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */; };
@@ -44,7 +45,6 @@
 		C9AF888618F6660E005E0CEC /* AUIAnimatableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF888318F6660E005E0CEC /* AUIAnimatableLabel.m */; };
 		C9AF888718F6660E005E0CEC /* UIFont+CoreTextExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */; };
 		C9B4631A18F47639000D480D /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9B4631918F47639000D480D /* MyriadPro-Bold.otf */; };
-		C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */; };
 		C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */; };
 		C9B4632518F4C388000D480D /* MTZHoneycrispProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4632318F4C388000D480D /* MTZHoneycrispProjectViewController.xib */; };
 		C9B4632A18F4C3BF000D480D /* MTZPasscodeProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B4632818F4C3BF000D480D /* MTZPasscodeProjectViewController.xib */; };
@@ -64,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9109ED5194314AE004E001A /* MTZTimelineEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZTimelineEventView.swift; sourceTree = "<group>"; };
 		C9596BB61940222100B074C2 /* MTZStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZStoryboardSegue.swift; sourceTree = "<group>"; };
 		C9596BBB1940283400B074C2 /* MTZAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZAboutViewController.swift; sourceTree = "<group>"; };
 		C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -124,8 +125,6 @@
 		C9AF888518F6660E005E0CEC /* UIFont+CoreTextExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CoreTextExtensions.m"; sourceTree = "<group>"; };
 		C9AF888C18F6669A005E0CEC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C9B4631918F47639000D480D /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
-		C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEventView.h; sourceTree = "<group>"; };
-		C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEventView.m; sourceTree = "<group>"; };
 		C9B4631E18F4831F000D480D /* MTZTimelineEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTimelineEvent.h; sourceTree = "<group>"; };
 		C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTimelineEvent.m; sourceTree = "<group>"; };
 		C9B4632318F4C388000D480D /* MTZHoneycrispProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZHoneycrispProjectViewController.xib; sourceTree = "<group>"; };
@@ -293,8 +292,7 @@
 				C998232718F2562500983B36 /* MTZBackgroundViewController.m */,
 				C9B4631E18F4831F000D480D /* MTZTimelineEvent.h */,
 				C9B4631F18F4831F000D480D /* MTZTimelineEvent.m */,
-				C9B4631B18F47A17000D480D /* MTZTimelineEventView.h */,
-				C9B4631C18F47A17000D480D /* MTZTimelineEventView.m */,
+				C9109ED5194314AE004E001A /* MTZTimelineEventView.swift */,
 				C98BD53A18FA676300F0F61B /* Computer Graphics.jpg */,
 				C98BD53418FA669F00F0F61B /* iPod.jpg */,
 				C98BD53618FA66A700F0F61B /* MacBook.jpg */,
@@ -489,11 +487,11 @@
 			files = (
 				C998232B18F2563100983B36 /* MTZProjectsViewController.m in Sources */,
 				C9596BB71940222100B074C2 /* MTZStoryboardSegue.swift in Sources */,
+				C9109ED6194314AE004E001A /* MTZTimelineEventView.swift in Sources */,
 				C98BD52218F9F50300F0F61B /* MTZAppIcon.m in Sources */,
 				C9B4632018F4831F000D480D /* MTZTimelineEvent.m in Sources */,
 				C98BD54118FB3F4300F0F61B /* CGAspectRatio.m in Sources */,
 				C998232818F2562500983B36 /* MTZBackgroundViewController.m in Sources */,
-				C9B4631D18F47A17000D480D /* MTZTimelineEventView.m in Sources */,
 				C9596BC2194033D700B074C2 /* MTZPasscodeProjectViewController.swift in Sources */,
 				C974585D194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift in Sources */,
 				C98BD52318F9F50300F0F61B /* MTZPushBackButton.m in Sources */,
