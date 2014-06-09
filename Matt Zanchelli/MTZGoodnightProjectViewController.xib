@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZGoodnightProjectViewController" customModule="Matt_Zanchelli">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZGoodnightProjectViewController">
             <connections>
                 <outlet property="contentView" destination="ihR-Dv-8tq" id="faD-Qb-PfJ"/>
                 <outlet property="descriptionLabel" destination="F3k-r2-ITR" id="qcr-Gj-UgJ"/>

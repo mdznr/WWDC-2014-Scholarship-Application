@@ -8,7 +8,8 @@
 
 import Foundation
 
-class MTZTimelineEvent : NSObject {
+@objc(MTZTimelineEvent)
+class TimelineEvent : NSObject {
 	///	Date of the event (as a string).
 	let date : String
 	

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MTZGoodnightProjectViewController: MTZPageViewController, UIScrollViewDelegate {
+@objc(MTZGoodnightProjectViewController)
+class GoodnightProjectViewController: MTZPageViewController, UIScrollViewDelegate {
 	
 	@IBOutlet var screenshot: UIImageView
 	

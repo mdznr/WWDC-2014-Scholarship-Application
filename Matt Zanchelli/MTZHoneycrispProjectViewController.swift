@@ -9,7 +9,8 @@
 import UIKit
 import QuartzCore
 
-class MTZHoneycrispProjectViewController: MTZPageViewController {
+@objc(MTZHoneycrispProjectViewController)
+class HoneycrispProjectViewController: MTZPageViewController {
 	
 	@IBOutlet var honeycrisp: UILabel
 	@IBOutlet var descriptionLabel: UILabel

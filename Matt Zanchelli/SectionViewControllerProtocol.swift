@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Matt Zanchelli. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-@objc
+@objc(MTZSectionViewControllerProtocol)
 protocol SectionViewControllerProtocol {
 	///	Flash scroll indicators, if any.
 	func flashScrollIndicators()

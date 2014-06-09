@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Matt_Zanchelli-Swift.h"
+
 @interface MTZProjectsViewController : UIPageViewController <SectionViewControllerProtocol>
 
 ///	A Boolean value that determines whether scrolling is enabled.

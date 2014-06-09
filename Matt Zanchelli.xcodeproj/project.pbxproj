@@ -10,9 +10,9 @@
 		C90D998919437AEF008EDC20 /* MTZTimelineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90D998819437AEF008EDC20 /* MTZTimelineEvent.swift */; };
 		C90D998B19437F69008EDC20 /* MTZBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90D998A19437F69008EDC20 /* MTZBackgroundViewController.swift */; };
 		C9109ED6194314AE004E001A /* MTZTimelineEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9109ED5194314AE004E001A /* MTZTimelineEventView.swift */; };
+		C93F3EE419439553005D7980 /* SectionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F3EE319439553005D7980 /* SectionViewControllerProtocol.swift */; };
 		C9596BB71940222100B074C2 /* MTZStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BB61940222100B074C2 /* MTZStoryboardSegue.swift */; };
 		C9596BBC1940283400B074C2 /* MTZAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BBB1940283400B074C2 /* MTZAboutViewController.swift */; };
-		C9596BBE19402E3F00B074C2 /* SectionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */; };
 		C9596BC2194033D700B074C2 /* MTZPasscodeProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9596BC1194033D700B074C2 /* MTZPasscodeProjectViewController.swift */; };
 		C974585D194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974585C194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift */; };
 		C974585F194046880085AAE4 /* MTZHoneycrispProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C974585E194046880085AAE4 /* MTZHoneycrispProjectViewController.swift */; };
@@ -67,9 +67,9 @@
 		C90D998819437AEF008EDC20 /* MTZTimelineEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZTimelineEvent.swift; sourceTree = "<group>"; };
 		C90D998A19437F69008EDC20 /* MTZBackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZBackgroundViewController.swift; sourceTree = "<group>"; };
 		C9109ED5194314AE004E001A /* MTZTimelineEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZTimelineEventView.swift; sourceTree = "<group>"; };
+		C93F3EE319439553005D7980 /* SectionViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C9596BB61940222100B074C2 /* MTZStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZStoryboardSegue.swift; sourceTree = "<group>"; };
 		C9596BBB1940283400B074C2 /* MTZAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZAboutViewController.swift; sourceTree = "<group>"; };
-		C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C9596BC1194033D700B074C2 /* MTZPasscodeProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZPasscodeProjectViewController.swift; sourceTree = "<group>"; };
 		C974585C194042AA0085AAE4 /* MTZGoodnightProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZGoodnightProjectViewController.swift; sourceTree = "<group>"; };
 		C974585E194046880085AAE4 /* MTZHoneycrispProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTZHoneycrispProjectViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		C9B4632D18F4C3DC000D480D /* MTZGoodnightProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZGoodnightProjectViewController.xib; sourceTree = "<group>"; };
 		C9B4633318F4C5DD000D480D /* MTZPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZPageViewController.h; sourceTree = "<group>"; };
 		C9B4633418F4C5DD000D480D /* MTZPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZPageViewController.m; sourceTree = "<group>"; };
-		C9E1BE7C19401B3A00EB72B0 /* Matt Zanchelli-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matt Zanchelli-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9E1BE7C19401B3A00EB72B0 /* Matt_Zanchelli-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matt_Zanchelli-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9E1BE7D19401B3A00EB72B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,7 +212,7 @@
 				C9596BB61940222100B074C2 /* MTZStoryboardSegue.swift */,
 				C998221418EDAC1E00983B36 /* MTZViewController.h */,
 				C998221518EDAC1E00983B36 /* MTZViewController.m */,
-				C9596BBD19402E3F00B074C2 /* SectionViewControllerProtocol.swift */,
+				C93F3EE319439553005D7980 /* SectionViewControllerProtocol.swift */,
 				C9596BBB1940283400B074C2 /* MTZAboutViewController.swift */,
 				C9AF880318F51C1B005E0CEC /* Background */,
 				C9AF880118F51C06005E0CEC /* Projects */,
@@ -224,7 +224,7 @@
 				C998221718EDAC1E00983B36 /* Images.xcassets */,
 				C998233018F25C5900983B36 /* Fonts */,
 				C998220618EDAC1E00983B36 /* Supporting Files */,
-				C9E1BE7C19401B3A00EB72B0 /* Matt Zanchelli-Bridging-Header.h */,
+				C9E1BE7C19401B3A00EB72B0 /* Matt_Zanchelli-Bridging-Header.h */,
 			);
 			path = "Matt Zanchelli";
 			sourceTree = "<group>";
@@ -492,13 +492,13 @@
 				C98BD52318F9F50300F0F61B /* MTZPushBackButton.m in Sources */,
 				C98BD52918F9F61B00F0F61B /* UIImage+Mask.m in Sources */,
 				C974585F194046880085AAE4 /* MTZHoneycrispProjectViewController.swift in Sources */,
-				C9596BBE19402E3F00B074C2 /* SectionViewControllerProtocol.swift in Sources */,
 				C9AF887718F62CF7005E0CEC /* iCarousel.m in Sources */,
 				C9AF887118F62C9A005E0CEC /* RS3DSegmentedControl.m in Sources */,
 				C9596BBC1940283400B074C2 /* MTZAboutViewController.swift in Sources */,
 				C97458611940D4BC0085AAE4 /* FontStyles.swift in Sources */,
 				C90D998B19437F69008EDC20 /* MTZBackgroundViewController.swift in Sources */,
 				C9B4633518F4C5DD000D480D /* MTZPageViewController.m in Sources */,
+				C93F3EE419439553005D7980 /* SectionViewControllerProtocol.swift in Sources */,
 				C97458631940DA3F0085AAE4 /* LabelStyles.swift in Sources */,
 				C98BD54218FB3F4300F0F61B /* CGRectManipulation.m in Sources */,
 				C9E1BE7E19401B3B00EB72B0 /* AppDelegate.swift in Sources */,
@@ -639,7 +639,7 @@
 				INFOPLIST_FILE = "Matt Zanchelli/Matt Zanchelli-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Matt Zanchelli/Matt Zanchelli-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Matt Zanchelli/Matt_Zanchelli-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = "Matt Zanchelli/Matt Zanchelli-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Matt Zanchelli/Matt Zanchelli-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Matt Zanchelli/Matt_Zanchelli-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

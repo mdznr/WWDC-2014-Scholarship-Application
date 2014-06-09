@@ -8,10 +8,11 @@
 
 import UIKit
 
-protocol MTZTimelineEventViewInterface {
+@objc(MTZTimelineEventViewInterface)
+protocol TimelineEventViewInterface {
 	///	Set up a timeline event view with a timeline event object.
 	///	@param timelineEvent The timeline event object to create the view from.
-	func setUpWithTimelineEvent(timelineEvent: MTZTimelineEvent)
+	func setUpWithTimelineEvent(timelineEvent: TimelineEvent)
 	
 	///	Date of the event (as a string).
 	var date : NSString { get set }
@@ -26,7 +27,8 @@ protocol MTZTimelineEventViewInterface {
 	var image : UIImage? { get set }
 }
 
-class MTZTimelineEventView: UIView, MTZTimelineEventViewInterface {
+@objc(MTZTimelineEventView)
+class TimelineEventView: UIView, TimelineEventViewInterface {
 	
 	// MARK: Public
 	
@@ -63,7 +65,7 @@ class MTZTimelineEventView: UIView, MTZTimelineEventViewInterface {
 	}
 	}
 	
-	func setUpWithTimelineEvent(timelineEvent: MTZTimelineEvent) {
+	func setUpWithTimelineEvent(timelineEvent: TimelineEvent) {
 		date = timelineEvent.date;
 		title = timelineEvent.title;
 		descriptionString = timelineEvent.descriptionString;

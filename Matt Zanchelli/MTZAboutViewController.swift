@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MTZAboutViewController: UIViewController, SectionViewControllerProtocol {
+@objc(MTZAboutViewController)
+class AboutViewController: UIViewController, SectionViewControllerProtocol {
 	
 	///	The label for my name.
 	@IBOutlet var nameLabel: UILabel;

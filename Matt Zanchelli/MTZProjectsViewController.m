@@ -57,9 +57,9 @@
 									  @"MTZPasscodeProjectViewController",
 									  @"MTZGoodnightProjectViewController"];
 	
-	self.childViewControllerClasses = @[[MTZHoneycrispProjectViewController class],
-										[MTZPasscodeProjectViewController class],
-										[MTZGoodnightProjectViewController class]];
+	self.childViewControllerClasses = @[[HoneycrispProjectViewController class],
+										[PasscodeProjectViewController class],
+										[GoodnightProjectViewController class]];
 	
 	// Load first view controller.
 	[self setViewControllers:@[[self viewControllerAtIndex:0]]

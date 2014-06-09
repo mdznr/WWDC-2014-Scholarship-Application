@@ -8,20 +8,21 @@
 
 import UIKit
 
-class MTZPasscodeProjectViewController: MTZPageViewController {
+@objc(MTZPasscodeProjectViewController)
+class PasscodeProjectViewController: MTZPageViewController {
 	
 	@IBOutlet var passcodeLabel: UILabel
-	@IBOutlet var descriptionLabel : UILabel
+	@IBOutlet var descriptionLabel: UILabel
 	
-	@IBOutlet var step1Label : UILabel
-	@IBOutlet var step2Label : UILabel
-	@IBOutlet var step3Label : UILabel
+	@IBOutlet var step1Label: UILabel
+	@IBOutlet var step2Label: UILabel
+	@IBOutlet var step3Label: UILabel
 		
-	@IBOutlet var secureByDesignLabel : UILabel
-	@IBOutlet var itsAlgorithmicLabel : UILabel
-	@IBOutlet var itsUbiquitousLabel : UILabel
-	@IBOutlet var availableMultiPlatformLabel : UILabel
-	@IBOutlet var freeAndOpenSourceLabel : UILabel
+	@IBOutlet var secureByDesignLabel: UILabel
+	@IBOutlet var itsAlgorithmicLabel: UILabel
+	@IBOutlet var itsUbiquitousLabel: UILabel
+	@IBOutlet var availableMultiPlatformLabel: UILabel
+	@IBOutlet var freeAndOpenSourceLabel: UILabel
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

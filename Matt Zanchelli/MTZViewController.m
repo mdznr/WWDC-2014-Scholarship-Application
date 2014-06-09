@@ -8,6 +8,8 @@
 
 #import "MTZViewController.h"
 
+#import "Matt_Zanchelli-Swift.h"
+#import "PSPushPopPressView/PSPushPopPressView.h"
 #import "RS3DSegmentedControl/RS3DSegmentedControl.h"
 
 @interface MTZViewController () <RS3DSegmentedControlDelegate, RS3DSegmentedControlDataSource>
@@ -158,7 +160,7 @@
 	[self addChildViewController:_containingViewController];
 	
 	// Ask child view controller to flash scroll indicators.
-	[((UIViewController<SectionViewControllerProtocol> *)self.containingViewController) flashScrollIndicators];
+	[((id<SectionViewControllerProtocol>)self.containingViewController) flashScrollIndicators];
 }
 
 ///	Add a child view controller.

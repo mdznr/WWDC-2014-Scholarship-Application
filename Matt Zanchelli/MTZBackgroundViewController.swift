@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MTZBackgroundViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+@objc(MTZBackgroundViewController)
+class BackgroundViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet var tableView : UITableView
 	
-//	var content : MTZTimelineEvent[]
+//	var content : TimelineEvent[]
 	var content : NSArray = []
 	
 	init(coder aDecoder: NSCoder!) {
@@ -24,19 +25,19 @@ class MTZBackgroundViewController: UIViewController, UITableViewDataSource, UITa
 		
 		tableView.contentInset = UIEdgeInsets(top: 44+31, left: 0, bottom: 0, right: 0)
 		
-		let e0 = MTZTimelineEvent(date: "Early Life", title: "Interested in Computers & Computer Graphics.", descriptionString: "As a kid, I was fascinated with computers and what was possible with them. I made artwork in various programs to give to my parents. I much preferred drawing with computer programs over traditional crayons and markers.", image: UIImage(named: "Computer Graphics.jpg"))
+		let e0 = TimelineEvent(date: "Early Life", title: "Interested in Computers & Computer Graphics.", descriptionString: "As a kid, I was fascinated with computers and what was possible with them. I made artwork in various programs to give to my parents. I much preferred drawing with computer programs over traditional crayons and markers.", image: UIImage(named: "Computer Graphics.jpg"))
 		
-		let e1 = MTZTimelineEvent(date: "Dec. 2004", title: "Owned my first iPad.", descriptionString: "As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Every day of my life is working towards that goal.", image: UIImage(named: "iPod.jpg"))
+		let e1 = TimelineEvent(date: "Dec. 2004", title: "Owned my first iPad.", descriptionString: "As I unboxed the silver iPod mini, my eyes lit up. I suddenly knew what I would be doing for the rest of my life: building incredible products and customer experiences like this one. Every day of my life is working towards that goal.", image: UIImage(named: "iPod.jpg"))
 		
-		let e2 = MTZTimelineEvent(date: "Aug. 2006", title: "Bought my first Mac.", descriptionString: "After a couple years of collecting iPods, I knew it was time to also get a Mac. I used them occasionally at school and found them to be much more enjoyable to use than any other computer I had ever used before.", image: UIImage(named:"MacBook.jpg"))
+		let e2 = TimelineEvent(date: "Aug. 2006", title: "Bought my first Mac.", descriptionString: "After a couple years of collecting iPods, I knew it was time to also get a Mac. I used them occasionally at school and found them to be much more enjoyable to use than any other computer I had ever used before.", image: UIImage(named:"MacBook.jpg"))
 		
-		let e3 = MTZTimelineEvent(date: "Aug. 2007", title: "Started High School.", descriptionString: "By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I was inspired by and learned from fantastic Mac designers. I started designing icons and user interfaces for fun.", image: UIImage(named: "Started HS.jpg"))
+		let e3 = TimelineEvent(date: "Aug. 2007", title: "Started High School.", descriptionString: "By this time, I was developing my interest in design. I spent a lot of time on design forums, like MacThemes, where I was inspired by and learned from fantastic Mac designers. I started designing icons and user interfaces for fun.", image: UIImage(named: "Started HS.jpg"))
 		
-		let e4 = MTZTimelineEvent(date: "Oct. 2007", title: "Began Freelancing.", descriptionString: "I had enough experience with designing and building websites that I could do freelance design and web work. I loved my time designing logos, business cards, and websites for friends and locals in my community.", image: UIImage(named: "10th Grade.jpg"))
+		let e4 = TimelineEvent(date: "Oct. 2007", title: "Began Freelancing.", descriptionString: "I had enough experience with designing and building websites that I could do freelance design and web work. I loved my time designing logos, business cards, and websites for friends and locals in my community.", image: UIImage(named: "10th Grade.jpg"))
 		
-		let e5 = MTZTimelineEvent(date: "Apr. 2008", title: "Started DJ BMZ", descriptionString: "I became very interested in music and started collecting equipment to playback and manipulate music. My neighbour and I started DJing parties and other events. Eventually that turned into a profitable business that’s still running to this day.", image: UIImage(named: "DJ BMZ.jpg"))
+		let e5 = TimelineEvent(date: "Apr. 2008", title: "Started DJ BMZ", descriptionString: "I became very interested in music and started collecting equipment to playback and manipulate music. My neighbour and I started DJing parties and other events. Eventually that turned into a profitable business that’s still running to this day.", image: UIImage(named: "DJ BMZ.jpg"))
 		
-		let e6 = MTZTimelineEvent(date: "Aug. 2011", title: "Started College.", descriptionString: "I figured out that the design I’m most interested in was in software, so I decided to go to school for Computer Science. I met by best friend, Peter, who taught me how to take what I learned in class and build native apps for Mac and iOS.", image: UIImage(named: "College.jpg"))
+		let e6 = TimelineEvent(date: "Aug. 2011", title: "Started College.", descriptionString: "I figured out that the design I’m most interested in was in software, so I decided to go to school for Computer Science. I met by best friend, Peter, who taught me how to take what I learned in class and build native apps for Mac and iOS.", image: UIImage(named: "College.jpg"))
 		
 		content = [e0, e1, e2, e3, e4, e5, e6]
 	}
@@ -74,16 +75,16 @@ class MTZBackgroundViewController: UIViewController, UITableViewDataSource, UITa
 				cell.contentView?.addSubview(view)
 			}
 			
-			var timelineEventView = cell.contentView?.viewWithTag(111) as MTZTimelineEventView?
+			var timelineEventView = cell.contentView?.viewWithTag(111) as TimelineEventView?
 			if !timelineEventView {
-				let view = MTZTimelineEventView(frame: cell.bounds)
+				let view = TimelineEventView(frame: cell.bounds)
 				view.tag = 111
 				cell.contentView?.addSubview(view)
 				timelineEventView = view
 			}
 			
-			// WARNING: If content was a MTZTimelineEvent[], no need to "as"
-			timelineEventView?.setUpWithTimelineEvent(content[path.row] as MTZTimelineEvent)
+			// WARNING: If content was a TimelineEvent[], no need to "as"
+			timelineEventView?.setUpWithTimelineEvent(content[path.row] as TimelineEvent)
 		}
 		
 		return cell

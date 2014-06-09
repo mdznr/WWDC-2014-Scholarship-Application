@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZPasscodeProjectViewController" customModule="Matt_Zanchelli">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTZPasscodeProjectViewController">
             <connections>
                 <outlet property="availableMultiPlatformLabel" destination="lOP-Nf-ITc" id="OYm-Gd-TUj"/>
                 <outlet property="descriptionLabel" destination="DYH-H7-tcF" id="d3f-R1-yaB"/>
